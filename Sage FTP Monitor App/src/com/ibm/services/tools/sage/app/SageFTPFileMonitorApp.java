@@ -682,11 +682,13 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 										lines.add("This alert was generated based on business rule ID: " + brIndexID );
 										lines.add("File Name/Pattern search string: " + fileNamePattern); // -- name of the file/pattern business rule item
 										lines.add("File delivery frequency (M = Monthly, W = Weekly, D = Daily): " + fileFrequency);
+										lines.add("Alerts sent so far for this event: " + alertCount);
+										lines.add("Maximum number of alerts before alerts expire " + maxAlerts);
+										lines.add("Minimum number of alerts (in minutes) between each alert " + alertInterval);
 										/*
 										 TODO 
 										 ADD ONE LINE TO THE BODY OF HE ALERT MESSAGE FOR EACH BUSINESS RULE ITEM
 										String fileNameMode 	= rs1.getString(appProps.getFileNameMode_ColNum()); // -- P = Pattern , F = FileName
-										String fileFrequency 	= rs1.getString(appProps.getFileFrequency_ColNum()); // -- M = Monthly, W = Weekly, D = Daily
 										int maxAlerts 			= rs1.getInt(appProps.getMaxAlerts_ColNum()); // -- Maximum alerts that can be sent for given exception
 										int alertCount 			= rs1.getInt(appProps.getAlertCount_ColNum()); // -- Number of alerts sent so far
 										int alertInterval		= rs1.getInt(appProps.getAlertInterval_ColNum()); // -- Minimum Alert interval in minutes
