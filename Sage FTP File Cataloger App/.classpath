@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/IBM/rationalsdp/RADCommonLib/com.ibm.datatools.db2/driver/db2jcc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/IBM/rationalsdp/RADCommonLib/com.ibm.datatools.db2/driver/db2jcc_license_cisuz.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/IBM/rationalsdp/RADCommonLib/com.ibm.datatools.db2/driver/db2jcc_license_cu.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/IBM/rationalsdp/RADCommonLib/commons-net-3.3/commons-net-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/IBM/rationalsdp/RADCommonLib/commons-net-3.3/commons-net-3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/IBM/rationalsdp/RADCommonLib/commons-net-3.3/commons-net-examples-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Desktop/RAD Workspace Sage/commons-io-2.4-bin/commons-io-2.4/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IBM_ADMIN/Desktop/Downloads/IBM/Sage/SageFTPFileMonitoring/jsch-0.1.52.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

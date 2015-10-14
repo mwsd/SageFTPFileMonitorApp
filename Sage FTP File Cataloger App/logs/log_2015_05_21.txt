@@ -1,0 +1,11 @@
+
+
+05/21/2015 02:49:02:563 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150521.144902563.172058
+05/21/2015 02:49:02:579 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/21/2015 02:49:04:282 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sampledb, userid=DAS_USER1
+
+
+05/21/2015 04:07:22:183 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150521.160722167.256280
+05/21/2015 04:07:22:261 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/21/2015 04:07:25:308 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/21/2015 04:07:27:230 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1

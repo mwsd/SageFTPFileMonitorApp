@@ -1,0 +1,1276 @@
+
+
+05/27/2015 10:22:27:659 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150527.102227659.707070
+05/27/2015 10:22:27:690 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/27/2015 10:22:29:518 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/27/2015 10:22:36:096 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+05/27/2015 10:22:36:096 AM EDT     Starting directory name = GSA_Test_Files
+05/27/2015 10:22:36:096 AM EDT     Is this a directory? = true
+05/27/2015 10:22:36:096 AM EDT     Does the directory exist? = true
+05/27/2015 10:22:36:096 AM EDT     Last Modified: 1432243534376
+05/27/2015 10:22:36:268 AM EDT     List of Files in GSA_Test_Files ... [Ljava.lang.String;@cc9cbd02
+05/27/2015 10:22:36:299 AM EDT     File List: []
+
+
+05/27/2015 10:31:08:794 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150527.103108794.664469
+05/27/2015 10:31:08:810 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/27/2015 10:31:10:279 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/27/2015 10:31:14:076 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+05/27/2015 10:31:14:091 AM EDT     Starting directory name = GSA_Test_Files
+05/27/2015 10:31:14:091 AM EDT     Is this a directory? = true
+05/27/2015 10:31:14:091 AM EDT     Does the directory exist? = true
+05/27/2015 10:31:14:091 AM EDT     Last Modified: 1432243534376
+05/27/2015 10:31:14:091 AM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+05/27/2015 10:31:14:123 AM EDT     File List: []
+
+
+05/27/2015 10:56:06:606 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150527.105606606.469972
+05/27/2015 10:56:06:622 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/27/2015 10:56:08:122 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/27/2015 10:56:13:450 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+05/27/2015 10:56:13:450 AM EDT     Starting directory name = GSA_Test_Files
+05/27/2015 10:56:13:450 AM EDT     Starting directory name with full path= C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files
+05/27/2015 10:56:13:450 AM EDT     Is this a directory? = true
+05/27/2015 10:56:13:465 AM EDT     Does the directory exist? = true
+05/27/2015 10:56:13:465 AM EDT     Last Modified: 1432243534376
+05/27/2015 10:56:13:465 AM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+05/27/2015 10:56:13:512 AM EDT     File List: []
+
+
+05/27/2015 11:52:29:518 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150527.115229518.092026
+05/27/2015 11:52:29:534 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/27/2015 11:52:31:049 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/27/2015 11:52:35:112 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+05/27/2015 11:52:35:112 AM EDT     Starting directory name = GSA_Test_Files
+05/27/2015 11:52:35:112 AM EDT     Starting directory name with full path= 
+05/27/2015 11:52:35:127 AM EDT     Is this a directory? = true
+05/27/2015 11:52:35:127 AM EDT     Does the directory exist? = true
+05/27/2015 11:52:35:127 AM EDT     Last Modified: 1432243534376
+05/27/2015 11:52:35:127 AM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+05/27/2015 11:52:35:174 AM EDT     File List: []
+
+
+05/27/2015 12:12:23:614 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150527.121223614.815518
+05/27/2015 12:12:23:629 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/27/2015 12:12:25:176 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/27/2015 12:12:30:099 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+05/27/2015 12:12:30:099 PM EDT     Starting directory name = GSA_Test_Files
+05/27/2015 12:12:30:099 PM EDT     Starting directory name with full path= 
+05/27/2015 12:14:32:922 PM EDT     Is this a directory? = true
+05/27/2015 12:14:36:985 PM EDT     Does the directory exist? = true
+05/27/2015 12:14:41:391 PM EDT     Last Modified: 1432243534376
+05/27/2015 12:14:45:063 PM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+05/27/2015 12:17:57:190 PM EDT     File List: []
+
+
+05/27/2015 04:59:13:580 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150527.165913580.749703
+05/27/2015 04:59:13:580 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/27/2015 04:59:15:158 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/27/2015 04:59:19:673 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+05/27/2015 05:01:01:768 PM EDT     Starting directory name = GSA_Test_Files
+05/27/2015 05:01:05:706 PM EDT     Starting directory name with full path= 
+05/27/2015 05:01:38:627 PM EDT     Is this a directory? = true
+05/27/2015 05:01:40:846 PM EDT     Does the directory exist? = true
+05/27/2015 05:01:46:784 PM EDT     Last Modified: 1432243534376
+05/27/2015 05:01:52:393 PM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+05/27/2015 05:02:30:393 PM EDT     File Name = ace-cst-daily.bqy
+05/27/2015 05:02:42:596 PM EDT     Does the file exist? = true
+05/27/2015 05:03:31:299 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:03:44:268 PM EDT     Root: C:\
+05/27/2015 05:03:56:518 PM EDT     Last Modified: 2015-05-21T21:14:32.797851Z
+05/27/2015 05:04:10:221 PM EDT     Created: 2015-05-21T21:14:29.875976Z
+05/27/2015 05:04:15:549 PM EDT     Last Accessed: 2015-05-21T21:14:29.875976Z
+05/27/2015 05:04:18:768 PM EDT     File Size: 136 kb
+05/27/2015 05:04:30:534 PM EDT     File Name = agent-mtd-ca-offshift.bqy
+05/27/2015 05:04:43:502 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:534 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:534 PM EDT     Root: C:\
+05/27/2015 05:04:43:534 PM EDT     Last Modified: 2015-05-21T21:10:27.657226Z
+05/27/2015 05:04:43:549 PM EDT     Created: 2015-05-21T21:09:15.579101Z
+05/27/2015 05:04:43:549 PM EDT     Last Accessed: 2015-05-21T21:09:15.579101Z
+05/27/2015 05:04:43:549 PM EDT     File Size: 6329 kb
+05/27/2015 05:04:43:549 PM EDT     File Name = agt-mtd-dash-america.xls
+05/27/2015 05:04:43:549 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:565 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:565 PM EDT     Root: C:\
+05/27/2015 05:04:43:565 PM EDT     Last Modified: 2015-05-21T21:13:52.641601Z
+05/27/2015 05:04:43:565 PM EDT     Created: 2015-05-21T21:13:51.610351Z
+05/27/2015 05:04:43:565 PM EDT     Last Accessed: 2015-05-21T21:13:51.610351Z
+05/27/2015 05:04:43:581 PM EDT     File Size: 69 kb
+05/27/2015 05:04:43:581 PM EDT     File Name = agt-mtd-la.bqy
+05/27/2015 05:04:43:581 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:581 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:581 PM EDT     Root: C:\
+05/27/2015 05:04:43:596 PM EDT     Last Modified: 2015-05-21T21:11:15.891601Z
+05/27/2015 05:04:43:596 PM EDT     Created: 2015-05-21T21:10:40.704101Z
+05/27/2015 05:04:43:596 PM EDT     Last Accessed: 2015-05-21T21:10:40.704101Z
+05/27/2015 05:04:43:596 PM EDT     File Size: 3062 kb
+05/27/2015 05:04:43:596 PM EDT     File Name = agt-mtd-na.bqy
+05/27/2015 05:04:43:596 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:612 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:612 PM EDT     Root: C:\
+05/27/2015 05:04:43:612 PM EDT     Last Modified: 2015-05-21T21:12:01.047851Z
+05/27/2015 05:04:43:612 PM EDT     Created: 2015-05-21T21:10:48.063476Z
+05/27/2015 05:04:43:612 PM EDT     Last Accessed: 2015-05-21T21:10:48.063476Z
+05/27/2015 05:04:43:612 PM EDT     File Size: 6242 kb
+05/27/2015 05:04:43:612 PM EDT     File Name = agt-mtd-skill-na.bqy
+05/27/2015 05:04:43:612 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:612 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:612 PM EDT     Root: C:\
+05/27/2015 05:04:43:612 PM EDT     Last Modified: 2015-05-21T21:14:11.172851Z
+05/27/2015 05:04:43:627 PM EDT     Created: 2015-05-21T21:13:53.219726Z
+05/27/2015 05:04:43:643 PM EDT     Last Accessed: 2015-05-21T21:13:53.219726Z
+05/27/2015 05:04:43:643 PM EDT     File Size: 1604 kb
+05/27/2015 05:04:43:643 PM EDT     File Name = AG_Check_Table-20150519.bqy
+05/27/2015 05:04:43:643 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:643 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:659 PM EDT     Root: C:\
+05/27/2015 05:04:43:659 PM EDT     Last Modified: 2015-05-21T21:25:36.283203Z
+05/27/2015 05:04:43:674 PM EDT     Created: 2015-05-21T21:25:34.376953Z
+05/27/2015 05:04:43:674 PM EDT     Last Accessed: 2015-05-21T21:25:34.376953Z
+05/27/2015 05:04:43:674 PM EDT     File Size: 267 kb
+05/27/2015 05:04:43:674 PM EDT     File Name = AG_Check_Table-20150520.bqy
+05/27/2015 05:04:43:674 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:690 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:690 PM EDT     Root: C:\
+05/27/2015 05:04:43:690 PM EDT     Last Modified: 2015-05-21T21:25:10.455078Z
+05/27/2015 05:04:43:690 PM EDT     Created: 2015-05-21T21:25:06.767578Z
+05/27/2015 05:04:43:690 PM EDT     Last Accessed: 2015-05-21T21:25:06.767578Z
+05/27/2015 05:04:43:690 PM EDT     File Size: 268 kb
+05/27/2015 05:04:43:690 PM EDT     File Name = AG_Check_Table-20150521.bqy
+05/27/2015 05:04:43:706 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:706 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:706 PM EDT     Root: C:\
+05/27/2015 05:04:43:706 PM EDT     Last Modified: 2015-05-21T21:13:14.485351Z
+05/27/2015 05:04:43:706 PM EDT     Created: 2015-05-21T21:13:09.141601Z
+05/27/2015 05:04:43:706 PM EDT     Last Accessed: 2015-05-21T21:13:09.141601Z
+05/27/2015 05:04:43:706 PM EDT     File Size: 389 kb
+05/27/2015 05:04:43:721 PM EDT     File Name = amex-mtd-call.bqy
+05/27/2015 05:04:43:721 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:721 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:721 PM EDT     Root: C:\
+05/27/2015 05:04:43:721 PM EDT     Last Modified: 2015-05-21T21:12:32.954101Z
+05/27/2015 05:04:43:721 PM EDT     Created: 2015-05-21T21:12:19.500976Z
+05/27/2015 05:04:43:721 PM EDT     Last Accessed: 2015-05-21T21:12:19.500976Z
+05/27/2015 05:04:43:737 PM EDT     File Size: 1049 kb
+05/27/2015 05:04:43:737 PM EDT     File Name = Asa_skill_vdns.bqy
+05/27/2015 05:04:43:737 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:737 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:737 PM EDT     Root: C:\
+05/27/2015 05:04:43:737 PM EDT     Last Modified: 2015-05-21T21:20:15.125976Z
+05/27/2015 05:04:43:752 PM EDT     Created: 2015-05-21T21:20:13.719726Z
+05/27/2015 05:04:43:752 PM EDT     Last Accessed: 2015-05-21T21:20:13.719726Z
+05/27/2015 05:04:43:752 PM EDT     File Size: 142 kb
+05/27/2015 05:04:43:752 PM EDT     File Name = belk-mtd-automation.bqy
+05/27/2015 05:04:43:752 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:768 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:768 PM EDT     Root: C:\
+05/27/2015 05:04:43:768 PM EDT     Last Modified: 2015-05-21T21:14:47.391601Z
+05/27/2015 05:04:43:768 PM EDT     Created: 2015-05-21T21:14:40.360351Z
+05/27/2015 05:04:43:768 PM EDT     Last Accessed: 2015-05-21T21:14:40.360351Z
+05/27/2015 05:04:43:768 PM EDT     File Size: 488 kb
+05/27/2015 05:04:43:768 PM EDT     File Name = cci-agt-mtd.bqy
+05/27/2015 05:04:43:768 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:784 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:784 PM EDT     Root: C:\
+05/27/2015 05:04:43:784 PM EDT     Last Modified: 2015-05-21T21:09:14.985351Z
+05/27/2015 05:04:43:784 PM EDT     Created: 2015-05-21T21:08:55.142578Z
+05/27/2015 05:04:43:784 PM EDT     Last Accessed: 2015-05-21T21:08:55.142578Z
+05/27/2015 05:04:43:784 PM EDT     File Size: 1413 kb
+05/27/2015 05:04:43:784 PM EDT     File Name = cci-csat-qtm-compliance.bqy
+05/27/2015 05:04:43:799 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:799 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:799 PM EDT     Root: C:\
+05/27/2015 05:04:43:799 PM EDT     Last Modified: 2015-05-21T21:17:25.611328Z
+05/27/2015 05:04:43:799 PM EDT     Created: 2015-05-21T21:14:51.875976Z
+05/27/2015 05:04:43:799 PM EDT     Last Accessed: 2015-05-21T21:14:51.875976Z
+05/27/2015 05:04:43:799 PM EDT     File Size: 11958 kb
+05/27/2015 05:04:43:799 PM EDT     File Name = chat-mthly-cci_bqy.bqy
+05/27/2015 05:04:43:799 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:815 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:815 PM EDT     Root: C:\
+05/27/2015 05:04:43:815 PM EDT     Last Modified: 2015-05-21T21:20:51.610351Z
+05/27/2015 05:04:43:815 PM EDT     Created: 2015-05-21T21:20:49.625976Z
+05/27/2015 05:04:43:831 PM EDT     Last Accessed: 2015-05-21T21:20:49.625976Z
+05/27/2015 05:04:43:831 PM EDT     File Size: 161 kb
+05/27/2015 05:04:43:831 PM EDT     File Name = chat-mthly-kelly_bqy.bqy
+05/27/2015 05:04:43:831 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:831 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:846 PM EDT     Root: C:\
+05/27/2015 05:04:43:846 PM EDT     Last Modified: 2015-05-21T21:20:49.000976Z
+05/27/2015 05:04:43:846 PM EDT     Created: 2015-05-21T21:20:45.047851Z
+05/27/2015 05:04:43:846 PM EDT     Last Accessed: 2015-05-21T21:20:45.047851Z
+05/27/2015 05:04:43:846 PM EDT     File Size: 147 kb
+05/27/2015 05:04:43:846 PM EDT     File Name = chat-qfinity-mthly-na.bqy
+05/27/2015 05:04:43:846 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:862 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:862 PM EDT     Root: C:\
+05/27/2015 05:04:43:862 PM EDT     Last Modified: 2015-05-21T21:18:41.017578Z
+05/27/2015 05:04:43:862 PM EDT     Created: 2015-05-21T21:18:37.173828Z
+05/27/2015 05:04:43:862 PM EDT     Last Accessed: 2015-05-21T21:18:37.173828Z
+05/27/2015 05:04:43:862 PM EDT     File Size: 263 kb
+05/27/2015 05:04:43:862 PM EDT     File Name = claim-acct-na.bqy
+05/27/2015 05:04:43:877 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:877 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:877 PM EDT     Root: C:\
+05/27/2015 05:04:43:877 PM EDT     Last Modified: 2015-05-21T21:25:01.423828Z
+05/27/2015 05:04:43:877 PM EDT     Created: 2015-05-21T21:24:38.750976Z
+05/27/2015 05:04:43:877 PM EDT     Last Accessed: 2015-05-21T21:24:38.750976Z
+05/27/2015 05:04:43:877 PM EDT     File Size: 1452 kb
+05/27/2015 05:04:43:877 PM EDT     File Name = claim-il-na.bqy
+05/27/2015 05:04:43:893 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:893 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:909 PM EDT     Root: C:\
+05/27/2015 05:04:43:909 PM EDT     Last Modified: 2015-05-21T21:23:00.750976Z
+05/27/2015 05:04:43:909 PM EDT     Created: 2015-05-21T21:22:46.266601Z
+05/27/2015 05:04:43:909 PM EDT     Last Accessed: 2015-05-21T21:22:46.266601Z
+05/27/2015 05:04:43:909 PM EDT     File Size: 660 kb
+05/27/2015 05:04:43:909 PM EDT     File Name = cnh-mtd-newsla.bqy
+05/27/2015 05:04:43:909 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:924 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:940 PM EDT     Root: C:\
+05/27/2015 05:04:43:940 PM EDT     Last Modified: 2015-05-21T21:10:40.125976Z
+05/27/2015 05:04:43:940 PM EDT     Created: 2015-05-21T21:10:38.625976Z
+05/27/2015 05:04:43:940 PM EDT     Last Accessed: 2015-05-21T21:10:38.625976Z
+05/27/2015 05:04:43:940 PM EDT     File Size: 69 kb
+05/27/2015 05:04:43:940 PM EDT     File Name = csat-mtd-aircanada.bqy
+05/27/2015 05:04:43:940 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:956 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:956 PM EDT     Root: C:\
+05/27/2015 05:04:43:956 PM EDT     Last Modified: 2015-05-21T21:22:44.063476Z
+05/27/2015 05:04:43:956 PM EDT     Created: 2015-05-21T21:22:43.000976Z
+05/27/2015 05:04:43:956 PM EDT     Last Accessed: 2015-05-21T21:22:43.000976Z
+05/27/2015 05:04:43:971 PM EDT     File Size: 73 kb
+05/27/2015 05:04:43:971 PM EDT     File Name = csat-mtd-allianz.bqy
+05/27/2015 05:04:43:971 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:971 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:971 PM EDT     Root: C:\
+05/27/2015 05:04:43:987 PM EDT     Last Modified: 2015-05-21T21:22:43.157226Z
+05/27/2015 05:04:43:987 PM EDT     Created: 2015-05-21T21:22:42.000976Z
+05/27/2015 05:04:43:987 PM EDT     Last Accessed: 2015-05-21T21:22:42.000976Z
+05/27/2015 05:04:43:987 PM EDT     File Size: 75 kb
+05/27/2015 05:04:43:987 PM EDT     File Name = csat-mtd-amtrak.bqy
+05/27/2015 05:04:43:987 PM EDT     Does the file exist? = true
+05/27/2015 05:04:43:987 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:43:987 PM EDT     Root: C:\
+05/27/2015 05:04:44:002 PM EDT     Last Modified: 2015-05-21T21:22:41.235351Z
+05/27/2015 05:04:44:002 PM EDT     Created: 2015-05-21T21:22:39.891601Z
+05/27/2015 05:04:44:002 PM EDT     Last Accessed: 2015-05-21T21:22:39.891601Z
+05/27/2015 05:04:44:002 PM EDT     File Size: 77 kb
+05/27/2015 05:04:44:002 PM EDT     File Name = csat-mtd-appleleasure.bqy
+05/27/2015 05:04:44:002 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:018 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:018 PM EDT     Root: C:\
+05/27/2015 05:04:44:018 PM EDT     Last Modified: 2015-05-21T21:21:48.125976Z
+05/27/2015 05:04:44:018 PM EDT     Created: 2015-05-21T21:21:47.047851Z
+05/27/2015 05:04:44:034 PM EDT     Last Accessed: 2015-05-21T21:21:47.047851Z
+05/27/2015 05:04:44:034 PM EDT     File Size: 67 kb
+05/27/2015 05:04:44:034 PM EDT     File Name = csat-mtd-ati.bqy
+05/27/2015 05:04:44:034 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:034 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:034 PM EDT     Root: C:\
+05/27/2015 05:04:44:049 PM EDT     Last Modified: 2015-05-21T21:21:46.438476Z
+05/27/2015 05:04:44:049 PM EDT     Created: 2015-05-21T21:21:45.047851Z
+05/27/2015 05:04:44:049 PM EDT     Last Accessed: 2015-05-21T21:21:45.047851Z
+05/27/2015 05:04:44:049 PM EDT     File Size: 65 kb
+05/27/2015 05:04:44:049 PM EDT     File Name = csat-mtd-avis.bqy
+05/27/2015 05:04:44:049 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:049 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:065 PM EDT     Root: C:\
+05/27/2015 05:04:44:065 PM EDT     Last Modified: 2015-05-21T21:22:40.204101Z
+05/27/2015 05:04:44:065 PM EDT     Created: 2015-05-21T21:22:37.985351Z
+05/27/2015 05:04:44:065 PM EDT     Last Accessed: 2015-05-21T21:22:37.985351Z
+05/27/2015 05:04:44:065 PM EDT     File Size: 63 kb
+05/27/2015 05:04:44:065 PM EDT     File Name = csat-mtd-bcbsma.bqy
+05/27/2015 05:04:44:065 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:081 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:081 PM EDT     Root: C:\
+05/27/2015 05:04:44:081 PM EDT     Last Modified: 2015-05-21T21:22:39.219726Z
+05/27/2015 05:04:44:081 PM EDT     Created: 2015-05-21T21:22:36.985351Z
+05/27/2015 05:04:44:081 PM EDT     Last Accessed: 2015-05-21T21:22:36.985351Z
+05/27/2015 05:04:44:081 PM EDT     File Size: 76 kb
+05/27/2015 05:04:44:081 PM EDT     File Name = csat-mtd-bcgovt.bqy
+05/27/2015 05:04:44:096 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:096 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:096 PM EDT     Root: C:\
+05/27/2015 05:04:44:096 PM EDT     Last Modified: 2015-05-21T21:22:37.204101Z
+05/27/2015 05:04:44:096 PM EDT     Created: 2015-05-21T21:22:35.422851Z
+05/27/2015 05:04:44:096 PM EDT     Last Accessed: 2015-05-21T21:22:35.422851Z
+05/27/2015 05:04:44:112 PM EDT     File Size: 82 kb
+05/27/2015 05:04:44:112 PM EDT     File Name = csat-mtd-belk.bqy
+05/27/2015 05:04:44:112 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:112 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:112 PM EDT     Root: C:\
+05/27/2015 05:04:44:112 PM EDT     Last Modified: 2015-05-21T21:22:35.500976Z
+05/27/2015 05:04:44:127 PM EDT     Created: 2015-05-21T21:22:33.485351Z
+05/27/2015 05:04:44:174 PM EDT     Last Accessed: 2015-05-21T21:22:33.485351Z
+05/27/2015 05:04:44:190 PM EDT     File Size: 68 kb
+05/27/2015 05:04:44:190 PM EDT     File Name = csat-mtd-bergen.bqy
+05/27/2015 05:04:44:190 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:206 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:206 PM EDT     Root: C:\
+05/27/2015 05:04:44:206 PM EDT     Last Modified: 2015-05-21T21:22:42.094726Z
+05/27/2015 05:04:44:206 PM EDT     Created: 2015-05-21T21:22:40.938476Z
+05/27/2015 05:04:44:206 PM EDT     Last Accessed: 2015-05-21T21:22:40.938476Z
+05/27/2015 05:04:44:206 PM EDT     File Size: 58 kb
+05/27/2015 05:04:44:206 PM EDT     File Name = csat-mtd-bggroup.bqy
+05/27/2015 05:04:44:206 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:221 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:221 PM EDT     Root: C:\
+05/27/2015 05:04:44:237 PM EDT     Last Modified: 2015-05-21T21:22:34.610351Z
+05/27/2015 05:04:44:237 PM EDT     Created: 2015-05-21T21:22:32.750976Z
+05/27/2015 05:04:44:237 PM EDT     Last Accessed: 2015-05-21T21:22:32.750976Z
+05/27/2015 05:04:44:237 PM EDT     File Size: 69 kb
+05/27/2015 05:04:44:237 PM EDT     File Name = csat-mtd-bns.bqy
+05/27/2015 05:04:44:252 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:252 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:252 PM EDT     Root: C:\
+05/27/2015 05:04:44:252 PM EDT     Last Modified: 2015-05-21T21:22:12.969726Z
+05/27/2015 05:04:44:252 PM EDT     Created: 2015-05-21T21:22:10.813476Z
+05/27/2015 05:04:44:252 PM EDT     Last Accessed: 2015-05-21T21:22:10.813476Z
+05/27/2015 05:04:44:252 PM EDT     File Size: 113 kb
+05/27/2015 05:04:44:268 PM EDT     File Name = csat-mtd-cemex.bqy
+05/27/2015 05:04:44:268 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:268 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:268 PM EDT     Root: C:\
+05/27/2015 05:04:44:268 PM EDT     Last Modified: 2015-05-21T21:22:09.954101Z
+05/27/2015 05:04:44:268 PM EDT     Created: 2015-05-21T21:22:07.172851Z
+05/27/2015 05:04:44:268 PM EDT     Last Accessed: 2015-05-21T21:22:07.172851Z
+05/27/2015 05:04:44:284 PM EDT     File Size: 120 kb
+05/27/2015 05:04:44:284 PM EDT     File Name = csat-mtd-cleco.bqy
+05/27/2015 05:04:44:284 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:284 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:284 PM EDT     Root: C:\
+05/27/2015 05:04:44:284 PM EDT     Last Modified: 2015-05-21T21:21:44.407226Z
+05/27/2015 05:04:44:284 PM EDT     Created: 2015-05-21T21:21:43.204101Z
+05/27/2015 05:04:44:299 PM EDT     Last Accessed: 2015-05-21T21:21:43.204101Z
+05/27/2015 05:04:44:299 PM EDT     File Size: 51 kb
+05/27/2015 05:04:44:299 PM EDT     File Name = csat-mtd-cnh.bqy
+05/27/2015 05:04:44:299 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:299 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:299 PM EDT     Root: C:\
+05/27/2015 05:04:44:299 PM EDT     Last Modified: 2015-05-21T21:22:32.532226Z
+05/27/2015 05:04:44:315 PM EDT     Created: 2015-05-21T21:22:31.032226Z
+05/27/2015 05:04:44:315 PM EDT     Last Accessed: 2015-05-21T21:22:31.032226Z
+05/27/2015 05:04:44:315 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:315 PM EDT     File Name = csat-mtd-dow.bqy
+05/27/2015 05:04:44:315 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:331 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:331 PM EDT     Root: C:\
+05/27/2015 05:04:44:331 PM EDT     Last Modified: 2015-05-21T21:22:32.000976Z
+05/27/2015 05:04:44:331 PM EDT     Created: 2015-05-21T21:22:27.454101Z
+05/27/2015 05:04:44:331 PM EDT     Last Accessed: 2015-05-21T21:22:27.454101Z
+05/27/2015 05:04:44:331 PM EDT     File Size: 196 kb
+05/27/2015 05:04:44:331 PM EDT     File Name = csat-mtd-encana.bqy
+05/27/2015 05:04:44:331 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:346 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:346 PM EDT     Root: C:\
+05/27/2015 05:04:44:346 PM EDT     Last Modified: 2015-05-21T21:22:06.500976Z
+05/27/2015 05:04:44:346 PM EDT     Created: 2015-05-21T21:22:04.141601Z
+05/27/2015 05:04:44:346 PM EDT     Last Accessed: 2015-05-21T21:22:04.141601Z
+05/27/2015 05:04:44:346 PM EDT     File Size: 69 kb
+05/27/2015 05:04:44:346 PM EDT     File Name = csat-mtd-fluor.bqy
+05/27/2015 05:04:44:346 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:362 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:362 PM EDT     Root: C:\
+05/27/2015 05:04:44:362 PM EDT     Last Modified: 2015-05-21T21:22:30.125976Z
+05/27/2015 05:04:44:362 PM EDT     Created: 2015-05-21T21:22:26.594726Z
+05/27/2015 05:04:44:362 PM EDT     Last Accessed: 2015-05-21T21:22:26.594726Z
+05/27/2015 05:04:44:362 PM EDT     File Size: 104 kb
+05/27/2015 05:04:44:362 PM EDT     File Name = csat-mtd-hartford.bqy
+05/27/2015 05:04:44:362 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:377 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:377 PM EDT     Root: C:\
+05/27/2015 05:04:44:377 PM EDT     Last Modified: 2015-05-21T21:22:03.547851Z
+05/27/2015 05:04:44:377 PM EDT     Created: 2015-05-21T21:22:01.672851Z
+05/27/2015 05:04:44:377 PM EDT     Last Accessed: 2015-05-21T21:22:01.672851Z
+05/27/2015 05:04:44:377 PM EDT     File Size: 99 kb
+05/27/2015 05:04:44:377 PM EDT     File Name = csat-mtd-healthnet.bqy
+05/27/2015 05:04:44:393 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:393 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:393 PM EDT     Root: C:\
+05/27/2015 05:04:44:393 PM EDT     Last Modified: 2015-05-21T21:22:25.813476Z
+05/27/2015 05:04:44:393 PM EDT     Created: 2015-05-21T21:22:24.844726Z
+05/27/2015 05:04:44:393 PM EDT     Last Accessed: 2015-05-21T21:22:24.844726Z
+05/27/2015 05:04:44:409 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:409 PM EDT     File Name = csat-mtd-hertz.bqy
+05/27/2015 05:04:44:409 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:409 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:409 PM EDT     Root: C:\
+05/27/2015 05:04:44:424 PM EDT     Last Modified: 2015-05-21T21:22:26.454101Z
+05/27/2015 05:04:44:424 PM EDT     Created: 2015-05-21T21:22:23.844726Z
+05/27/2015 05:04:44:424 PM EDT     Last Accessed: 2015-05-21T21:22:23.844726Z
+05/27/2015 05:04:44:424 PM EDT     File Size: 130 kb
+05/27/2015 05:04:44:424 PM EDT     File Name = csat-mtd-inttruck.bqy
+05/27/2015 05:04:44:424 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:424 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:424 PM EDT     Root: C:\
+05/27/2015 05:04:44:424 PM EDT     Last Modified: 2015-05-21T21:22:23.875976Z
+05/27/2015 05:04:44:424 PM EDT     Created: 2015-05-21T21:22:22.657226Z
+05/27/2015 05:04:44:424 PM EDT     Last Accessed: 2015-05-21T21:22:22.657226Z
+05/27/2015 05:04:44:440 PM EDT     File Size: 75 kb
+05/27/2015 05:04:44:440 PM EDT     File Name = csat-mtd-manulife.bqy
+05/27/2015 05:04:44:440 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:456 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:456 PM EDT     Root: C:\
+05/27/2015 05:04:44:456 PM EDT     Last Modified: 2015-05-21T21:21:42.594726Z
+05/27/2015 05:04:44:456 PM EDT     Created: 2015-05-21T21:21:41.172851Z
+05/27/2015 05:04:44:456 PM EDT     Last Accessed: 2015-05-21T21:21:41.172851Z
+05/27/2015 05:04:44:456 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:456 PM EDT     File Name = csat-mtd-millercoors.bqy
+05/27/2015 05:04:44:471 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:471 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:471 PM EDT     Root: C:\
+05/27/2015 05:04:44:471 PM EDT     Last Modified: 2015-05-21T21:22:23.188476Z
+05/27/2015 05:04:44:471 PM EDT     Created: 2015-05-21T21:22:22.125976Z
+05/27/2015 05:04:44:471 PM EDT     Last Accessed: 2015-05-21T21:22:22.125976Z
+05/27/2015 05:04:44:471 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:471 PM EDT     File Name = csat-mtd-mssb.bqy
+05/27/2015 05:04:44:471 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:487 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:487 PM EDT     Root: C:\
+05/27/2015 05:04:44:487 PM EDT     Last Modified: 2015-05-21T21:22:21.625976Z
+05/27/2015 05:04:44:487 PM EDT     Created: 2015-05-21T21:22:20.079101Z
+05/27/2015 05:04:44:487 PM EDT     Last Accessed: 2015-05-21T21:22:20.079101Z
+05/27/2015 05:04:44:487 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:487 PM EDT     File Name = csat-mtd-nisource.bqy
+05/27/2015 05:04:44:487 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:502 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:502 PM EDT     Root: C:\
+05/27/2015 05:04:44:502 PM EDT     Last Modified: 2015-05-21T21:22:21.016601Z
+05/27/2015 05:04:44:502 PM EDT     Created: 2015-05-21T21:22:18.625976Z
+05/27/2015 05:04:44:502 PM EDT     Last Accessed: 2015-05-21T21:22:18.625976Z
+05/27/2015 05:04:44:502 PM EDT     File Size: 87 kb
+05/27/2015 05:04:44:502 PM EDT     File Name = csat-mtd-panasonic.bqy
+05/27/2015 05:04:44:502 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:518 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:518 PM EDT     Root: C:\
+05/27/2015 05:04:44:518 PM EDT     Last Modified: 2015-05-21T21:22:18.891601Z
+05/27/2015 05:04:44:518 PM EDT     Created: 2015-05-21T21:22:17.344726Z
+05/27/2015 05:04:44:518 PM EDT     Last Accessed: 2015-05-21T21:22:17.344726Z
+05/27/2015 05:04:44:518 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:518 PM EDT     File Name = csat-mtd-patriot.bqy
+05/27/2015 05:04:44:518 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:534 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:534 PM EDT     Root: C:\
+05/27/2015 05:04:44:534 PM EDT     Last Modified: 2015-05-21T21:22:16.688476Z
+05/27/2015 05:04:44:534 PM EDT     Created: 2015-05-21T21:22:15.641601Z
+05/27/2015 05:04:44:534 PM EDT     Last Accessed: 2015-05-21T21:22:15.641601Z
+05/27/2015 05:04:44:534 PM EDT     File Size: 52 kb
+05/27/2015 05:04:44:534 PM EDT     File Name = csat-mtd-rogers.bqy
+05/27/2015 05:04:44:534 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:534 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:549 PM EDT     Root: C:\
+05/27/2015 05:04:44:549 PM EDT     Last Modified: 2015-05-21T21:22:17.360351Z
+05/27/2015 05:04:44:549 PM EDT     Created: 2015-05-21T21:22:14.563476Z
+05/27/2015 05:04:44:549 PM EDT     Last Accessed: 2015-05-21T21:22:14.563476Z
+05/27/2015 05:04:44:549 PM EDT     File Size: 112 kb
+05/27/2015 05:04:44:549 PM EDT     File Name = csat-mtd-sic.bqy
+05/27/2015 05:04:44:549 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:549 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:549 PM EDT     Root: C:\
+05/27/2015 05:04:44:549 PM EDT     Last Modified: 2015-05-21T21:22:01.032226Z
+05/27/2015 05:04:44:549 PM EDT     Created: 2015-05-21T21:21:59.313476Z
+05/27/2015 05:04:44:565 PM EDT     Last Accessed: 2015-05-21T21:21:59.313476Z
+05/27/2015 05:04:44:565 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:565 PM EDT     File Name = csat-mtd-statestreet.bqy
+05/27/2015 05:04:44:565 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:565 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:565 PM EDT     Root: C:\
+05/27/2015 05:04:44:565 PM EDT     Last Modified: 2015-05-21T21:21:58.641601Z
+05/27/2015 05:04:44:581 PM EDT     Created: 2015-05-21T21:21:52.313476Z
+05/27/2015 05:04:44:581 PM EDT     Last Accessed: 2015-05-21T21:21:52.313476Z
+05/27/2015 05:04:44:581 PM EDT     File Size: 190 kb
+05/27/2015 05:04:44:581 PM EDT     File Name = csat-mtd-suntrust.bqy
+05/27/2015 05:04:44:581 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:581 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:596 PM EDT     Root: C:\
+05/27/2015 05:04:44:596 PM EDT     Last Modified: 2015-05-21T21:21:40.469726Z
+05/27/2015 05:04:44:596 PM EDT     Created: 2015-05-21T21:21:38.969726Z
+05/27/2015 05:04:44:596 PM EDT     Last Accessed: 2015-05-21T21:21:38.969726Z
+05/27/2015 05:04:44:596 PM EDT     File Size: 104 kb
+05/27/2015 05:04:44:596 PM EDT     File Name = csat-mtd-tgcs.bqy
+05/27/2015 05:04:44:596 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:596 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:596 PM EDT     Root: C:\
+05/27/2015 05:04:44:612 PM EDT     Last Modified: 2015-05-21T21:21:38.407226Z
+05/27/2015 05:04:44:612 PM EDT     Created: 2015-05-21T21:21:37.469726Z
+05/27/2015 05:04:44:612 PM EDT     Last Accessed: 2015-05-21T21:21:37.469726Z
+05/27/2015 05:04:44:612 PM EDT     File Size: 66 kb
+05/27/2015 05:04:44:612 PM EDT     File Name = csat-mtd-ula.bqy
+05/27/2015 05:04:44:612 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:612 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:612 PM EDT     Root: C:\
+05/27/2015 05:04:44:612 PM EDT     Last Modified: 2015-05-21T21:21:49.985351Z
+05/27/2015 05:04:44:612 PM EDT     Created: 2015-05-21T21:21:48.829101Z
+05/27/2015 05:04:44:612 PM EDT     Last Accessed: 2015-05-21T21:21:48.829101Z
+05/27/2015 05:04:44:627 PM EDT     File Size: 76 kb
+05/27/2015 05:04:44:627 PM EDT     File Name = csat-mtd-wpl.bqy
+05/27/2015 05:04:44:627 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:627 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:627 PM EDT     Root: C:\
+05/27/2015 05:04:44:627 PM EDT     Last Modified: 2015-05-21T21:22:14.954101Z
+05/27/2015 05:04:44:627 PM EDT     Created: 2015-05-21T21:22:13.641601Z
+05/27/2015 05:04:44:627 PM EDT     Last Accessed: 2015-05-21T21:22:13.641601Z
+05/27/2015 05:04:44:627 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:627 PM EDT     File Name = csat-mtd-wsib.bqy
+05/27/2015 05:04:44:627 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:643 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:643 PM EDT     Root: C:\
+05/27/2015 05:04:44:643 PM EDT     Last Modified: 2015-05-21T21:22:13.641601Z
+05/27/2015 05:04:44:643 PM EDT     Created: 2015-05-21T21:22:11.375976Z
+05/27/2015 05:04:44:659 PM EDT     Last Accessed: 2015-05-21T21:22:11.375976Z
+05/27/2015 05:04:44:659 PM EDT     File Size: 72 kb
+05/27/2015 05:04:44:659 PM EDT     File Name = CTS_Productivity_MTD.bqy
+05/27/2015 05:04:44:659 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:659 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:659 PM EDT     Root: C:\
+05/27/2015 05:04:44:659 PM EDT     Last Modified: 2015-05-21T21:25:22.658203Z
+05/27/2015 05:04:44:659 PM EDT     Created: 2015-05-21T21:25:11.033203Z
+05/27/2015 05:04:44:674 PM EDT     Last Accessed: 2015-05-21T21:25:11.033203Z
+05/27/2015 05:04:44:674 PM EDT     File Size: 1022 kb
+05/27/2015 05:04:44:674 PM EDT     File Name = Custom-mtd-arcadia.bqy
+05/27/2015 05:04:44:674 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:674 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:674 PM EDT     Root: C:\
+05/27/2015 05:04:44:674 PM EDT     Last Modified: 2015-05-21T21:20:54.141601Z
+05/27/2015 05:04:44:674 PM EDT     Created: 2015-05-21T21:20:52.204101Z
+05/27/2015 05:04:44:690 PM EDT     Last Accessed: 2015-05-21T21:20:52.204101Z
+05/27/2015 05:04:44:690 PM EDT     File Size: 158 kb
+05/27/2015 05:04:44:690 PM EDT     File Name = dash-mtd-america.bqy
+05/27/2015 05:04:44:690 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:690 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:690 PM EDT     Root: C:\
+05/27/2015 05:04:44:690 PM EDT     Last Modified: 2015-05-21T21:14:26.547851Z
+05/27/2015 05:04:44:690 PM EDT     Created: 2015-05-21T21:13:32.516601Z
+05/27/2015 05:04:44:690 PM EDT     Last Accessed: 2015-05-21T21:13:32.516601Z
+05/27/2015 05:04:44:690 PM EDT     File Size: 4096 kb
+05/27/2015 05:04:44:690 PM EDT     File Name = dash-mtd-ap.bqy
+05/27/2015 05:04:44:706 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:706 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:706 PM EDT     Root: C:\
+05/27/2015 05:04:44:706 PM EDT     Last Modified: 2015-05-21T21:22:10.547851Z
+05/27/2015 05:04:44:706 PM EDT     Created: 2015-05-21T21:21:35.141601Z
+05/27/2015 05:04:44:721 PM EDT     Last Accessed: 2015-05-21T21:21:35.141601Z
+05/27/2015 05:04:44:721 PM EDT     File Size: 2431 kb
+05/27/2015 05:04:44:721 PM EDT     File Name = dash-mtd-canadian-sector.bqy
+05/27/2015 05:04:44:721 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:721 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:721 PM EDT     Root: C:\
+05/27/2015 05:04:44:721 PM EDT     Last Modified: 2015-05-21T21:12:41.016601Z
+05/27/2015 05:04:44:721 PM EDT     Created: 2015-05-21T21:12:35.454101Z
+05/27/2015 05:04:44:737 PM EDT     Last Accessed: 2015-05-21T21:12:35.454101Z
+05/27/2015 05:04:44:737 PM EDT     File Size: 424 kb
+05/27/2015 05:04:44:737 PM EDT     File Name = dash-mtd-emea.bqy
+05/27/2015 05:04:44:737 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:737 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:737 PM EDT     Root: C:\
+05/27/2015 05:04:44:737 PM EDT     Last Modified: 2015-05-21T21:20:12.797851Z
+05/27/2015 05:04:44:737 PM EDT     Created: 2015-05-21T21:19:44.907226Z
+05/27/2015 05:04:44:737 PM EDT     Last Accessed: 2015-05-21T21:19:44.907226Z
+05/27/2015 05:04:44:737 PM EDT     File Size: 2537 kb
+05/27/2015 05:04:44:752 PM EDT     File Name = dash-mtd-ibm.bqy
+05/27/2015 05:04:44:752 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:752 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:752 PM EDT     Root: C:\
+05/27/2015 05:04:44:752 PM EDT     Last Modified: 2015-05-21T21:13:08.485351Z
+05/27/2015 05:04:44:752 PM EDT     Created: 2015-05-21T21:13:07.313476Z
+05/27/2015 05:04:44:752 PM EDT     Last Accessed: 2015-05-21T21:13:07.313476Z
+05/27/2015 05:04:44:752 PM EDT     File Size: 36 kb
+05/27/2015 05:04:44:752 PM EDT     File Name = dash-mtd-quality-emea.bqy
+05/27/2015 05:04:44:752 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:768 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:768 PM EDT     Root: C:\
+05/27/2015 05:04:44:768 PM EDT     Last Modified: 2015-05-21T21:20:32.891601Z
+05/27/2015 05:04:44:768 PM EDT     Created: 2015-05-21T21:20:15.750976Z
+05/27/2015 05:04:44:768 PM EDT     Last Accessed: 2015-05-21T21:20:15.750976Z
+05/27/2015 05:04:44:768 PM EDT     File Size: 1080 kb
+05/27/2015 05:04:44:768 PM EDT     File Name = dash-mtd-sla-ibm.bqy
+05/27/2015 05:04:44:768 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:784 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:784 PM EDT     Root: C:\
+05/27/2015 05:04:44:784 PM EDT     Last Modified: 2015-05-21T21:13:06.704101Z
+05/27/2015 05:04:44:784 PM EDT     Created: 2015-05-21T21:13:05.875976Z
+05/27/2015 05:04:44:784 PM EDT     Last Accessed: 2015-05-21T21:13:05.875976Z
+05/27/2015 05:04:44:784 PM EDT     File Size: 50 kb
+05/27/2015 05:04:44:784 PM EDT     File Name = dash-mtd-tor-mon-offshift.bqy
+05/27/2015 05:04:44:784 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:799 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:799 PM EDT     Root: C:\
+05/27/2015 05:04:44:799 PM EDT     Last Modified: 2015-05-21T21:08:43.923828Z
+05/27/2015 05:04:44:799 PM EDT     Created: 2015-05-21T21:07:06.189453Z
+05/27/2015 05:04:44:799 PM EDT     Last Accessed: 2015-05-21T21:07:06.189453Z
+05/27/2015 05:04:44:799 PM EDT     File Size: 7038 kb
+05/27/2015 05:04:44:799 PM EDT     File Name = dash-mtd-us-bld-offshift.bqy
+05/27/2015 05:04:44:799 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:799 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:799 PM EDT     Root: C:\
+05/27/2015 05:04:44:815 PM EDT     Last Modified: 2015-05-21T21:08:11.923828Z
+05/27/2015 05:04:44:815 PM EDT     Created: 2015-05-21T21:06:09.813476Z
+05/27/2015 05:04:44:815 PM EDT     Last Accessed: 2015-05-21T21:06:09.813476Z
+05/27/2015 05:04:44:815 PM EDT     File Size: 7493 kb
+05/27/2015 05:04:44:815 PM EDT     File Name = dash-wkly-lean-gdf-boulder.bqy
+05/27/2015 05:04:44:815 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:815 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:815 PM EDT     Root: C:\
+05/27/2015 05:04:44:815 PM EDT     Last Modified: 2015-05-21T21:25:12.548828Z
+05/27/2015 05:04:44:815 PM EDT     Created: 2015-05-21T21:24:00.766601Z
+05/27/2015 05:04:44:815 PM EDT     Last Accessed: 2015-05-21T21:24:00.766601Z
+05/27/2015 05:04:44:815 PM EDT     File Size: 4120 kb
+05/27/2015 05:04:44:815 PM EDT     File Name = dash-wkly-lean-gdf-toronto.bqy
+05/27/2015 05:04:44:831 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:831 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:831 PM EDT     Root: C:\
+05/27/2015 05:04:44:831 PM EDT     Last Modified: 2015-05-21T21:24:00.000976Z
+05/27/2015 05:04:44:831 PM EDT     Created: 2015-05-21T21:23:01.422851Z
+05/27/2015 05:04:44:831 PM EDT     Last Accessed: 2015-05-21T21:23:01.422851Z
+05/27/2015 05:04:44:831 PM EDT     File Size: 4458 kb
+05/27/2015 05:04:44:831 PM EDT     File Name = det-snap-mtd-hssbc_bqy.bqy
+05/27/2015 05:04:44:831 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:846 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:846 PM EDT     Root: C:\
+05/27/2015 05:04:44:846 PM EDT     Last Modified: 2015-05-21T21:10:47.407226Z
+05/27/2015 05:04:44:846 PM EDT     Created: 2015-05-21T21:08:30.111328Z
+05/27/2015 05:04:44:846 PM EDT     Last Accessed: 2015-05-21T21:08:30.111328Z
+05/27/2015 05:04:44:846 PM EDT     File Size: 10062 kb
+05/27/2015 05:04:44:846 PM EDT     File Name = dksd-comp-com.bqy
+05/27/2015 05:04:44:846 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:846 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:846 PM EDT     Root: C:\
+05/27/2015 05:04:44:862 PM EDT     Last Modified: 2015-05-21T21:25:48.548828Z
+05/27/2015 05:04:44:862 PM EDT     Created: 2015-05-21T21:25:26.283203Z
+05/27/2015 05:04:44:862 PM EDT     Last Accessed: 2015-05-21T21:25:26.283203Z
+05/27/2015 05:04:44:862 PM EDT     File Size: 2012 kb
+05/27/2015 05:04:44:862 PM EDT     File Name = dly-callstat-rogers.bqy
+05/27/2015 05:04:44:862 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:862 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:862 PM EDT     Root: C:\
+05/27/2015 05:04:44:862 PM EDT     Last Modified: 2015-05-21T21:13:50.875976Z
+05/27/2015 05:04:44:877 PM EDT     Created: 2015-05-21T21:13:29.344726Z
+05/27/2015 05:04:44:877 PM EDT     Last Accessed: 2015-05-21T21:13:29.344726Z
+05/27/2015 05:04:44:877 PM EDT     File Size: 1597 kb
+05/27/2015 05:04:44:877 PM EDT     File Name = dly-cms-data-check-20150520.bqy
+05/27/2015 05:04:44:877 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:877 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:893 PM EDT     Root: C:\
+05/27/2015 05:04:44:893 PM EDT     Last Modified: 2015-05-21T21:25:21.220703Z
+05/27/2015 05:04:44:893 PM EDT     Created: 2015-05-21T21:25:13.220703Z
+05/27/2015 05:04:44:893 PM EDT     Last Accessed: 2015-05-21T21:25:13.220703Z
+05/27/2015 05:04:44:893 PM EDT     File Size: 804 kb
+05/27/2015 05:04:44:893 PM EDT     File Name = dly-cms-data-check-20150521.bqy
+05/27/2015 05:04:44:893 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:893 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:909 PM EDT     Root: C:\
+05/27/2015 05:04:44:909 PM EDT     Last Modified: 2015-05-21T21:14:51.313476Z
+05/27/2015 05:04:44:909 PM EDT     Created: 2015-05-21T21:14:39.672851Z
+05/27/2015 05:04:44:909 PM EDT     Last Accessed: 2015-05-21T21:14:39.672851Z
+05/27/2015 05:04:44:909 PM EDT     File Size: 803 kb
+05/27/2015 05:04:44:909 PM EDT     File Name = dly-pmt-cms-data-check-20150519.bqy
+05/27/2015 05:04:44:909 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:909 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:924 PM EDT     Root: C:\
+05/27/2015 05:04:44:924 PM EDT     Last Modified: 2015-05-21T21:25:27.236328Z
+05/27/2015 05:04:44:924 PM EDT     Created: 2015-05-21T21:25:23.236328Z
+05/27/2015 05:04:44:924 PM EDT     Last Accessed: 2015-05-21T21:25:23.236328Z
+05/27/2015 05:04:44:924 PM EDT     File Size: 667 kb
+05/27/2015 05:04:44:924 PM EDT     File Name = dly-pmt-cms-data-check-20150520.bqy
+05/27/2015 05:04:44:924 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:924 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:924 PM EDT     Root: C:\
+05/27/2015 05:04:44:924 PM EDT     Last Modified: 2015-05-21T21:20:44.391601Z
+05/27/2015 05:04:44:940 PM EDT     Created: 2015-05-21T21:20:33.500976Z
+05/27/2015 05:04:44:940 PM EDT     Last Accessed: 2015-05-21T21:20:33.500976Z
+05/27/2015 05:04:44:940 PM EDT     File Size: 667 kb
+05/27/2015 05:04:44:940 PM EDT     File Name = dly-scotia-results.bqy
+05/27/2015 05:04:44:940 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:940 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:956 PM EDT     Root: C:\
+05/27/2015 05:04:44:956 PM EDT     Last Modified: 2015-05-21T21:13:28.766601Z
+05/27/2015 05:04:44:956 PM EDT     Created: 2015-05-21T21:13:27.032226Z
+05/27/2015 05:04:44:956 PM EDT     Last Accessed: 2015-05-21T21:13:27.032226Z
+05/27/2015 05:04:44:956 PM EDT     File Size: 102 kb
+05/27/2015 05:04:44:956 PM EDT     File Name = EMEA_Check_Table-20150519.bqy
+05/27/2015 05:04:44:956 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:956 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:971 PM EDT     Root: C:\
+05/27/2015 05:04:44:971 PM EDT     Last Modified: 2015-05-21T21:25:33.830078Z
+05/27/2015 05:04:44:971 PM EDT     Created: 2015-05-21T21:25:31.720703Z
+05/27/2015 05:04:44:971 PM EDT     Last Accessed: 2015-05-21T21:25:31.720703Z
+05/27/2015 05:04:44:971 PM EDT     File Size: 225 kb
+05/27/2015 05:04:44:971 PM EDT     File Name = EMEA_Check_Table-20150520.bqy
+05/27/2015 05:04:44:971 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:971 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:971 PM EDT     Root: C:\
+05/27/2015 05:04:44:987 PM EDT     Last Modified: 2015-05-21T21:25:06.189453Z
+05/27/2015 05:04:44:987 PM EDT     Created: 2015-05-21T21:25:02.033203Z
+05/27/2015 05:04:44:987 PM EDT     Last Accessed: 2015-05-21T21:25:02.033203Z
+05/27/2015 05:04:44:987 PM EDT     File Size: 225 kb
+05/27/2015 05:04:44:987 PM EDT     File Name = EMEA_Check_Table-20150521.bqy
+05/27/2015 05:04:44:987 PM EDT     Does the file exist? = true
+05/27/2015 05:04:44:987 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:44:987 PM EDT     Root: C:\
+05/27/2015 05:04:44:987 PM EDT     Last Modified: 2015-05-21T21:12:50.141601Z
+05/27/2015 05:04:44:987 PM EDT     Created: 2015-05-21T21:12:45.750976Z
+05/27/2015 05:04:45:002 PM EDT     Last Accessed: 2015-05-21T21:12:45.750976Z
+05/27/2015 05:04:45:002 PM EDT     File Size: 287 kb
+05/27/2015 05:04:45:002 PM EDT     File Name = etalk-cont-na.bqy
+05/27/2015 05:04:45:002 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:002 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:002 PM EDT     Root: C:\
+05/27/2015 05:04:45:002 PM EDT     Last Modified: 2015-05-21T21:08:27.908203Z
+05/27/2015 05:04:45:002 PM EDT     Created: 2015-05-21T21:08:12.611328Z
+05/27/2015 05:04:45:002 PM EDT     Last Accessed: 2015-05-21T21:08:12.611328Z
+05/27/2015 05:04:45:018 PM EDT     File Size: 1510 kb
+05/27/2015 05:04:45:018 PM EDT     File Name = ibm-single-english-daily-dashboard.bqy
+05/27/2015 05:04:45:018 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:018 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:018 PM EDT     Root: C:\
+05/27/2015 05:04:45:018 PM EDT     Last Modified: 2015-05-21T21:13:31.938476Z
+05/27/2015 05:04:45:018 PM EDT     Created: 2015-05-21T21:13:22.391601Z
+05/27/2015 05:04:45:018 PM EDT     Last Accessed: 2015-05-21T21:13:22.391601Z
+05/27/2015 05:04:45:018 PM EDT     File Size: 623 kb
+05/27/2015 05:04:45:018 PM EDT     File Name = IBM_EMEA_Opened_Incidents.bqy
+05/27/2015 05:04:45:018 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:034 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:034 PM EDT     Root: C:\
+05/27/2015 05:04:45:034 PM EDT     Last Modified: 2015-05-21T21:13:05.250976Z
+05/27/2015 05:04:45:034 PM EDT     Created: 2015-05-21T21:12:50.750976Z
+05/27/2015 05:04:45:034 PM EDT     Last Accessed: 2015-05-21T21:12:50.750976Z
+05/27/2015 05:04:45:034 PM EDT     File Size: 1071 kb
+05/27/2015 05:04:45:034 PM EDT     File Name = IBM_Opened_Incidents.bqy
+05/27/2015 05:04:45:049 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:049 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:049 PM EDT     Root: C:\
+05/27/2015 05:04:45:049 PM EDT     Last Modified: 2015-05-21T21:13:16.438476Z
+05/27/2015 05:04:45:049 PM EDT     Created: 2015-05-21T21:13:02.375976Z
+05/27/2015 05:04:45:065 PM EDT     Last Accessed: 2015-05-21T21:13:02.375976Z
+05/27/2015 05:04:45:065 PM EDT     File Size: 927 kb
+05/27/2015 05:04:45:065 PM EDT     File Name = iga-mtd-lcm-compliance.bqy
+05/27/2015 05:04:45:065 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:081 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:081 PM EDT     Root: C:\
+05/27/2015 05:04:45:081 PM EDT     Last Modified: 2015-05-21T21:14:36.938476Z
+05/27/2015 05:04:45:081 PM EDT     Created: 2015-05-21T21:14:34.407226Z
+05/27/2015 05:04:45:081 PM EDT     Last Accessed: 2015-05-21T21:14:34.407226Z
+05/27/2015 05:04:45:081 PM EDT     File Size: 196 kb
+05/27/2015 05:04:45:081 PM EDT     File Name = iga-mtd-tqe-compliance.bqy
+05/27/2015 05:04:45:081 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:096 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:096 PM EDT     Root: C:\
+05/27/2015 05:04:45:096 PM EDT     Last Modified: 2015-05-21T21:14:36.844726Z
+05/27/2015 05:04:45:096 PM EDT     Created: 2015-05-21T21:14:33.391601Z
+05/27/2015 05:04:45:096 PM EDT     Last Accessed: 2015-05-21T21:14:33.391601Z
+05/27/2015 05:04:45:096 PM EDT     File Size: 196 kb
+05/27/2015 05:04:45:096 PM EDT     File Name = iga-wkly-mtd-lcm.bqy
+05/27/2015 05:04:45:096 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:112 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:112 PM EDT     Root: C:\
+05/27/2015 05:04:45:112 PM EDT     Last Modified: 2015-05-21T21:12:46.750976Z
+05/27/2015 05:04:45:112 PM EDT     Created: 2015-05-21T21:12:44.032226Z
+05/27/2015 05:04:45:112 PM EDT     Last Accessed: 2015-05-21T21:12:44.032226Z
+05/27/2015 05:04:45:112 PM EDT     File Size: 110 kb
+05/27/2015 05:04:45:112 PM EDT     File Name = iga-wkly-mtd-qtm.bqy
+05/27/2015 05:04:45:112 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:112 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:127 PM EDT     Root: C:\
+05/27/2015 05:04:45:127 PM EDT     Last Modified: 2015-05-21T21:10:31.079101Z
+05/27/2015 05:04:45:127 PM EDT     Created: 2015-05-21T21:10:28.297851Z
+05/27/2015 05:04:45:127 PM EDT     Last Accessed: 2015-05-21T21:10:28.297851Z
+05/27/2015 05:04:45:127 PM EDT     File Size: 129 kb
+05/27/2015 05:04:45:127 PM EDT     File Name = iga-wkly-mtd-tqe.bqy
+05/27/2015 05:04:45:127 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:127 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:127 PM EDT     Root: C:\
+05/27/2015 05:04:45:127 PM EDT     Last Modified: 2015-05-21T21:08:29.408203Z
+05/27/2015 05:04:45:143 PM EDT     Created: 2015-05-21T21:08:28.501953Z
+05/27/2015 05:04:45:143 PM EDT     Last Accessed: 2015-05-21T21:08:28.501953Z
+05/27/2015 05:04:45:143 PM EDT     File Size: 112 kb
+05/27/2015 05:04:45:143 PM EDT     File Name = in-emp-data-compliance_bqy.bqy
+05/27/2015 05:04:45:143 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:143 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:143 PM EDT     Root: C:\
+05/27/2015 05:04:45:143 PM EDT     Last Modified: 2015-05-21T21:14:29.329101Z
+05/27/2015 05:04:45:143 PM EDT     Created: 2015-05-21T21:14:27.125976Z
+05/27/2015 05:04:45:143 PM EDT     Last Accessed: 2015-05-21T21:14:27.125976Z
+05/27/2015 05:04:45:159 PM EDT     File Size: 138 kb
+05/27/2015 05:04:45:159 PM EDT     File Name = kelly-agt-mtd.bqy
+05/27/2015 05:04:45:159 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:159 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:159 PM EDT     Root: C:\
+05/27/2015 05:04:45:159 PM EDT     Last Modified: 2015-05-21T21:08:54.595703Z
+05/27/2015 05:04:45:159 PM EDT     Created: 2015-05-21T21:08:44.548828Z
+05/27/2015 05:04:45:174 PM EDT     Last Accessed: 2015-05-21T21:08:44.548828Z
+05/27/2015 05:04:45:174 PM EDT     File Size: 683 kb
+05/27/2015 05:04:45:174 PM EDT     File Name = kelly-csat-qtm-compliance.bqy
+05/27/2015 05:04:45:174 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:174 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:174 PM EDT     Root: C:\
+05/27/2015 05:04:45:174 PM EDT     Last Modified: 2015-05-21T21:17:01.689453Z
+05/27/2015 05:04:45:174 PM EDT     Created: 2015-05-21T21:14:48.000976Z
+05/27/2015 05:04:45:174 PM EDT     Last Accessed: 2015-05-21T21:14:48.000976Z
+05/27/2015 05:04:45:174 PM EDT     File Size: 10144 kb
+05/27/2015 05:04:45:174 PM EDT     File Name = La-emp-data-compliance.bqy
+05/27/2015 05:04:45:174 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:190 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:190 PM EDT     Root: C:\
+05/27/2015 05:04:45:190 PM EDT     Last Modified: 2015-05-21T21:14:29.313476Z
+05/27/2015 05:04:45:190 PM EDT     Created: 2015-05-21T21:14:25.672851Z
+05/27/2015 05:04:45:190 PM EDT     Last Accessed: 2015-05-21T21:14:25.672851Z
+05/27/2015 05:04:45:190 PM EDT     File Size: 149 kb
+05/27/2015 05:04:45:190 PM EDT     File Name = Metric_Results_Daily.bqy
+05/27/2015 05:04:45:190 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:206 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:206 PM EDT     Root: C:\
+05/27/2015 05:04:45:206 PM EDT     Last Modified: 2015-05-21T21:19:44.313476Z
+05/27/2015 05:04:45:206 PM EDT     Created: 2015-05-21T21:19:42.922851Z
+05/27/2015 05:04:45:206 PM EDT     Last Accessed: 2015-05-21T21:19:42.922851Z
+05/27/2015 05:04:45:206 PM EDT     File Size: 49 kb
+05/27/2015 05:04:45:206 PM EDT     File Name = Metric_Results_YTD.bqy
+05/27/2015 05:04:45:206 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:206 PM EDT     Total Space: 153497Avaiilable Space19430Used Space134067
+05/27/2015 05:04:45:206 PM EDT     Root: C:\
+05/27/2015 05:04:45:221 PM EDT     Last Modified: 2015-05-21T21:19:42.313476Z
+05/27/2015 05:04:45:221 PM EDT     Created: 2015-05-21T21:19:40.610351Z
+05/27/2015 05:04:45:221 PM EDT     Last Accessed: 2015-05-21T21:19:40.610351Z
+05/27/2015 05:04:45:221 PM EDT     File Size: 87 kb
+05/27/2015 05:04:45:221 PM EDT     File Name = MSSB_Interval_Report.xls
+05/27/2015 05:04:45:221 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:221 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:221 PM EDT     Root: C:\
+05/27/2015 05:04:45:221 PM EDT     Last Modified: 2015-05-21T21:05:04.875976Z
+05/27/2015 05:04:45:221 PM EDT     Created: 2015-05-21T21:04:07.235351Z
+05/27/2015 05:04:45:221 PM EDT     Last Accessed: 2015-05-21T21:04:07.235351Z
+05/27/2015 05:04:45:237 PM EDT     File Size: 3062 kb
+05/27/2015 05:04:45:237 PM EDT     File Name = mtd-ace.bqy
+05/27/2015 05:04:45:237 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:237 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:237 PM EDT     Root: C:\
+05/27/2015 05:04:45:237 PM EDT     Last Modified: 2015-05-21T21:12:22.000976Z
+05/27/2015 05:04:45:237 PM EDT     Created: 2015-05-21T21:12:17.625976Z
+05/27/2015 05:04:45:237 PM EDT     Last Accessed: 2015-05-21T21:12:17.625976Z
+05/27/2015 05:04:45:237 PM EDT     File Size: 91 kb
+05/27/2015 05:04:45:237 PM EDT     File Name = mtd-aircanada.bqy
+05/27/2015 05:04:45:252 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:252 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:252 PM EDT     Root: C:\
+05/27/2015 05:04:45:252 PM EDT     Last Modified: 2015-05-21T21:12:17.079101Z
+05/27/2015 05:04:45:252 PM EDT     Created: 2015-05-21T21:12:15.438476Z
+05/27/2015 05:04:45:252 PM EDT     Last Accessed: 2015-05-21T21:12:15.438476Z
+05/27/2015 05:04:45:252 PM EDT     File Size: 87 kb
+05/27/2015 05:04:45:252 PM EDT     File Name = mtd-albertaeii.bqy
+05/27/2015 05:04:45:252 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:268 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:268 PM EDT     Root: C:\
+05/27/2015 05:04:45:268 PM EDT     Last Modified: 2015-05-21T21:12:15.938476Z
+05/27/2015 05:04:45:268 PM EDT     Created: 2015-05-21T21:12:14.329101Z
+05/27/2015 05:04:45:268 PM EDT     Last Accessed: 2015-05-21T21:12:14.329101Z
+05/27/2015 05:04:45:268 PM EDT     File Size: 84 kb
+05/27/2015 05:04:45:268 PM EDT     File Name = mtd-albertahealth.bqy
+05/27/2015 05:04:45:268 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:284 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:284 PM EDT     Root: C:\
+05/27/2015 05:04:45:284 PM EDT     Last Modified: 2015-05-21T21:12:14.704101Z
+05/27/2015 05:04:45:284 PM EDT     Created: 2015-05-21T21:12:12.594726Z
+05/27/2015 05:04:45:284 PM EDT     Last Accessed: 2015-05-21T21:12:12.594726Z
+05/27/2015 05:04:45:299 PM EDT     File Size: 88 kb
+05/27/2015 05:04:45:299 PM EDT     File Name = mtd-amex-cwc-rpt.bqy
+05/27/2015 05:04:45:299 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:315 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:315 PM EDT     Root: C:\
+05/27/2015 05:04:45:315 PM EDT     Last Modified: 2015-05-21T21:17:02.830078Z
+05/27/2015 05:04:45:315 PM EDT     Created: 2015-05-21T21:17:02.283203Z
+05/27/2015 05:04:45:315 PM EDT     Last Accessed: 2015-05-21T21:17:02.283203Z
+05/27/2015 05:04:45:315 PM EDT     File Size: 20 kb
+05/27/2015 05:04:45:315 PM EDT     File Name = mtd-att-anstime-details.bqy
+05/27/2015 05:04:45:315 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:315 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:331 PM EDT     Root: C:\
+05/27/2015 05:04:45:331 PM EDT     Last Modified: 2015-05-21T21:13:01.782226Z
+05/27/2015 05:04:45:331 PM EDT     Created: 2015-05-21T21:12:47.360351Z
+05/27/2015 05:04:45:331 PM EDT     Last Accessed: 2015-05-21T21:12:47.360351Z
+05/27/2015 05:04:45:331 PM EDT     File Size: 994 kb
+05/27/2015 05:04:45:331 PM EDT     File Name = mtd-bcgovt-sla.bqy
+05/27/2015 05:04:45:331 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:331 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:346 PM EDT     Root: C:\
+05/27/2015 05:04:45:346 PM EDT     Last Modified: 2015-05-21T21:12:41.016601Z
+05/27/2015 05:04:45:346 PM EDT     Created: 2015-05-21T21:12:39.782226Z
+05/27/2015 05:04:45:346 PM EDT     Last Accessed: 2015-05-21T21:12:39.782226Z
+05/27/2015 05:04:45:346 PM EDT     File Size: 87 kb
+05/27/2015 05:04:45:346 PM EDT     File Name = mtd-cci-empstaff.bqy
+05/27/2015 05:04:45:346 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:346 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:362 PM EDT     Root: C:\
+05/27/2015 05:04:45:362 PM EDT     Last Modified: 2015-05-21T21:07:05.517578Z
+05/27/2015 05:04:45:362 PM EDT     Created: 2015-05-21T21:06:34.938476Z
+05/27/2015 05:04:45:362 PM EDT     Last Accessed: 2015-05-21T21:06:34.938476Z
+05/27/2015 05:04:45:362 PM EDT     File Size: 3006 kb
+05/27/2015 05:04:45:362 PM EDT     File Name = mtd-encana.bqy
+05/27/2015 05:04:45:362 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:362 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:362 PM EDT     Root: C:\
+05/27/2015 05:04:45:362 PM EDT     Last Modified: 2015-05-21T21:12:13.750976Z
+05/27/2015 05:04:45:362 PM EDT     Created: 2015-05-21T21:12:10.750976Z
+05/27/2015 05:04:45:362 PM EDT     Last Accessed: 2015-05-21T21:12:10.750976Z
+05/27/2015 05:04:45:377 PM EDT     File Size: 85 kb
+05/27/2015 05:04:45:377 PM EDT     File Name = mtd-equifax-dailyrpt.bqy
+05/27/2015 05:04:45:377 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:377 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:377 PM EDT     Root: C:\
+05/27/2015 05:04:45:377 PM EDT     Last Modified: 2015-05-21T21:14:39.032226Z
+05/27/2015 05:04:45:377 PM EDT     Created: 2015-05-21T21:14:37.532226Z
+05/27/2015 05:04:45:377 PM EDT     Last Accessed: 2015-05-21T21:14:37.532226Z
+05/27/2015 05:04:45:377 PM EDT     File Size: 64 kb
+05/27/2015 05:04:45:377 PM EDT     File Name = mtd-gap.bqy
+05/27/2015 05:04:45:377 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:393 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:393 PM EDT     Root: C:\
+05/27/2015 05:04:45:393 PM EDT     Last Modified: 2015-05-21T21:12:11.938476Z
+05/27/2015 05:04:45:393 PM EDT     Created: 2015-05-21T21:12:09.500976Z
+05/27/2015 05:04:45:393 PM EDT     Last Accessed: 2015-05-21T21:12:09.500976Z
+05/27/2015 05:04:45:409 PM EDT     File Size: 95 kb
+05/27/2015 05:04:45:409 PM EDT     File Name = mtd-gates.bqy
+05/27/2015 05:04:45:409 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:409 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:409 PM EDT     Root: C:\
+05/27/2015 05:04:45:409 PM EDT     Last Modified: 2015-05-21T21:12:10.204101Z
+05/27/2015 05:04:45:409 PM EDT     Created: 2015-05-21T21:12:08.813476Z
+05/27/2015 05:04:45:409 PM EDT     Last Accessed: 2015-05-21T21:12:08.813476Z
+05/27/2015 05:04:45:409 PM EDT     File Size: 80 kb
+05/27/2015 05:04:45:424 PM EDT     File Name = mtd-globaliga-dashboard.bqy
+05/27/2015 05:04:45:424 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:424 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:424 PM EDT     Root: C:\
+05/27/2015 05:04:45:424 PM EDT     Last Modified: 2015-05-21T21:13:26.438476Z
+05/27/2015 05:04:45:424 PM EDT     Created: 2015-05-21T21:13:17.079101Z
+05/27/2015 05:04:45:424 PM EDT     Last Accessed: 2015-05-21T21:13:17.079101Z
+05/27/2015 05:04:45:424 PM EDT     File Size: 674 kb
+05/27/2015 05:04:45:424 PM EDT     File Name = mtd-healthnet.bqy
+05/27/2015 05:04:45:424 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:440 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:440 PM EDT     Root: C:\
+05/27/2015 05:04:45:440 PM EDT     Last Modified: 2015-05-21T21:12:08.782226Z
+05/27/2015 05:04:45:440 PM EDT     Created: 2015-05-21T21:12:07.297851Z
+05/27/2015 05:04:45:440 PM EDT     Last Accessed: 2015-05-21T21:12:07.297851Z
+05/27/2015 05:04:45:440 PM EDT     File Size: 89 kb
+05/27/2015 05:04:45:440 PM EDT     File Name = mtd-hertz.bqy
+05/27/2015 05:04:45:440 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:440 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:456 PM EDT     Root: C:\
+05/27/2015 05:04:45:456 PM EDT     Last Modified: 2015-05-21T21:12:08.204101Z
+05/27/2015 05:04:45:456 PM EDT     Created: 2015-05-21T21:12:06.141601Z
+05/27/2015 05:04:45:456 PM EDT     Last Accessed: 2015-05-21T21:12:06.141601Z
+05/27/2015 05:04:45:456 PM EDT     File Size: 98 kb
+05/27/2015 05:04:45:456 PM EDT     File Name = mtd-hssbc.bqy
+05/27/2015 05:04:45:456 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:456 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:456 PM EDT     Root: C:\
+05/27/2015 05:04:45:456 PM EDT     Last Modified: 2015-05-21T21:12:45.188476Z
+05/27/2015 05:04:45:471 PM EDT     Created: 2015-05-21T21:12:41.657226Z
+05/27/2015 05:04:45:471 PM EDT     Last Accessed: 2015-05-21T21:12:41.657226Z
+05/27/2015 05:04:45:471 PM EDT     File Size: 154 kb
+05/27/2015 05:04:45:471 PM EDT     File Name = mtd-hssbcexel.xls
+05/27/2015 05:04:45:471 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:471 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:487 PM EDT     Root: C:\
+05/27/2015 05:04:45:487 PM EDT     Last Modified: 2015-05-21T21:12:43.438476Z
+05/27/2015 05:04:45:487 PM EDT     Created: 2015-05-21T21:12:41.657226Z
+05/27/2015 05:04:45:487 PM EDT     Last Accessed: 2015-05-21T21:12:41.657226Z
+05/27/2015 05:04:45:487 PM EDT     File Size: 97 kb
+05/27/2015 05:04:45:487 PM EDT     File Name = mtd-imac-report.bqy
+05/27/2015 05:04:45:487 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:502 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:502 PM EDT     Root: C:\
+05/27/2015 05:04:45:502 PM EDT     Last Modified: 2015-05-21T21:21:30.969726Z
+05/27/2015 05:04:45:502 PM EDT     Created: 2015-05-21T21:21:29.063476Z
+05/27/2015 05:04:45:502 PM EDT     Last Accessed: 2015-05-21T21:21:29.063476Z
+05/27/2015 05:04:45:502 PM EDT     File Size: 284 kb
+05/27/2015 05:04:45:502 PM EDT     File Name = mtd-irvingoil.bqy
+05/27/2015 05:04:45:502 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:502 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:502 PM EDT     Root: C:\
+05/27/2015 05:04:45:502 PM EDT     Last Modified: 2015-05-21T21:12:06.735351Z
+05/27/2015 05:04:45:518 PM EDT     Created: 2015-05-21T21:12:04.454101Z
+05/27/2015 05:04:45:518 PM EDT     Last Accessed: 2015-05-21T21:12:04.454101Z
+05/27/2015 05:04:45:518 PM EDT     File Size: 85 kb
+05/27/2015 05:04:45:518 PM EDT     File Name = mtd-kelly-empstaff.bqy
+05/27/2015 05:04:45:518 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:518 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:518 PM EDT     Root: C:\
+05/27/2015 05:04:45:534 PM EDT     Last Modified: 2015-05-21T21:06:34.141601Z
+05/27/2015 05:04:45:534 PM EDT     Created: 2015-05-21T21:06:12.016601Z
+05/27/2015 05:04:45:534 PM EDT     Last Accessed: 2015-05-21T21:06:12.016601Z
+05/27/2015 05:04:45:534 PM EDT     File Size: 1167 kb
+05/27/2015 05:04:45:534 PM EDT     File Name = mtd-manulife.bqy
+05/27/2015 05:04:45:534 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:534 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:549 PM EDT     Root: C:\
+05/27/2015 05:04:45:549 PM EDT     Last Modified: 2015-05-21T21:12:05.454101Z
+05/27/2015 05:04:45:549 PM EDT     Created: 2015-05-21T21:12:03.813476Z
+05/27/2015 05:04:45:549 PM EDT     Last Accessed: 2015-05-21T21:12:03.813476Z
+05/27/2015 05:04:45:549 PM EDT     File Size: 82 kb
+05/27/2015 05:04:45:549 PM EDT     File Name = mtd-montreal-cst.bqy
+05/27/2015 05:04:45:549 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:549 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:565 PM EDT     Root: C:\
+05/27/2015 05:04:45:565 PM EDT     Last Modified: 2015-05-21T21:14:25.079101Z
+05/27/2015 05:04:45:565 PM EDT     Created: 2015-05-21T21:14:11.750976Z
+05/27/2015 05:04:45:565 PM EDT     Last Accessed: 2015-05-21T21:14:11.750976Z
+05/27/2015 05:04:45:565 PM EDT     File Size: 883 kb
+05/27/2015 05:04:45:565 PM EDT     File Name = mtd-panasonic.bqy
+05/27/2015 05:04:45:565 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:565 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:565 PM EDT     Root: C:\
+05/27/2015 05:04:45:565 PM EDT     Last Modified: 2015-05-21T21:12:03.891601Z
+05/27/2015 05:04:45:565 PM EDT     Created: 2015-05-21T21:12:02.219726Z
+05/27/2015 05:04:45:581 PM EDT     Last Accessed: 2015-05-21T21:12:02.219726Z
+05/27/2015 05:04:45:581 PM EDT     File Size: 87 kb
+05/27/2015 05:04:45:581 PM EDT     File Name = mtd-pfizer-ticket.bqy
+05/27/2015 05:04:45:581 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:581 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:581 PM EDT     Root: C:\
+05/27/2015 05:04:45:581 PM EDT     Last Modified: 2015-05-21T21:12:39.188476Z
+05/27/2015 05:04:45:581 PM EDT     Created: 2015-05-21T21:12:38.125976Z
+05/27/2015 05:04:45:581 PM EDT     Last Accessed: 2015-05-21T21:12:38.125976Z
+05/27/2015 05:04:45:581 PM EDT     File Size: 44 kb
+05/27/2015 05:04:45:581 PM EDT     File Name = mtd-rcc-pool.bqy
+05/27/2015 05:04:45:581 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:596 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:596 PM EDT     Root: C:\
+05/27/2015 05:04:45:596 PM EDT     Last Modified: 2015-05-21T21:06:08.954101Z
+05/27/2015 05:04:45:596 PM EDT     Created: 2015-05-21T21:04:46.438476Z
+05/27/2015 05:04:45:596 PM EDT     Last Accessed: 2015-05-21T21:04:46.438476Z
+05/27/2015 05:04:45:596 PM EDT     File Size: 6355 kb
+05/27/2015 05:04:45:612 PM EDT     File Name = mtd-sog-shiftrpt.bqy
+05/27/2015 05:04:45:612 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:612 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:612 PM EDT     Root: C:\
+05/27/2015 05:04:45:612 PM EDT     Last Modified: 2015-05-21T21:13:21.782226Z
+05/27/2015 05:04:45:612 PM EDT     Created: 2015-05-21T21:13:15.110351Z
+05/27/2015 05:04:45:612 PM EDT     Last Accessed: 2015-05-21T21:13:15.110351Z
+05/27/2015 05:04:45:612 PM EDT     File Size: 408 kb
+05/27/2015 05:04:45:612 PM EDT     File Name = mtd-standardinsurance.bqy
+05/27/2015 05:04:45:627 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:627 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:627 PM EDT     Root: C:\
+05/27/2015 05:04:45:627 PM EDT     Last Modified: 2015-05-21T21:12:03.219726Z
+05/27/2015 05:04:45:627 PM EDT     Created: 2015-05-21T21:12:01.594726Z
+05/27/2015 05:04:45:627 PM EDT     Last Accessed: 2015-05-21T21:12:01.594726Z
+05/27/2015 05:04:45:627 PM EDT     File Size: 85 kb
+05/27/2015 05:04:45:627 PM EDT     File Name = MTD_IBM_Ticket_Mthly_Report-20150519.bqy
+05/27/2015 05:04:45:627 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:643 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:643 PM EDT     Root: C:\
+05/27/2015 05:04:45:643 PM EDT     Last Modified: 2015-05-21T21:25:29.048828Z
+05/27/2015 05:04:45:643 PM EDT     Created: 2015-05-21T21:25:28.095703Z
+05/27/2015 05:04:45:643 PM EDT     Last Accessed: 2015-05-21T21:25:28.095703Z
+05/27/2015 05:04:45:643 PM EDT     File Size: 66 kb
+05/27/2015 05:04:45:643 PM EDT     File Name = MTD_IBM_Ticket_Mthly_Report-20150520.bqy
+05/27/2015 05:04:45:643 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:659 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:659 PM EDT     Root: C:\
+05/27/2015 05:04:45:659 PM EDT     Last Modified: 2015-05-21T21:22:45.485351Z
+05/27/2015 05:04:45:659 PM EDT     Created: 2015-05-21T21:22:43.985351Z
+05/27/2015 05:04:45:659 PM EDT     Last Accessed: 2015-05-21T21:22:43.985351Z
+05/27/2015 05:04:45:659 PM EDT     File Size: 66 kb
+05/27/2015 05:04:45:659 PM EDT     File Name = MTD_IBM_Ticket_Report.bqy
+05/27/2015 05:04:45:674 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:674 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:674 PM EDT     Root: C:\
+05/27/2015 05:04:45:674 PM EDT     Last Modified: 2015-05-21T21:12:34.766601Z
+05/27/2015 05:04:45:674 PM EDT     Created: 2015-05-21T21:12:33.594726Z
+05/27/2015 05:04:45:674 PM EDT     Last Accessed: 2015-05-21T21:12:33.594726Z
+05/27/2015 05:04:45:690 PM EDT     File Size: 66 kb
+05/27/2015 05:04:45:690 PM EDT     File Name = na-aged-ticket.bqy
+05/27/2015 05:04:45:690 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:690 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:690 PM EDT     Root: C:\
+05/27/2015 05:04:45:690 PM EDT     Last Modified: 2015-05-21T21:18:36.642578Z
+05/27/2015 05:04:45:690 PM EDT     Created: 2015-05-21T21:17:28.267578Z
+05/27/2015 05:04:45:690 PM EDT     Last Accessed: 2015-05-21T21:17:28.267578Z
+05/27/2015 05:04:45:706 PM EDT     File Size: 5321 kb
+05/27/2015 05:04:45:706 PM EDT     File Name = na-csat-qtm-complaince.bqy
+05/27/2015 05:04:45:706 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:706 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:706 PM EDT     Root: C:\
+05/27/2015 05:04:45:706 PM EDT     Last Modified: 2015-05-21T21:21:28.422851Z
+05/27/2015 05:04:45:706 PM EDT     Created: 2015-05-21T21:17:16.517578Z
+05/27/2015 05:04:45:706 PM EDT     Last Accessed: 2015-05-21T21:17:16.517578Z
+05/27/2015 05:04:45:706 PM EDT     File Size: 20525 kb
+05/27/2015 05:04:45:706 PM EDT     File Name = na-emp-data-compliance.bqy
+05/27/2015 05:04:45:706 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:721 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:721 PM EDT     Root: C:\
+05/27/2015 05:04:45:721 PM EDT     Last Modified: 2015-05-21T21:14:33.782226Z
+05/27/2015 05:04:45:721 PM EDT     Created: 2015-05-21T21:14:31.094726Z
+05/27/2015 05:04:45:721 PM EDT     Last Accessed: 2015-05-21T21:14:31.094726Z
+05/27/2015 05:04:45:721 PM EDT     File Size: 138 kb
+05/27/2015 05:04:45:721 PM EDT     File Name = NDSC_India_CLAIM_Weekly.bqy
+05/27/2015 05:04:45:737 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:737 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:737 PM EDT     Root: C:\
+05/27/2015 05:04:45:737 PM EDT     Last Modified: 2015-05-21T21:25:25.642578Z
+05/27/2015 05:04:45:737 PM EDT     Created: 2015-05-21T21:25:21.939453Z
+05/27/2015 05:04:45:737 PM EDT     Last Accessed: 2015-05-21T21:25:21.939453Z
+05/27/2015 05:04:45:737 PM EDT     File Size: 311 kb
+05/27/2015 05:04:45:737 PM EDT     File Name = new-acct-mtd-caclaimvalidation.bqy
+05/27/2015 05:04:45:752 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:752 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:752 PM EDT     Root: C:\
+05/27/2015 05:04:45:752 PM EDT     Last Modified: 2015-05-21T21:05:28.313476Z
+05/27/2015 05:04:45:752 PM EDT     Created: 2015-05-21T21:05:09.329101Z
+05/27/2015 05:04:45:752 PM EDT     Last Accessed: 2015-05-21T21:05:09.329101Z
+05/27/2015 05:04:45:752 PM EDT     File Size: 1051 kb
+05/27/2015 05:04:45:752 PM EDT     File Name = new-acct-mtd-usclaimvalidation.bqy
+05/27/2015 05:04:45:752 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:768 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:768 PM EDT     Root: C:\
+05/27/2015 05:04:45:768 PM EDT     Last Modified: 2015-05-21T21:06:11.360351Z
+05/27/2015 05:04:45:768 PM EDT     Created: 2015-05-21T21:05:29.079101Z
+05/27/2015 05:04:45:768 PM EDT     Last Accessed: 2015-05-21T21:05:29.079101Z
+05/27/2015 05:04:45:768 PM EDT     File Size: 3509 kb
+05/27/2015 05:04:45:768 PM EDT     File Name = Phillipines-emp-data-compliance.bqy
+05/27/2015 05:04:45:768 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:784 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:784 PM EDT     Root: C:\
+05/27/2015 05:04:45:784 PM EDT     Last Modified: 2015-05-21T21:14:39.766601Z
+05/27/2015 05:04:45:784 PM EDT     Created: 2015-05-21T21:14:37.438476Z
+05/27/2015 05:04:45:784 PM EDT     Last Accessed: 2015-05-21T21:14:37.438476Z
+05/27/2015 05:04:45:784 PM EDT     File Size: 119 kb
+05/27/2015 05:04:45:784 PM EDT     File Name = qtm-agent-recrodingplan.bqy
+05/27/2015 05:04:45:784 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:784 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:799 PM EDT     Root: C:\
+05/27/2015 05:04:45:799 PM EDT     Last Modified: 2015-05-21T21:10:38.047851Z
+05/27/2015 05:04:45:799 PM EDT     Created: 2015-05-21T21:10:31.641601Z
+05/27/2015 05:04:45:799 PM EDT     Last Accessed: 2015-05-21T21:10:31.641601Z
+05/27/2015 05:04:45:799 PM EDT     File Size: 481 kb
+05/27/2015 05:04:45:799 PM EDT     File Name = SDOM_DCS_RRM_CTS_2015-05-15.xls
+05/27/2015 05:04:45:799 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:799 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:799 PM EDT     Root: C:\
+05/27/2015 05:04:45:799 PM EDT     Last Modified: 2015-05-21T21:25:31.142578Z
+05/27/2015 05:04:45:799 PM EDT     Created: 2015-05-21T21:25:29.611328Z
+05/27/2015 05:04:45:799 PM EDT     Last Accessed: 2015-05-21T21:25:29.611328Z
+05/27/2015 05:04:45:815 PM EDT     File Size: 106 kb
+05/27/2015 05:04:45:815 PM EDT     File Name = SLA_Americas_TSRM_Daily_MTD.bqy
+05/27/2015 05:04:45:815 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:815 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:815 PM EDT     Root: C:\
+05/27/2015 05:04:45:815 PM EDT     Last Modified: 2015-05-21T21:21:34.532226Z
+05/27/2015 05:04:45:815 PM EDT     Created: 2015-05-21T21:20:54.907226Z
+05/27/2015 05:04:45:815 PM EDT     Last Accessed: 2015-05-21T21:20:54.907226Z
+05/27/2015 05:04:45:815 PM EDT     File Size: 3421 kb
+05/27/2015 05:04:45:815 PM EDT     File Name = Snap-mtd-ibmmegacenter-vdn.bqy
+05/27/2015 05:04:45:815 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:831 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:831 PM EDT     Root: C:\
+05/27/2015 05:04:45:831 PM EDT     Last Modified: 2015-05-21T21:17:27.658203Z
+05/27/2015 05:04:45:831 PM EDT     Created: 2015-05-21T21:17:26.173828Z
+05/27/2015 05:04:45:831 PM EDT     Last Accessed: 2015-05-21T21:17:26.173828Z
+05/27/2015 05:04:45:831 PM EDT     File Size: 86 kb
+05/27/2015 05:04:45:831 PM EDT     File Name = test2.txt
+05/27/2015 05:04:45:831 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:831 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:831 PM EDT     Root: C:\
+05/27/2015 05:04:45:846 PM EDT     Last Modified: 2015-05-21T21:14:30.391601Z
+05/27/2015 05:04:45:846 PM EDT     Created: 2015-05-21T21:14:29.860351Z
+05/27/2015 05:04:45:846 PM EDT     Last Accessed: 2015-05-21T21:14:29.860351Z
+05/27/2015 05:04:45:846 PM EDT     File Size: 0 kb
+05/27/2015 05:04:45:846 PM EDT     File Name = tqe-qfinity-mthly-na.bqy
+05/27/2015 05:04:45:846 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:846 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:862 PM EDT     Root: C:\
+05/27/2015 05:04:45:862 PM EDT     Last Modified: 2015-05-21T21:19:40.000976Z
+05/27/2015 05:04:45:862 PM EDT     Created: 2015-05-21T21:18:41.626953Z
+05/27/2015 05:04:45:862 PM EDT     Last Accessed: 2015-05-21T21:18:41.626953Z
+05/27/2015 05:04:45:862 PM EDT     File Size: 5517 kb
+05/27/2015 05:04:45:862 PM EDT     File Name = Wfm-daily-alladherence.bqy
+05/27/2015 05:04:45:862 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:862 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:862 PM EDT     Root: C:\
+05/27/2015 05:04:45:877 PM EDT     Last Modified: 2015-05-21T21:12:37.563476Z
+05/27/2015 05:04:45:877 PM EDT     Created: 2015-05-21T21:12:22.594726Z
+05/27/2015 05:04:45:877 PM EDT     Last Accessed: 2015-05-21T21:12:22.594726Z
+05/27/2015 05:04:45:877 PM EDT     File Size: 1261 kb
+05/27/2015 05:04:45:877 PM EDT     File Name = Wfm-daily-cciadherence.bqy
+05/27/2015 05:04:45:877 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:877 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:877 PM EDT     Root: C:\
+05/27/2015 05:04:45:877 PM EDT     Last Modified: 2015-05-21T21:11:46.172851Z
+05/27/2015 05:04:45:893 PM EDT     Created: 2015-05-21T21:11:30.157226Z
+05/27/2015 05:04:45:893 PM EDT     Last Accessed: 2015-05-21T21:11:30.157226Z
+05/27/2015 05:04:45:893 PM EDT     File Size: 1037 kb
+05/27/2015 05:04:45:893 PM EDT     File Name = Wfm-daily-kellyadherence.bqy
+05/27/2015 05:04:45:893 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:893 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:893 PM EDT     Root: C:\
+05/27/2015 05:04:45:893 PM EDT     Last Modified: 2015-05-21T21:11:29.610351Z
+05/27/2015 05:04:45:893 PM EDT     Created: 2015-05-21T21:11:16.454101Z
+05/27/2015 05:04:45:893 PM EDT     Last Accessed: 2015-05-21T21:11:16.454101Z
+05/27/2015 05:04:45:893 PM EDT     File Size: 1019 kb
+05/27/2015 05:04:45:893 PM EDT     File Name = Wfm-daily-VendorAdherence.bqy
+05/27/2015 05:04:45:909 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:909 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:909 PM EDT     Root: C:\
+05/27/2015 05:04:45:909 PM EDT     Last Modified: 2015-05-21T21:12:01.594726Z
+05/27/2015 05:04:45:909 PM EDT     Created: 2015-05-21T21:11:46.750976Z
+05/27/2015 05:04:45:909 PM EDT     Last Accessed: 2015-05-21T21:11:46.750976Z
+05/27/2015 05:04:45:909 PM EDT     File Size: 1051 kb
+05/27/2015 05:04:45:909 PM EDT     File Name = Wfm-mtd-cci.bqy
+05/27/2015 05:04:45:909 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:924 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:924 PM EDT     Root: C:\
+05/27/2015 05:04:45:924 PM EDT     Last Modified: 2015-05-21T21:04:06.141601Z
+05/27/2015 05:04:45:924 PM EDT     Created: 2015-05-21T21:03:30.469726Z
+05/27/2015 05:04:45:924 PM EDT     Last Accessed: 2015-05-21T21:03:30.469726Z
+05/27/2015 05:04:45:924 PM EDT     File Size: 2028 kb
+05/27/2015 05:04:45:924 PM EDT     File Name = Wfm-mtd-kelly.bqy
+05/27/2015 05:04:45:924 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:940 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:940 PM EDT     Root: C:\
+05/27/2015 05:04:45:940 PM EDT     Last Modified: 2015-05-21T21:03:29.625976Z
+05/27/2015 05:04:45:940 PM EDT     Created: 2015-05-21T21:02:59.672851Z
+05/27/2015 05:04:45:940 PM EDT     Last Accessed: 2015-05-21T21:02:59.672851Z
+05/27/2015 05:04:45:940 PM EDT     File Size: 1696 kb
+05/27/2015 05:04:45:940 PM EDT     File Name = Wfm-mtd-vendor.bqy
+05/27/2015 05:04:45:940 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:956 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:956 PM EDT     Root: C:\
+05/27/2015 05:04:45:956 PM EDT     Last Modified: 2015-05-21T21:03:30.125976Z
+05/27/2015 05:04:45:956 PM EDT     Created: 2015-05-21T21:02:59.532226Z
+05/27/2015 05:04:45:956 PM EDT     Last Accessed: 2015-05-21T21:02:59.532226Z
+05/27/2015 05:04:45:956 PM EDT     File Size: 2208 kb
+05/27/2015 05:04:45:956 PM EDT     File Name = WFM_MTD_Schedule_Adherence.bqy
+05/27/2015 05:04:45:956 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:956 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:956 PM EDT     Root: C:\
+05/27/2015 05:04:45:971 PM EDT     Last Modified: 2015-05-21T21:04:45.735351Z
+05/27/2015 05:04:45:971 PM EDT     Created: 2015-05-21T21:03:30.891601Z
+05/27/2015 05:04:45:971 PM EDT     Last Accessed: 2015-05-21T21:03:30.891601Z
+05/27/2015 05:04:45:971 PM EDT     File Size: 5070 kb
+05/27/2015 05:04:45:971 PM EDT     File Name = wkly-submitter-claim.bqy
+05/27/2015 05:04:45:971 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:971 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:971 PM EDT     Root: C:\
+05/27/2015 05:04:45:971 PM EDT     Last Modified: 2015-05-21T21:24:38.047851Z
+05/27/2015 05:04:45:971 PM EDT     Created: 2015-05-21T21:22:44.954101Z
+05/27/2015 05:04:45:971 PM EDT     Last Accessed: 2015-05-21T21:22:44.954101Z
+05/27/2015 05:04:45:987 PM EDT     File Size: 6906 kb
+05/27/2015 05:04:45:987 PM EDT     File Name = wkly-ytd-na-claim-cost.bqy
+05/27/2015 05:04:45:987 PM EDT     Does the file exist? = true
+05/27/2015 05:04:45:987 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:45:987 PM EDT     Root: C:\
+05/27/2015 05:04:45:987 PM EDT     Last Modified: 2015-05-21T21:21:36.907226Z
+05/27/2015 05:04:46:002 PM EDT     Created: 2015-05-21T21:21:31.579101Z
+05/27/2015 05:04:46:002 PM EDT     Last Accessed: 2015-05-21T21:21:31.579101Z
+05/27/2015 05:04:46:002 PM EDT     File Size: 427 kb
+05/27/2015 05:04:46:002 PM EDT     File Name = ytd-macys-vru-survey.bqy
+05/27/2015 05:04:46:002 PM EDT     Does the file exist? = true
+05/27/2015 05:04:46:002 PM EDT     Total Space: 153497Avaiilable Space19429Used Space134068
+05/27/2015 05:04:46:018 PM EDT     Root: C:\
+05/27/2015 05:04:46:018 PM EDT     Last Modified: 2015-05-21T21:17:15.892578Z
+05/27/2015 05:04:46:018 PM EDT     Created: 2015-05-21T21:17:03.439453Z
+05/27/2015 05:04:46:018 PM EDT     Last Accessed: 2015-05-21T21:17:03.439453Z
+05/27/2015 05:04:46:018 PM EDT     File Size: 855 kb
+05/27/2015 05:04:46:034 PM EDT     File List: []

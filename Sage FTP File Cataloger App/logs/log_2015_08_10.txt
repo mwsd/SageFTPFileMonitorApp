@@ -1,0 +1,53 @@
+
+
+08/10/2015 03:21:23:812 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150810.152123796.726478
+08/10/2015 03:21:23:828 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/10/2015 03:21:26:328 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/10/2015 03:22:16:765 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+08/10/2015 03:25:53:719 PM EDT     ERROR!  class java.lang.Exception: Error creating SSH/sftp session/channel - Auth fail
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerAppFTPClient.connectSFTPServer(SageFTPFileCatalogerAppFTPClient.java:153)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:118)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
+
+
+08/10/2015 03:29:34:218 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150810.152934218.398521
+08/10/2015 03:29:34:234 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/10/2015 03:29:35:812 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/10/2015 03:29:41:625 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/10/2015 03:32:31:531 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150810.153231531.330699
+08/10/2015 03:32:31:546 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/10/2015 03:32:33:062 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/10/2015 03:32:37:375 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+08/10/2015 03:35:54:218 PM EDT     File name: .
+08/10/2015 03:35:57:296 PM EDT     File Size: 16384
+08/10/2015 03:36:03:203 PM EDT     Last Accessed: Mon Aug 10 15:35:09 EDT 2015
+08/10/2015 03:36:11:343 PM EDT     Last Modified: Mon Aug 03 13:53:42 EDT 2015
+08/10/2015 03:36:18:125 PM EDT     Permissions: drwxrwxr-x
+08/10/2015 03:36:22:890 PM EDT     Flags: 15
+08/10/2015 03:36:32:109 PM EDT     File name: ..
+08/10/2015 03:36:35:578 PM EDT     File Size: 2048
+08/10/2015 03:36:39:031 PM EDT     Last Accessed: Mon Aug 10 04:11:41 EDT 2015
+08/10/2015 03:36:44:046 PM EDT     Last Modified: Wed May 16 17:10:20 EDT 2012
+08/10/2015 03:36:45:718 PM EDT     Permissions: drwxrwxr-x
+08/10/2015 03:36:46:765 PM EDT     Flags: 15
+08/10/2015 03:36:54:203 PM EDT     File name: ui
+08/10/2015 03:36:58:046 PM EDT     File Size: 2048
+08/10/2015 03:36:59:218 PM EDT     Last Accessed: Mon Aug 10 04:13:09 EDT 2015
+08/10/2015 03:37:00:812 PM EDT     Last Modified: Sat Dec 08 23:10:10 EST 2012
+08/10/2015 03:37:01:515 PM EDT     Permissions: drwxrwxr-x
+08/10/2015 03:37:02:390 PM EDT     Flags: 15
+08/10/2015 03:37:08:312 PM EDT     File name: reports
+08/10/2015 03:37:16:500 PM EDT     File Size: 1044480
+08/10/2015 03:37:29:671 PM EDT     Last Accessed: Mon Aug 10 15:21:53 EDT 2015
+08/10/2015 03:37:32:484 PM EDT     Last Modified: Mon Aug 10 09:16:23 EDT 2015
+08/10/2015 03:37:33:734 PM EDT     Permissions: drwxrwxr-x
+08/10/2015 03:37:34:359 PM EDT     Flags: 15
+08/10/2015 03:37:40:875 PM EDT     File name: feeds
+08/10/2015 03:37:42:593 PM EDT     File Size: 2048
+08/10/2015 03:37:42:937 PM EDT     Last Accessed: Mon Aug 10 04:11:47 EDT 2015
+08/10/2015 03:37:43:437 PM EDT     Last Modified: Thu Mar 26 11:57:59 EDT 2015
+08/10/2015 03:37:43:718 PM EDT     Permissions: drwxrwsr-x
+08/10/2015 03:37:44:031 PM EDT     Flags: 15

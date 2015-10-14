@@ -1,0 +1,46 @@
+
+
+05/22/2015 11:09:43:796 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150522.110943796.527759
+05/22/2015 11:09:43:843 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/22/2015 11:09:45:921 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+
+
+05/22/2015 11:13:19:203 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150522.111319203.830523
+05/22/2015 11:13:19:218 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/22/2015 11:13:20:734 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+
+
+05/22/2015 11:26:38:407 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150522.112638407.295549
+05/22/2015 11:26:38:422 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/22/2015 11:26:39:954 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/22/2015 11:29:26:938 AM EDT     ERROR!  class java.lang.Exception: Data source connection. SQL Exception: '[jcc][t4][2030][11211][3.52.90] A communication error occurred during operations on the connection's underlying socket, socket input stream, 
+or socket output stream.  Error location: Reply.fill().  Message: Connection reset. ERRORCODE=-4499, SQLSTATE=08001'.
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.services.tools.sage.utilities.AppJDBC.connectDataSource(AppJDBC.java:54)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.initializeJDBCConnection(SageFTPFileCatalogerApp.java:227)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:68)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
+
+
+05/22/2015 11:39:22:640 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150522.113922640.753563
+05/22/2015 11:39:22:640 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/22/2015 11:39:24:343 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/22/2015 11:39:25:484 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+05/22/2015 11:41:11:399 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150522.114111399.366330
+05/22/2015 11:41:11:415 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/22/2015 11:41:12:899 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/22/2015 11:41:13:868 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+05/22/2015 11:44:00:548 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150522.114400548.027709
+05/22/2015 11:44:00:564 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/22/2015 11:44:02:126 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/22/2015 11:44:06:750 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+05/22/2015 11:45:23:812 AM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150522.114523812.649989
+05/22/2015 11:45:23:828 AM EDT     Verifying application properties in 'config.properties' and any linked files...
+05/22/2015 11:45:25:828 AM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+05/22/2015 11:45:33:000 AM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1

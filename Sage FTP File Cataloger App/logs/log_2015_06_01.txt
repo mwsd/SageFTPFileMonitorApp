@@ -1,0 +1,195 @@
+
+
+06/01/2015 02:58:54:446 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150601.145854430.274382
+06/01/2015 02:58:54:508 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+06/01/2015 02:58:56:540 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+06/01/2015 02:59:02:399 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+06/01/2015 02:59:02:399 PM EDT     Starting directory name = GSA_Test_Files
+06/01/2015 02:59:02:399 PM EDT     Starting directory name with full path= 
+06/01/2015 02:59:16:508 PM EDT     Is this a directory? = true
+06/01/2015 02:59:16:508 PM EDT     Does the directory exist? = true
+06/01/2015 02:59:16:508 PM EDT     Last Modified: 1432243534376
+06/01/2015 02:59:16:711 PM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+06/01/2015 02:59:16:899 PM EDT     File Name = ace-cst-daily.bqy
+06/01/2015 02:59:16:899 PM EDT     File System Name = sun.nio.fs.WindowsFileSystem@1e2b5c60
+06/01/2015 02:59:16:899 PM EDT     Directory Tree Depth = 9
+06/01/2015 02:59:16:915 PM EDT     Parent Path = C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files
+06/01/2015 02:59:16:915 PM EDT     Root of the File Path: C:\
+06/01/2015 02:59:16:930 PM EDT     Total Space: 153497 Available Space 19375 Used Space 134122
+06/01/2015 02:59:16:930 PM EDT     Name of the File Storage: 
+06/01/2015 02:59:16:930 PM EDT     Type of the File Storage: NTFS
+06/01/2015 02:59:29:946 PM EDT     supported file attribute views: [acl, basic, owner, user, dos]
+06/01/2015 02:59:30:055 PM EDT     Last Modified: 2015-05-21T21:14:32.797851Z
+06/01/2015 02:59:30:055 PM EDT     Created: 2015-05-21T21:14:29.875976Z
+06/01/2015 02:59:30:055 PM EDT     Last Accessed: 2015-05-21T21:14:29.875976Z
+06/01/2015 02:59:30:055 PM EDT     File Size: 136 kb
+06/01/2015 02:59:30:071 PM EDT     File Content Type: null
+06/01/2015 02:59:33:024 PM EDT     SQL=SELECT "HostName", "Path", "Filename" FROM "SAGE"."FTP_File_Catalog" ORDER BY "Filename"
+06/01/2015 02:59:33:024 PM EDT     ERROR!  class com.ibm.db2.jcc.a.nn: DB2 SQL Error: SQLCODE=-206, SQLSTATE=42703, SQLERRMC=Path, DRIVER=3.52.90
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.db2.jcc.a.ad.a(ad.java:663)
+     at com.ibm.db2.jcc.a.ad.a(ad.java:60)
+     at com.ibm.db2.jcc.a.ad.a(ad.java:127)
+     at com.ibm.db2.jcc.a.rl.c(rl.java:2424)
+     at com.ibm.db2.jcc.a.rl.d(rl.java:2401)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:1902)
+     at com.ibm.db2.jcc.t4.db.g(db.java:138)
+     at com.ibm.db2.jcc.t4.db.a(db.java:38)
+     at com.ibm.db2.jcc.t4.t.a(t.java:32)
+     at com.ibm.db2.jcc.t4.sb.h(sb.java:141)
+     at com.ibm.db2.jcc.a.rl.Y(rl.java:1873)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:2746)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:591)
+     at com.ibm.db2.jcc.a.rl.executeQuery(rl.java:575)
+     at com.ibm.services.tools.sage.utilities.AppJDBC.getResultSet(AppJDBC.java:111)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.SelectFTPFileDataFromDB(SageFTPFileCatalogerApp.java:358)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:143)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
+
+
+06/01/2015 03:13:16:703 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150601.151316703.116718
+06/01/2015 03:13:16:718 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+06/01/2015 03:13:18:296 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+06/01/2015 03:13:19:281 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+06/01/2015 03:13:19:296 PM EDT     Starting directory name = GSA_Test_Files
+06/01/2015 03:13:19:296 PM EDT     Starting directory name with full path= 
+06/01/2015 03:13:25:828 PM EDT     Is this a directory? = true
+06/01/2015 03:13:25:828 PM EDT     Does the directory exist? = true
+06/01/2015 03:13:25:828 PM EDT     Last Modified: 1432243534376
+06/01/2015 03:13:25:843 PM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+06/01/2015 03:13:25:890 PM EDT     File Name = ace-cst-daily.bqy
+06/01/2015 03:13:25:890 PM EDT     File System Name = sun.nio.fs.WindowsFileSystem@9ce1480d
+06/01/2015 03:13:25:906 PM EDT     Directory Tree Depth = 9
+06/01/2015 03:13:25:906 PM EDT     Parent Path = C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files
+06/01/2015 03:13:25:906 PM EDT     Root of the File Path: C:\
+06/01/2015 03:13:25:921 PM EDT     Total Space: 153497 Available Space 19371 Used Space 134126
+06/01/2015 03:13:25:921 PM EDT     Name of the File Storage: 
+06/01/2015 03:13:25:921 PM EDT     Type of the File Storage: NTFS
+06/01/2015 03:13:30:078 PM EDT     supported file attribute views: [acl, basic, owner, user, dos]
+06/01/2015 03:13:30:109 PM EDT     Last Modified: 2015-05-21T21:14:32.797851Z
+06/01/2015 03:13:30:109 PM EDT     Created: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:13:30:109 PM EDT     Last Accessed: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:13:30:109 PM EDT     File Size: 136 kb
+06/01/2015 03:13:30:109 PM EDT     File Content Type: null
+06/01/2015 03:13:38:734 PM EDT     SQL=SELECT "NULL", "'C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files'", "[[Filename]]" FROM "SAGE"."FTP_File_Catalog" ORDER BY "Filename"
+
+
+06/01/2015 03:38:49:328 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150601.153849328.289767
+06/01/2015 03:38:49:343 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+06/01/2015 03:38:52:406 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+06/01/2015 03:38:54:578 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+06/01/2015 03:38:54:578 PM EDT     Starting directory name = GSA_Test_Files
+06/01/2015 03:38:54:578 PM EDT     Starting directory name with full path= 
+06/01/2015 03:39:21:937 PM EDT     Is this a directory? = true
+06/01/2015 03:39:21:937 PM EDT     Does the directory exist? = true
+06/01/2015 03:39:21:953 PM EDT     Last Modified: 1432243534376
+06/01/2015 03:39:22:218 PM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+06/01/2015 03:39:22:312 PM EDT     File Name = ace-cst-daily.bqy
+06/01/2015 03:39:22:312 PM EDT     File System Name = sun.nio.fs.WindowsFileSystem@4e446dbc
+06/01/2015 03:39:22:312 PM EDT     Directory Tree Depth = 9
+06/01/2015 03:39:22:312 PM EDT     Parent Path = C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files
+06/01/2015 03:39:22:312 PM EDT     Root of the File Path: C:\
+06/01/2015 03:39:22:328 PM EDT     Total Space: 153497 Available Space 19374 Used Space 134123
+06/01/2015 03:39:22:328 PM EDT     Name of the File Storage: 
+06/01/2015 03:39:22:343 PM EDT     Type of the File Storage: NTFS
+06/01/2015 03:39:24:406 PM EDT     supported file attribute views: [acl, basic, owner, user, dos]
+06/01/2015 03:39:24:468 PM EDT     Last Modified: 2015-05-21T21:14:32.797851Z
+06/01/2015 03:39:24:468 PM EDT     Created: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:39:24:484 PM EDT     Last Accessed: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:39:24:484 PM EDT     File Size: 136 kb
+06/01/2015 03:39:24:500 PM EDT     File Content Type: null
+06/01/2015 03:39:33:203 PM EDT     SQL=SELECT "HostName", "FilePath", "Filename" FROM "SAGE"."FTP_File_Catalog" WHERE "FilePath"=''C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files'' AND "FileName"=''ace-cst-daily.bqy' AND "HostName"=''TestServer''
+06/01/2015 03:41:57:218 PM EDT     ERROR!  class com.ibm.db2.jcc.a.nn: DB2 SQL Error: SQLCODE=-7, SQLSTATE=42601, SQLERRMC=\;HERE "FilePath"=''C:, DRIVER=3.52.90
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.db2.jcc.a.ad.a(ad.java:663)
+     at com.ibm.db2.jcc.a.ad.a(ad.java:60)
+     at com.ibm.db2.jcc.a.ad.a(ad.java:127)
+     at com.ibm.db2.jcc.a.rl.c(rl.java:2424)
+     at com.ibm.db2.jcc.a.rl.d(rl.java:2401)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:1902)
+     at com.ibm.db2.jcc.t4.db.g(db.java:138)
+     at com.ibm.db2.jcc.t4.db.a(db.java:38)
+     at com.ibm.db2.jcc.t4.t.a(t.java:32)
+     at com.ibm.db2.jcc.t4.sb.h(sb.java:141)
+     at com.ibm.db2.jcc.a.rl.Y(rl.java:1873)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:2746)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:591)
+     at com.ibm.db2.jcc.a.rl.executeQuery(rl.java:575)
+     at com.ibm.services.tools.sage.utilities.AppJDBC.getResultSet(AppJDBC.java:111)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.SelectFTPFileDataFromDB(SageFTPFileCatalogerApp.java:359)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:143)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
+
+
+06/01/2015 03:49:00:343 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150601.154900343.794050
+06/01/2015 03:49:00:359 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+06/01/2015 03:49:02:156 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+06/01/2015 03:49:03:093 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+06/01/2015 03:49:03:093 PM EDT     Starting directory name = GSA_Test_Files
+06/01/2015 03:49:03:093 PM EDT     Starting directory name with full path= 
+06/01/2015 03:49:07:109 PM EDT     Is this a directory? = true
+06/01/2015 03:49:07:109 PM EDT     Does the directory exist? = true
+06/01/2015 03:49:07:125 PM EDT     Last Modified: 1432243534376
+06/01/2015 03:49:07:125 PM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+06/01/2015 03:49:07:203 PM EDT     File Name = ace-cst-daily.bqy
+06/01/2015 03:49:07:203 PM EDT     File System Name = sun.nio.fs.WindowsFileSystem@e5f3315b
+06/01/2015 03:49:07:203 PM EDT     Directory Tree Depth = 9
+06/01/2015 03:49:07:218 PM EDT     Parent Path = C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files
+06/01/2015 03:49:07:218 PM EDT     Root of the File Path: C:\
+06/01/2015 03:49:07:218 PM EDT     Total Space: 153497 Available Space 19374 Used Space 134123
+06/01/2015 03:49:07:234 PM EDT     Name of the File Storage: 
+06/01/2015 03:49:07:234 PM EDT     Type of the File Storage: NTFS
+06/01/2015 03:49:08:328 PM EDT     supported file attribute views: [acl, basic, owner, user, dos]
+06/01/2015 03:49:08:359 PM EDT     Last Modified: 2015-05-21T21:14:32.797851Z
+06/01/2015 03:49:08:359 PM EDT     Created: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:49:08:375 PM EDT     Last Accessed: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:49:08:375 PM EDT     File Size: 136 kb
+06/01/2015 03:49:08:375 PM EDT     File Content Type: null
+06/01/2015 03:49:11:562 PM EDT     SQL=SELECT "HostName", "FilePath", "Filename" FROM "SAGE"."FTP_File_Catalog" WHERE "FilePath"='C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files' AND "FileName"='ace-cst-daily.bqy' AND "HostName"='TestServer'
+06/01/2015 03:50:13:640 PM EDT     ERROR!  class com.ibm.db2.jcc.a.nn: DB2 SQL Error: SQLCODE=-206, SQLSTATE=42703, SQLERRMC=Filename, DRIVER=3.52.90
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.db2.jcc.a.ad.a(ad.java:663)
+     at com.ibm.db2.jcc.a.ad.a(ad.java:60)
+     at com.ibm.db2.jcc.a.ad.a(ad.java:127)
+     at com.ibm.db2.jcc.a.rl.c(rl.java:2424)
+     at com.ibm.db2.jcc.a.rl.d(rl.java:2401)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:1902)
+     at com.ibm.db2.jcc.t4.db.g(db.java:138)
+     at com.ibm.db2.jcc.t4.db.a(db.java:38)
+     at com.ibm.db2.jcc.t4.t.a(t.java:32)
+     at com.ibm.db2.jcc.t4.sb.h(sb.java:141)
+     at com.ibm.db2.jcc.a.rl.Y(rl.java:1873)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:2746)
+     at com.ibm.db2.jcc.a.rl.a(rl.java:591)
+     at com.ibm.db2.jcc.a.rl.executeQuery(rl.java:575)
+     at com.ibm.services.tools.sage.utilities.AppJDBC.getResultSet(AppJDBC.java:111)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.SelectFTPFileDataFromDB(SageFTPFileCatalogerApp.java:359)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:143)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
+
+
+06/01/2015 03:58:13:656 PM EDT     Starting Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150601.155813656.462265
+06/01/2015 03:58:13:671 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+06/01/2015 03:58:15:421 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+06/01/2015 03:58:16:156 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+06/01/2015 03:58:16:156 PM EDT     Starting directory name = GSA_Test_Files
+06/01/2015 03:58:16:171 PM EDT     Starting directory name with full path= 
+06/01/2015 03:58:20:453 PM EDT     Is this a directory? = true
+06/01/2015 03:58:20:453 PM EDT     Does the directory exist? = true
+06/01/2015 03:58:20:453 PM EDT     Last Modified: 1432243534376
+06/01/2015 03:58:20:453 PM EDT     List of Files in GSA_Test_Files ... [ace-cst-daily.bqy, agent-mtd-ca-offshift.bqy, agt-mtd-dash-america.xls, agt-mtd-la.bqy, agt-mtd-na.bqy, agt-mtd-skill-na.bqy, AG_Check_Table-20150519.bqy, AG_Check_Table-20150520.bqy, AG_Check_Table-20150521.bqy, amex-mtd-call.bqy, Asa_skill_vdns.bqy, belk-mtd-automation.bqy, cci-agt-mtd.bqy, cci-csat-qtm-compliance.bqy, chat-mthly-cci_bqy.bqy, chat-mthly-kelly_bqy.bqy, chat-qfinity-mthly-na.bqy, claim-acct-na.bqy, claim-il-na.bqy, cnh-mtd-newsla.bqy, csat-mtd-aircanada.bqy, csat-mtd-allianz.bqy, csat-mtd-amtrak.bqy, csat-mtd-appleleasure.bqy, csat-mtd-ati.bqy, csat-mtd-avis.bqy, csat-mtd-bcbsma.bqy, csat-mtd-bcgovt.bqy, csat-mtd-belk.bqy, csat-mtd-bergen.bqy, csat-mtd-bggroup.bqy, csat-mtd-bns.bqy, csat-mtd-cemex.bqy, csat-mtd-cleco.bqy, csat-mtd-cnh.bqy, csat-mtd-dow.bqy, csat-mtd-encana.bqy, csat-mtd-fluor.bqy, csat-mtd-hartford.bqy, csat-mtd-healthnet.bqy, csat-mtd-hertz.bqy, csat-mtd-inttruck.bqy, csat-mtd-manulife.bqy, csat-mtd-millercoors.bqy, csat-mtd-mssb.bqy, csat-mtd-nisource.bqy, csat-mtd-panasonic.bqy, csat-mtd-patriot.bqy, csat-mtd-rogers.bqy, csat-mtd-sic.bqy, csat-mtd-statestreet.bqy, csat-mtd-suntrust.bqy, csat-mtd-tgcs.bqy, csat-mtd-ula.bqy, csat-mtd-wpl.bqy, csat-mtd-wsib.bqy, CTS_Productivity_MTD.bqy, Custom-mtd-arcadia.bqy, dash-mtd-america.bqy, dash-mtd-ap.bqy, dash-mtd-canadian-sector.bqy, dash-mtd-emea.bqy, dash-mtd-ibm.bqy, dash-mtd-quality-emea.bqy, dash-mtd-sla-ibm.bqy, dash-mtd-tor-mon-offshift.bqy, dash-mtd-us-bld-offshift.bqy, dash-wkly-lean-gdf-boulder.bqy, dash-wkly-lean-gdf-toronto.bqy, det-snap-mtd-hssbc_bqy.bqy, dksd-comp-com.bqy, dly-callstat-rogers.bqy, dly-cms-data-check-20150520.bqy, dly-cms-data-check-20150521.bqy, dly-pmt-cms-data-check-20150519.bqy, dly-pmt-cms-data-check-20150520.bqy, dly-scotia-results.bqy, EMEA_Check_Table-20150519.bqy, EMEA_Check_Table-20150520.bqy, EMEA_Check_Table-20150521.bqy, etalk-cont-na.bqy, ibm-single-english-daily-dashboard.bqy, IBM_EMEA_Opened_Incidents.bqy, IBM_Opened_Incidents.bqy, iga-mtd-lcm-compliance.bqy, iga-mtd-tqe-compliance.bqy, iga-wkly-mtd-lcm.bqy, iga-wkly-mtd-qtm.bqy, iga-wkly-mtd-tqe.bqy, in-emp-data-compliance_bqy.bqy, kelly-agt-mtd.bqy, kelly-csat-qtm-compliance.bqy, La-emp-data-compliance.bqy, Metric_Results_Daily.bqy, Metric_Results_YTD.bqy, MSSB_Interval_Report.xls, mtd-ace.bqy, mtd-aircanada.bqy, mtd-albertaeii.bqy, mtd-albertahealth.bqy, mtd-amex-cwc-rpt.bqy, mtd-att-anstime-details.bqy, mtd-bcgovt-sla.bqy, mtd-cci-empstaff.bqy, mtd-encana.bqy, mtd-equifax-dailyrpt.bqy, mtd-gap.bqy, mtd-gates.bqy, mtd-globaliga-dashboard.bqy, mtd-healthnet.bqy, mtd-hertz.bqy, mtd-hssbc.bqy, mtd-hssbcexel.xls, mtd-imac-report.bqy, mtd-irvingoil.bqy, mtd-kelly-empstaff.bqy, mtd-manulife.bqy, mtd-montreal-cst.bqy, mtd-panasonic.bqy, mtd-pfizer-ticket.bqy, mtd-rcc-pool.bqy, mtd-sog-shiftrpt.bqy, mtd-standardinsurance.bqy, MTD_IBM_Ticket_Mthly_Report-20150519.bqy, MTD_IBM_Ticket_Mthly_Report-20150520.bqy, MTD_IBM_Ticket_Report.bqy, na-aged-ticket.bqy, na-csat-qtm-complaince.bqy, na-emp-data-compliance.bqy, NDSC_India_CLAIM_Weekly.bqy, new-acct-mtd-caclaimvalidation.bqy, new-acct-mtd-usclaimvalidation.bqy, Phillipines-emp-data-compliance.bqy, qtm-agent-recrodingplan.bqy, SDOM_DCS_RRM_CTS_2015-05-15.xls, SLA_Americas_TSRM_Daily_MTD.bqy, Snap-mtd-ibmmegacenter-vdn.bqy, test2.txt, tqe-qfinity-mthly-na.bqy, Wfm-daily-alladherence.bqy, Wfm-daily-cciadherence.bqy, Wfm-daily-kellyadherence.bqy, Wfm-daily-VendorAdherence.bqy, Wfm-mtd-cci.bqy, Wfm-mtd-kelly.bqy, Wfm-mtd-vendor.bqy, WFM_MTD_Schedule_Adherence.bqy, wkly-submitter-claim.bqy, wkly-ytd-na-claim-cost.bqy, ytd-macys-vru-survey.bqy]
+06/01/2015 03:58:20:531 PM EDT     File Name = ace-cst-daily.bqy
+06/01/2015 03:58:20:531 PM EDT     File System Name = sun.nio.fs.WindowsFileSystem@106d30a6
+06/01/2015 03:58:20:546 PM EDT     Directory Tree Depth = 9
+06/01/2015 03:58:20:546 PM EDT     Parent Path = C:\Users\IBM_ADMIN\Desktop\Downloads\IBM\Sage\SageFTPFileMonitoring\GSA_Test_Files
+06/01/2015 03:58:20:546 PM EDT     Root of the File Path: C:\
+06/01/2015 03:58:20:546 PM EDT     Total Space: 153497 Available Space 19374 Used Space 134123
+06/01/2015 03:58:20:562 PM EDT     Name of the File Storage: 
+06/01/2015 03:58:20:562 PM EDT     Type of the File Storage: NTFS
+06/01/2015 03:58:22:078 PM EDT     supported file attribute views: [acl, basic, owner, user, dos]
+06/01/2015 03:58:22:109 PM EDT     Last Modified: 2015-05-21T21:14:32.797851Z
+06/01/2015 03:58:22:109 PM EDT     Created: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:58:22:109 PM EDT     Last Accessed: 2015-05-21T21:14:29.875976Z
+06/01/2015 03:58:22:125 PM EDT     File Size: 136 kb
+06/01/2015 03:58:22:125 PM EDT     File Content Type: null
+06/01/2015 04:01:03:783 PM EDT     Ready to insert file meta data..

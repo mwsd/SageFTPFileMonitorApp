@@ -1,0 +1,72 @@
+08/06/2015 01:40:49:830 PM EDT     ERROR!  class java.lang.Exception: Unable to locate the 'FTPServerName' property in the 'config.properties' file.
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.services.tools.sage.utilities.AppTools.getAppPropertyValueString(AppTools.java:812)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.setupAndVerifyAppProperties(SageFTPFileCatalogerApp.java:261)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:67)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
+
+
+08/06/2015 01:44:40:063 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.134440063.595421
+08/06/2015 01:44:40:079 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 01:44:41:704 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 01:44:44:672 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/06/2015 01:46:48:783 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.134648783.180969
+08/06/2015 01:46:48:798 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 01:46:50:361 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 01:46:51:126 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+08/06/2015 01:47:29:534 PM EDT     ERROR!  class java.lang.NullPointerException: null
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerAppFTPClient.configureFTPConnection(SageFTPFileCatalogerAppFTPClient.java:102)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:117)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
+
+
+08/06/2015 01:49:06:578 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.134906562.595479
+08/06/2015 01:49:06:578 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 01:49:08:093 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 01:49:08:875 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/06/2015 01:54:05:296 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.135405296.546805
+08/06/2015 01:54:05:312 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 01:54:06:812 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 01:54:07:593 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/06/2015 01:59:49:313 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.135949313.641849
+08/06/2015 01:59:49:329 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 01:59:50:844 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 01:59:51:610 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/06/2015 02:07:57:516 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.140757516.872887
+08/06/2015 02:07:57:516 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 02:07:59:250 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 02:07:59:985 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/06/2015 02:16:58:766 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.141658766.449792
+08/06/2015 02:16:58:782 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 02:17:00:407 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 02:17:01:110 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/06/2015 02:23:10:395 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.142310395.822834
+08/06/2015 02:23:10:411 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 02:23:11:942 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 02:23:12:661 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+
+
+08/06/2015 05:04:26:593 PM EDT     Starting Sage FTP File Cataloger App (v2015.05.21). Java App Runtime ID=20150806.170426593.531073
+08/06/2015 05:04:26:609 PM EDT     Verifying application properties in 'config.properties' and any linked files...
+08/06/2015 05:04:28:703 PM EDT     Connecting to JDBC data source: class=com.ibm.db2.jcc.DB2Driver, url=jdbc:db2://localhost:50001/sage_sbx, userid=DAS_USER1
+08/06/2015 05:04:39:546 PM EDT     Connected to JDBC data source: DB2 v10.1.0.872, release=0201010E, build=s120403, fixpack=0, OS=WIN32_NT 6.1 Service Pack 1
+08/06/2015 05:07:27:531 PM EDT     ERROR!  class java.lang.Exception: AppFTP FTPClient connect error. IOException: Could not parse response code.
+Server Reply: SSH-1.99-OpenSSH_6.0
+
+     - - - - - - - - - - - - - - - - Java Error Stack Trace - - - - - - - - - - - - - - - -
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerAppFTPClient.connectFTPSServer(SageFTPFileCatalogerAppFTPClient.java:69)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp.runApp(SageFTPFileCatalogerApp.java:118)
+     at com.ibm.services.tools.sage.app.SageFTPFileCatalogerApp_Launch.main(SageFTPFileCatalogerApp_Launch.java:31)
