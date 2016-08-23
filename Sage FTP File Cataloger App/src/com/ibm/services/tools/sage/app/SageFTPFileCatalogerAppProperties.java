@@ -19,26 +19,46 @@ public class SageFTPFileCatalogerAppProperties extends AppProperties {
 	private String ftpUserId;
 	private String ftpPassword;
 	private String dateModifiedFieldName;
-	private String sqlSelectFileData;
+	//private String sqlSelectFileData;
 	private String SqlInsertIntoFTP_File_Catalog;
-	private String SqlUpdateFTP_File_Catalog;
+	//private String SqlUpdateFTP_File_Catalog;
 	private String SqlUpdateStatusFTP_File_Catalog;
+	private Integer pageSize;
 	private String fileSizeUnit;
 	private Double fileSizeMultiplier;
 	private String fileSizeUnitValidValues[] = {"byte","kbyte","mbyte","gbyte","tbyte"};
-	private Double fileSizeMultiplierValidValues[] = {1.0,1024.0,1024.0*1024.0,1024.0*1024.0*1024.0,1024.0*1024.0*1024.0*1024.0};
+	static final double KB = 1024.0;
+	static final double ONE = 1.0;
+	private double fileSizeMultiplierValidValues[] = {ONE,KB,KB*KB,KB*KB*KB,KB*KB*KB*KB};
 	private String SqlInsertIntoDB_Activity;
-	private Integer lastModDate_ColNum;
+	//private Integer lastModDate_ColNum;
 	private String currentFileID;
 	private String SqlFetchAllRows;
+	private String SqlFetchAllRows_Activity;
 	private Integer hostName_ColNum;
 	private Integer filePath_ColNum;
 	private Integer fileName_ColNum;
+	private Integer FileSize_ColNum;
+	private Integer FileSize_Unit_ColNum;
+	private Integer FileCreate_Date_ColNum;
+	private Integer FileLastMod_Date_ColNum;
+	private Integer FilePermissions_ColNum;
+	private Integer FileOwners_ColNum;
+	private Integer FileStatus_ColNum;
+	private Integer FileType_ColNum;
+	private Integer activityType_ColNum;
+	private Integer activityDesc_ColNum;
+	private Integer activityFileId_ColNum;
+	
 	private Integer contentHeaderSize;
 	private String alertFileName;
 	private String fileSystemLocation;
 	private String ftpProtocol;
 	private String excludeDirs;
+	private String FileCatalogTableName;
+	private String FileActivityTableName;
+	
+	
 	
 	
 	/**
@@ -140,18 +160,6 @@ public class SageFTPFileCatalogerAppProperties extends AppProperties {
 		this.currentFileID = currentFileID;
 	}
 	/**
-	 * @return the lastModDate_ColNum
-	 */
-	public Integer getLastModDate_ColNum() {
-		return lastModDate_ColNum;
-	}
-	/**
-	 * @param lastModDate_ColNum the lastModDate_ColNum to set
-	 */
-	public void setLastModDate_ColNum(Integer lastModDate_ColNum) {
-		this.lastModDate_ColNum = lastModDate_ColNum;
-	}
-	/**
 	 * @return the sqlInsertIntoDB_Activity
 	 */
 	public String getSqlInsertIntoDB_Activity() {
@@ -163,31 +171,7 @@ public class SageFTPFileCatalogerAppProperties extends AppProperties {
 	public void setSqlInsertIntoDB_Activity(String sqlInsertIntoDB_Activity) {
 		SqlInsertIntoDB_Activity = sqlInsertIntoDB_Activity;
 	}
-	/**
-	 * @return the sqlUpdateFTP_File_Catalog
-	 */
-	public String getSqlUpdateFTP_File_Catalog() {
-		return SqlUpdateFTP_File_Catalog;
-	}
-	/**
-	 * @param sqlUpdateFTP_File_Catalog the sqlUpdateFTP_File_Catalog to set
-	 */
-	public void setSqlUpdateFTP_File_Catalog(String sqlUpdateFTP_File_Catalog) {
-		SqlUpdateFTP_File_Catalog = sqlUpdateFTP_File_Catalog;
-	}
-	/**
-	 * @return the sqlSelectFileData
-	 */
-	public String getSqlSelectFileData() {
-		return sqlSelectFileData;
-	}
-	/**
-	 * @param sqlSelectFileData the sqlSelectFileData to set
-	 */	
-	public void setSqlSelectFileData(String sqlSelectFileData) {
-		this.sqlSelectFileData = sqlSelectFileData;
-	}
-	/**
+	/*
 	 * @return the ftpServerName
 	 */
 	public String getFtpServerName() {
@@ -214,7 +198,7 @@ public class SageFTPFileCatalogerAppProperties extends AppProperties {
 	/**
 	 * @return the fileSizeMultiplier (calculated from fileSizeUnit
 	 */
-	public Double getFileSizeMultiplier() {
+	public double getFileSizeMultiplier() {
 		
 		 for (int i = 0; i < this.fileSizeUnitValidValues.length ; i++) {
 			if (fileSizeUnit.equalsIgnoreCase(this.fileSizeUnitValidValues[i])) {				
@@ -222,7 +206,7 @@ public class SageFTPFileCatalogerAppProperties extends AppProperties {
 			}
 		 }	
 		 if (this.fileSizeMultiplier.isNaN() ) {
-			 return null;
+			 return 0.0;
 		 }
 		 else {
 			 return this.fileSizeMultiplier;	 
@@ -339,6 +323,184 @@ public class SageFTPFileCatalogerAppProperties extends AppProperties {
 	public void setExcludeDirs(String excludeDirs) {
 		this.excludeDirs = excludeDirs;
 	}
-
+	/**
+	 * @return the fileSize_ColNum
+	 */
+	public Integer getFileSize_ColNum() {
+		return FileSize_ColNum;
+	}
+	/**
+	 * @param fileSize_ColNum the fileSize_ColNum to set
+	 */
+	public void setFileSize_ColNum(Integer fileSize_ColNum) {
+		FileSize_ColNum = fileSize_ColNum;
+	}
+	/**
+	 * @return the fileSize_Unit_ColNum
+	 */
+	public Integer getFileSize_Unit_ColNum() {
+		return FileSize_Unit_ColNum;
+	}
+	/**
+	 * @param fileSize_Unit_ColNum the fileSize_Unit_ColNum to set
+	 */
+	public void setFileSize_Unit_ColNum(Integer fileSize_Unit_ColNum) {
+		FileSize_Unit_ColNum = fileSize_Unit_ColNum;
+	}
+	/**
+	 * @return the fileCreate_Date_ColNum
+	 */
+	public Integer getFileCreate_Date_ColNum() {
+		return FileCreate_Date_ColNum;
+	}
+	/**
+	 * @param fileCreate_Date_ColNum the fileCreate_Date_ColNum to set
+	 */
+	public void setFileCreate_Date_ColNum(Integer fileCreate_Date_ColNum) {
+		FileCreate_Date_ColNum = fileCreate_Date_ColNum;
+	}
+	/**
+	 * @return the fileLastMod_Date_ColNum
+	 */
+	public Integer getFileLastMod_Date_ColNum() {
+		return FileLastMod_Date_ColNum;
+	}
+	/**
+	 * @param fileLastMod_Date_ColNum the fileLastMod_Date_ColNum to set
+	 */
+	public void setFileLastMod_Date_ColNum(Integer fileLastMod_Date_ColNum) {
+		FileLastMod_Date_ColNum = fileLastMod_Date_ColNum;
+	}
+	/**
+	 * @return the filePermissions_ColNum
+	 */
+	public Integer getFilePermissions_ColNum() {
+		return FilePermissions_ColNum;
+	}
+	/**
+	 * @param filePermissions_ColNum the filePermissions_ColNum to set
+	 */
+	public void setFilePermissions_ColNum(Integer filePermissions_ColNum) {
+		FilePermissions_ColNum = filePermissions_ColNum;
+	}
+	/**
+	 * @return the fileOwners_ColNum
+	 */
+	public Integer getFileOwners_ColNum() {
+		return FileOwners_ColNum;
+	}
+	/**
+	 * @param fileOwners_ColNum the fileOwners_ColNum to set
+	 */
+	public void setFileOwners_ColNum(Integer fileOwners_ColNum) {
+		FileOwners_ColNum = fileOwners_ColNum;
+	}
+	/**
+	 * @return the fileStatus_ColNum
+	 */
+	public Integer getFileStatus_ColNum() {
+		return FileStatus_ColNum;
+	}
+	/**
+	 * @param fileStatus_ColNum the fileStatus_ColNum to set
+	 */
+	public void setFileStatus_ColNum(Integer fileStatus_ColNum) {
+		FileStatus_ColNum = fileStatus_ColNum;
+	}
+	/**
+	 * @return the fileType_ColNum
+	 */
+	public Integer getFileType_ColNum() {
+		return FileType_ColNum;
+	}
+	/**
+	 * @param fileType_ColNum the fileType_ColNum to set
+	 */
+	public void setFileType_ColNum(Integer fileType_ColNum) {
+		FileType_ColNum = fileType_ColNum;
+	}
+	/**
+	 * @return the sqlFetchAllRows_Activity
+	 */
+	public String getSqlFetchAllRows_Activity() {
+		return SqlFetchAllRows_Activity;
+	}
+	/**
+	 * @param sqlFetchAllRows_Activity the sqlFetchAllRows_Activity to set
+	 */
+	public void setSqlFetchAllRows_Activity(String sqlFetchAllRows_Activity) {
+		SqlFetchAllRows_Activity = sqlFetchAllRows_Activity;
+	}
+	/**
+	 * @return the activityType_ColNum
+	 */
+	public Integer getActivityType_ColNum() {
+		return activityType_ColNum;
+	}
+	/**
+	 * @param activityType_ColNum the activityType_ColNum to set
+	 */
+	public void setActivityType_ColNum(Integer activityType_ColNum) {
+		this.activityType_ColNum = activityType_ColNum;
+	}
+	/**
+	 * @return the activityDesc_ColNum
+	 */
+	public Integer getActivityDesc_ColNum() {
+		return activityDesc_ColNum;
+	}
+	/**
+	 * @param activityDesc_ColNum the activityDesc_ColNum to set
+	 */
+	public void setActivityDesc_ColNum(Integer activityDesc_ColNum) {
+		this.activityDesc_ColNum = activityDesc_ColNum;
+	}
+	/**
+	 * @return the activityFileId_ColNum
+	 */
+	public Integer getActivityFileId_ColNum() {
+		return activityFileId_ColNum;
+	}
+	/**
+	 * @param activityFileId_ColNum the activityFileId_ColNum to set
+	 */
+	public void setActivityFileId_ColNum(Integer activityFileId_ColNum) {
+		this.activityFileId_ColNum = activityFileId_ColNum;
+	}
+	/**
+	 * @return the pageSize
+	 */
+	public Integer getPageSize() {
+		return pageSize;
+	}
+	/**
+	 * @param pageSize the pageSize to set
+	 */
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+	}
+	/**
+	 * @return the fileCatalogTableName
+	 */
+	public String getFileCatalogTableName() {
+		return FileCatalogTableName;
+	}
+	/**
+	 * @param fileCatalogTableName the fileCatalogTableName to set
+	 */
+	public void setFileCatalogTableName(String fileCatalogTableName) {
+		FileCatalogTableName = fileCatalogTableName;
+	}
+	/**
+	 * @return the fileActivityTableName
+	 */
+	public String getFileActivityTableName() {
+		return FileActivityTableName;
+	}
+	/**
+	 * @param fileActivityTableName the fileActivityTableName to set
+	 */
+	public void setFileActivityTableName(String fileActivityTableName) {
+		FileActivityTableName = fileActivityTableName;
+	}
 }
-

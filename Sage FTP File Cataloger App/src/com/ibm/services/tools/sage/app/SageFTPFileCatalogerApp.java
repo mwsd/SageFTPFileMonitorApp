@@ -7,12 +7,16 @@ import java.nio.file.*;
 import java.nio.file.attribute.*;
 import java.net.URL;
 import java.sql.*;
+import javax.sql.rowset.*;
+import javax.sql.rowset.spi.*;
+import com.sun.rowset.CachedRowSetImpl;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Properties;
 import com.ibm.services.tools.sage.utilities.*;
 import org.apache.commons.io.*;
+import java.text.SimpleDateFormat;
 /****************************************************************************************
  * This class is the primary application class used for the backend processing for the "Sage FTP Monitoring" application.
  * The SageFTPFileCatalogerApp is the first of the 2 components that make up the Sage FTP Monitoring application.
@@ -74,12 +78,20 @@ public class SageFTPFileCatalogerApp {
 	public ArrayList<String> 	fOwners		= new ArrayList<String>(); // File Owners
 	public ArrayList<String> 	fHeaders	= new ArrayList<String>(); // File Headers
 	
+	// -- Array List of Cached DB column values and indexes
+	ArrayList<String> 	fileKey_db 			= new ArrayList<String>(); // File Names
+	ArrayList<String> 	fileDateModified_db = new ArrayList<String>(); // last modification date of files
+	ArrayList<String> 	fileId_db 			= new ArrayList<String>(); // File ID
+	ArrayList<Integer> 	fileRowId_db 		= new ArrayList<Integer>(); // Record Number
+	
 	//-- File DateTime Format
 	String fdtFormat;
-	//-- DB Result set Object 1
-	ResultSet rs1;
-	//-- DB Result set Object 1
-	ResultSet rs2;
+	//-- Cached DB Rowset Object 1
+	CachedRowSet rs1;
+	//-- Cached DB Rowset set Object 2
+	CachedRowSet rs2;
+	//-- Record counter for number of records nserted into the FTP File Activity Table
+	long fa = 0;
 	
 	public void runApp(String propertiesFileName) throws Exception{
 		
@@ -233,12 +245,6 @@ public class SageFTPFileCatalogerApp {
 				}
 			}
 			
-			//Log a series of properties of the directory to log output for diagnostics and development purposes
-			//AppLog.logActivity(appProps,"Is this a directory? = " + dir.isDirectory(), true, true);
-			//AppLog.logActivity(appProps,"Does the directory exist? = " + dir.exists(), true, true);
-			//AppLog.logActivity(appProps,"Last Modified: " + lastModDir, true, true);
-			//AppLog.logActivity(appProps,"List of Files in " + dirName_root + " ... " + Arrays.toString(fName.toArray()), true, true);
-			
 			/*
 			 * DEVELOPER NOTE:
 			 * Consider collecting all the file data in an Object List before attempting to
@@ -247,12 +253,73 @@ public class SageFTPFileCatalogerApp {
 			 * and will avoid a read from the file system before advancing to the next query each time.
 			 */
 			
-			//-- SCAN THE FILE SYSTEM (CACHE) AND UPDATE THE DB AS NEEDED 
-			//-- ================================================
-			scanFileSystem(appProps, jdbcDataSource);
+			//-- Establish a DB record cache for the FTP File Catalog table for processing locally in memory
+			//-- ===========================================================================================
 			
-			//-- SCAN THE DB RECORDS AND UPDATE AS 'INACTIVE' ANY RECORDS THAT ARE NOT FOUND IN THE FILE SYSTEM 
-			scanDBRecords(appProps,jdbcDataSource);
+			jdbcDataSource.dbConnection.setAutoCommit(false);  // Need to disable auto-commit for CachedRowSet
+			rs1 = null;
+			ResultSet rsLocal = jdbcDataSource.getResultSet(appProps.getSqlFetchAllRows(), appProps.getDbSQLTimeout()); //--create a new resulset from the SQL query
+		    rs1 = new CachedRowSetImpl(); //-- instantiate a new cached rowset implementation
+		    rs1.populate(rsLocal); //-- populate the CachedRowset from the query resultset
+		    rs1.setTableName(appProps.getFileCatalogTableName()); // Set the table name that is to be cached
+		    
+			//-- Establish a DB record cache for the FTP File Activity table for processing locally in memory
+			//-- ===========================================================================================
+			rs2 = null;
+			rsLocal = jdbcDataSource.getResultSet(appProps.getSqlFetchAllRows_Activity(), appProps.getDbSQLTimeout());//--create a new resulset from the SQL query
+		    rs2 = new CachedRowSetImpl(); //-- instantiate a new cached rowset implementation
+		    rs2.populate(rsLocal); //-- populate the CachedRowset from the query resultset
+		    rs2.setTableName(appProps.getFileActivityTableName()); // Set the table name that is to be cached
+
+		    /* The KeyColumns in the CachedRowSet have to be defined independent of underlying dadasource data object
+		     * The KeyColumns property is used to uniquely identify a record when the record set is synced with the data source  
+		     */
+		    int [] keys2 = {1};  // Set column 1 as the cached record key  in the RowSet
+	        rs2.setKeyColumns(keys2);
+	        
+	        //--Build a Hashtable here consisting of fHostName - fPath - fName so each filesystem file can be used to search the db row cache.
+	        //-- =============================================================================================================================
+        	ResultSetMetaData rsmd;
+	    	String colName1,colName2,colName3;
+	    	Integer ft = 0;
+	    	long recNo = 0;
+	        
+		 	AppLog.logActivity(appProps,"Number of records in this page?? " + rs1.size() + " page size = " + rs1.getPageSize()  , true, true);
+		 	rs1.beforeFirst(); //--Move the row cursor ahead of the first row
+		 	
+	        recNo = 0;
+	        while (rs1.next()) {
+	        	recNo++;
+	        	rsmd = rs1.getMetaData();
+	        	colName1 = rsmd.getColumnName(appProps.getFileName_ColNum());
+	        	colName2 = rsmd.getColumnName(appProps.getFilePath_ColNum());
+	        	colName3 = rsmd.getColumnName(appProps.getHostName_ColNum());
+	        	if (!fileKey_db.add(rs1.getString(colName1)+";"+rs1.getString(colName2)+";"+rs1.getString(colName3))) {
+	        		throw new Exception ("Could not add key value " + rs1.getString(colName1)+rs1.getString(colName2)+rs1.getString(colName3) + " to fileKey_db array");
+	        	}
+			
+	        	colName1 = rsmd.getColumnName(appProps.getFileLastMod_Date_ColNum());
+	        	fileDateModified_db.add(rs1.getTimestamp(colName1).toString());
+	        	fileId_db.add(rs1.getString(1));
+	        	fileRowId_db.add(rs1.getRow());
+	        } //-- end while(rs1.next())
+
+	        //-- SCAN THE FILE SYSTEM (CACHE) AND UPDATE THE File Catalog Table AS NEEDED 
+	        //-- ========================================================================
+	        ft = scanFileSystem(appProps, jdbcDataSource);
+	        
+	        AppLog.logActivity(appProps,"Finished posting records " , true, true);
+			AppLog.logActivity(appProps,"Number of cached files scanned: " + fName.size() , true, true);
+			AppLog.logActivity(appProps,"Total number of update/insert DB transactions: " + ft.toString() , true, true);	
+						
+			//-- SCAN THE DB RECORDS AND UPDATE AS 'Deleted' ANY RECORDS THAT ARE NOT FOUND IN THE FILE SYSTEM 
+			int fu = scanDBRecords(appProps,jdbcDataSource);
+			
+			AppLog.logActivity(appProps,"Finished posting file status updates" , true, true);
+			AppLog.logActivity(appProps,"Number of DB records scanned: " + rs1.size() , true, true);
+			AppLog.logActivity(appProps,"Number of records where status was marked 'Deleted': " + fu , true, true);			
+			AppLog.logActivity(appProps,"Source Database posts are complete" , true, true);
+			
 		
 		} catch (Exception e){
 	
@@ -341,22 +408,34 @@ public class SageFTPFileCatalogerApp {
 			//-- CUSTOM PARAMETERS
 			//-- =================
 			//-- Setup other custom app properties ---			
-			appProps.setSqlSelectFileData(AppTools.getAppPropertyValueString(props, fileName, "sqlSelectFileData", true, true, ""));
 			appProps.setSqlInsertIntoFTP_File_Catalog(AppTools.getAppPropertyValueString(props, fileName, "sqlInsertIntoFTP_File_Catalog", true, true, ""));
-			appProps.setSqlUpdateFTP_File_Catalog(AppTools.getAppPropertyValueString(props, fileName, "sqlUpdateFTP_File_Catalog", true, true, ""));
 			appProps.setFileDirectory(AppTools.getAppPropertyValueString(props, fileName, "fileDirectory", true, true, ""));
 			appProps.setFileSizeUnit(AppTools.getAppPropertyValueString(props, fileName, "fileSizeUnit", true, true, ""));
 			appProps.setDateModifiedFieldName(AppTools.getAppPropertyValueString(props, fileName, "dateModifiedFieldName", true, true, ""));
-			appProps.setLastModDate_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "lastModDate_ColNum", true, true, ""));
 			appProps.setSqlInsertIntoDB_Activity(AppTools.getAppPropertyValueString(props, fileName, "SqlInsertIntoDB_Activity", true, true, ""));
 			appProps.setSqlFetchAllRows(AppTools.getAppPropertyValueString(props, fileName, "SqlFetchAllRows", true, true, ""));
 			appProps.setSqlUpdateStatusFTP_File_Catalog(AppTools.getAppPropertyValueString(props, fileName, "SqlUpdateStatusFTP_File_Catalog", true, true, ""));
+			appProps.setPageSize(AppTools.getAppPropertyValueInt(props, fileName, "pageSize", true, true, ""));
 			
 			appProps.setContentHeaderSize(AppTools.getAppPropertyValueInt(props, fileName, "contentHeaderSize", true, true, ""));
 			
 			appProps.setHostName_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "hostName_ColNum", true, true, ""));
 			appProps.setFilePath_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "filePath_ColNum", true, true, ""));
 			appProps.setFileName_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileName_ColNum", true, true, ""));
+			appProps.setFileSize_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileSize_ColNum", true, true, ""));
+			appProps.setFileSize_Unit_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileSize_Unit_ColNum", true, true, ""));
+			appProps.setFileCreate_Date_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileCreate_Date_ColNum", true, true, ""));
+			appProps.setFileLastMod_Date_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileLastMod_Date_ColNum", true, true, ""));
+			appProps.setFilePermissions_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "filePermissions_ColNum", true, true, ""));
+			appProps.setFileOwners_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileOwners_ColNum", true, true, ""));
+			appProps.setFileStatus_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileStatus_ColNum", true, true, ""));
+			appProps.setFileType_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "fileType_ColNum", true, true, ""));
+			
+			appProps.setActivityType_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "activityType_ColNum", true, true, ""));
+			appProps.setActivityDesc_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "activityDesc_ColNum", true, true, ""));
+			appProps.setActivityFileId_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "activityFileId_ColNum", true, true, ""));
+			appProps.setSqlFetchAllRows_Activity(AppTools.getAppPropertyValueString(props, fileName, "SqlFetchAllRows_Activity", true, true, ""));
+
 			appProps.setAlertFileName(AppTools.getAppPropertyValueString(props, fileName, "alertFileName", true, true, ""));
 			appProps.setFileSystemLocation(AppTools.getAppPropertyValueString(props, fileName, "fileSystemLocation", true, true, ""));
 
@@ -367,6 +446,8 @@ public class SageFTPFileCatalogerApp {
 			appProps.setFtpPassword(AppTools.getAppPropertyValueString(props, fileName, "ftpPassword", true, true, ""));
 			appProps.setExcludeDirs(AppTools.getAppPropertyValueString(props, fileName, "excludeDirs", true, true, ""));
 			
+			appProps.setFileCatalogTableName(AppTools.getAppPropertyValueString(props, fileName, "fileCatalogTableName", true, true, ""));
+			appProps.setFileActivityTableName(AppTools.getAppPropertyValueString(props, fileName, "fileActivityTableName", true, true, ""));
 			
 			//-- RETURN TO CALLER
 			//-- Return the AppProperties object
@@ -427,43 +508,6 @@ public class SageFTPFileCatalogerApp {
 		}	 
 	}
 	
-	/****************************************************************************************************************
-	 * Builds the necessary SQL using the file meta data values and the AppProperties SQL template, then executes the SQL 
-	 * against the database using the AppJDBC data source
-	 * @param appProps 
-	 * @param jdbcDataSource
-	 * @throws Exception
-	 */
-	public ResultSet SelectFTPFileDataFromDB(
-			SageFTPFileCatalogerAppProperties appProps,
-			AppJDBC jdbcDataSource,
-			String serverName,
-			String filePath,
-			String fileName) throws Exception{
-		try{
-			//-- Get the SQL from the properties and update with actual values
-			
-			//-- Read the SQL statement template from the app properties bean into a local variable
-			String selectSQL = appProps.getSqlSelectFileData();
-			
-			//-- Substitute the hostname, file path and file name into the tags
-			selectSQL = AppTools.updateStringTagWithValue(selectSQL,"[[HostName]]", AppJDBC.prepObjectValueForSQL("string",serverName,false));
-			selectSQL = AppTools.updateStringTagWithValue(selectSQL,"[[FilePath]]", AppJDBC.prepObjectValueForSQL("string",filePath,false));
-			selectSQL = AppTools.updateStringTagWithValue(selectSQL,"[[FileName]]", AppJDBC.prepObjectValueForSQL("string", fileName,false));
-			
-			try {
-				//-- Get the resultset using the query and timeout from the config file
-				ResultSet rs = jdbcDataSource.getResultSet(selectSQL,appProps.getDbSQLTimeout());
-				return rs;
-			} catch (Exception e){
-				AppLog.logActivity(appProps,"SQL=" + selectSQL, true, true);
-				throw e;
-			}
-		} catch  (Exception e){
-			//-- If an error occurs, just "bubble it up" to the calling method
-			throw e;
-		}	 
-	}	// end of Method SelectFTPFileDataFromDB
 	
 	/****************************************************************************************************************
 	 * Builds the necessary SQL using the values in the AppProperties SQL template, then executes the SQL 
@@ -489,81 +533,76 @@ public class SageFTPFileCatalogerApp {
 			String permissions,
 			String owners,
 			String fileHeader) throws Exception{
+		
 		try{
-			
-			//-- The Basic File attributes class is platform independent
-			// *** This has been deprecated by making the caller supply the parameters which
-			// *** allows this method to be used from either local file system or remote FTP file system
-			
-			//BasicFileAttributes bfa = Files.readAttributes(pFile, BasicFileAttributes.class);
-			//String lastModDate = bfa.lastModifiedTime().toString();
-			//String createDate = bfa.creationTime().toString();
-			
+						
 			// --- Read the date format for file mod and file creation into local variables
 			String lastModDate_Format 	= this.fdtFormat; 
 			String createDate_Format 	= this.fdtFormat;
 			
+			//-- Extract the file extension from the file name
+			String fileExt = fileName.substring(fileName.lastIndexOf('.')+1);
+			
+			//-- Instantiate a meta data object for the result set
+		  	ResultSetMetaData rsmd = rs1.getMetaData();
+			
+		  	 // A updatable ResultSet has a special row that serves as a staging area
+	         // for building a row to be inserted.
+			rs1.moveToInsertRow();
+			
+			//-- Generated a new FileID for this new record
+			appProps.setCurrentFileID(AppTools.uniqueID());
+			rs1.updateString(1, appProps.getCurrentFileID());
+			
+			//--Populate the cached record columns
+			rs1.updateString(rsmd.getColumnName(appProps.getFileName_ColNum()), fileName);
+			rs1.updateString(rsmd.getColumnName(appProps.getFilePath_ColNum()), filePath);
+			rs1.updateString(rsmd.getColumnName(appProps.getHostName_ColNum()), serverName);
+			rs1.updateDouble(rsmd.getColumnName(appProps.getFileSize_ColNum()), fileSize * appProps.getFileSizeMultiplier());
+			rs1.updateString(rsmd.getColumnName(appProps.getFileSize_Unit_ColNum()), fileSizeUnit);
+			
+			//-- Convert the last mod date file system format to a database format
+			lastModDate = SageFTPFileCatalogerAppJDBC.prepObjectValueForSQL("datetime",lastModDate,false,appProps.getDbFormat_DateTime().toString(),lastModDate_Format);
 			if (lastModDate.indexOf(".") > -1) {
+				//-- strip out the single quotes
+				lastModDate = lastModDate.substring(1,lastModDate.length()-1);
 				//-- Truncate millisecond and timezone portion of the datetime string
 				lastModDate = lastModDate.substring(0, lastModDate.indexOf("."));
 			} 
+			rs1.updateTimestamp(appProps.getFileLastMod_Date_ColNum(), Timestamp.valueOf(lastModDate));
 
+			//-- Convert the create date file system format to a database format
+			createDate = SageFTPFileCatalogerAppJDBC.prepObjectValueForSQL("datetime",createDate,false,appProps.getDbFormat_DateTime().toString(),createDate_Format);
 			if (createDate.indexOf(".") > -1) {
+				//-- strip out the single quotes
+				createDate = createDate.substring(1,createDate.length()-1);
 				//-- Truncate millisecond and timezone portion of the datetime string
-				createDate = createDate.substring(0, createDate.indexOf("."));	 	
+				createDate = createDate.substring(0, createDate.indexOf("."));
 			} 
+			rs1.updateTimestamp(rsmd.getColumnName(appProps.getFileCreate_Date_ColNum()), Timestamp.valueOf(createDate));
 			
-			
-			/*
-			 * ### UNDER DEVELOPMENT - FOR FUTURE USE #######################
-			 * //-- ACL File Attributes
-			 * AclFileAttributeView aclView = Files.getFileAttributeView(pFile, AclFileAttributeView.class);
-			 * if (aclView != null) {
-			 * 	List<AclEntry> thisAcl = aclView.getAcl();
-			 *	String acl_str = thisAcl.toString();
-			 * }
-			 * //##########################################################
-			*/
-			
-			//-- Get the SQL from the properties file and update with actual values for record insert into File Catalog Table 
-			String insertSQL = appProps.getSqlInsertIntoFTP_File_Catalog();
-			appProps.setCurrentFileID(AppTools.uniqueID());
-			
-			//--- Substitute the tags for values
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[FileID]]", AppJDBC.prepObjectValueForSQL("string",appProps.getCurrentFileID(),false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[FileName]]", AppJDBC.prepObjectValueForSQL("string",fileName,false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Size]]", AppJDBC.prepObjectValueForSQL("decimal",fileSize * appProps.getFileSizeMultiplier(),false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Size_Unit]]", AppJDBC.prepObjectValueForSQL("string",fileSizeUnit,false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Create_Date]]", SageFTPFileCatalogerAppJDBC.prepObjectValueForSQL("datetime",createDate,false,appProps.getDbFormat_DateTime().toString(),createDate_Format));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[LastMod_Date]]", SageFTPFileCatalogerAppJDBC.prepObjectValueForSQL("datetime",lastModDate,false,appProps.getDbFormat_DateTime().toString(),lastModDate_Format));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[FilePath]]", AppJDBC.prepObjectValueForSQL("string",filePath,false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[HostName]]", AppJDBC.prepObjectValueForSQL("string",serverName,false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Permissions]]", AppJDBC.prepObjectValueForSQL("string","TBD",false));
-			//insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Owners]]", AppJDBC.prepObjectValueForSQL("string",Files.getOwner(pFile).getName().toString(),false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Owners]]", AppJDBC.prepObjectValueForSQL("string",owners,false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Status]]", AppJDBC.prepObjectValueForSQL("string","active",false));
-			
-			//-- Extract the file extension and substitute the sql string for the file extension value
-			String fileExt = fileName.substring(fileName.lastIndexOf('.')+1);
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[FileType]]", AppJDBC.prepObjectValueForSQL("string",fileExt,false));
-
-			//-- Read the content header of the file
-			//FileReader fr = new FileReader(pFile.toFile());
-			//char [] fh = new char[appProps.getContentHeaderSize()];
-			//fr.read(fh);
-			//fr.close();
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[ContentHeader]]", AppJDBC.prepObjectValueForSQL("string",fileHeader,false));
-			
-			try {
-				//-- Execute the SQL in the jdbcdataSource
-				return jdbcDataSource.executeStatement(insertSQL, appProps.getDbSQLTimeout());
-				
-			} catch (Exception e){
-				AppLog.logActivity(appProps,"SQL=" + insertSQL, true, true);
-				throw e;
-			}
-			
-			
+			//-- Populate the remaining file attribute columns
+			rs1.updateString(rsmd.getColumnName(appProps.getFilePermissions_ColNum()), permissions);
+			rs1.updateString(rsmd.getColumnName(appProps.getFileOwners_ColNum()), owners);
+			rs1.updateString(rsmd.getColumnName(appProps.getFileStatus_ColNum()), "active");
+			rs1.updateString(rsmd.getColumnName(appProps.getFileType_ColNum()), fileExt);
+			//-- Insert the row
+	        rs1.insertRow();
+	        //-- need to move away from insert row before apply changes
+	        rs1.moveToCurrentRow();
+	        rs1.acceptChanges(jdbcDataSource.dbConnection);
+	        rs1.commit();
+	    	AppLog.logActivity(appProps,"New Record in Cache: FileKey= " + fileName+"-"+filePath+"-"+serverName+"\nCurrent Row# "+rs1.getRow(), true, true);
+	    	
+	    	/*
+			//-- insert a corresponding DB activity record to record the record update
+			String activityType = "insert";
+			String activityDesc = "New File Record ";
+			insertNewActivityRecordIntoDB(appProps,jdbcDataSource,activityType,activityDesc,appProps.getCurrentFileID());
+	    	*/
+	    	
+	    	return 1;
+	    				
 		} catch  (Exception e){
 			//-- If an error occurs, just "bubble it up" to the calling method
 			throw e;
@@ -575,6 +614,8 @@ public class SageFTPFileCatalogerApp {
 	 * against the database using the AppJDBC data source to update a record.
 	 * @param appProps 
 	 * @param jdbcDataSource
+	 * @param string2 
+	 * @param string 
 	 * @param pFile
 	 * @param fileID
 	 * @throws Exception
@@ -582,62 +623,76 @@ public class SageFTPFileCatalogerApp {
 	public int updateFileDataRecordInDB(
 			SageFTPFileCatalogerAppProperties appProps,
 			AppJDBC jdbcDataSource,
-			String fileID,
-			String fileName,
+			int rowNum,
 			String lastModDate,
 			long fileSize, 
 			String fileSizeUnit,
 			String permissions,
 			String owners,
-			String fileHeader) throws Exception{
+			String fileHeader,
+			String fileId) throws Exception{
 	
+		
 		try{
 			
 			// -- ::: Update the File Meta Data record with any changes
-			
-			//-- Get the SQL from the properties and update with actual values 
-			String updateSQL = appProps.getSqlUpdateFTP_File_Catalog();
-			//-- The Basic File attributes class is platform independent 
-			//BasicFileAttributes bfa = Files.readAttributes(pFile, BasicFileAttributes.class);
-			//String lastModDate = bfa.lastModifiedTime().toString();
-	
+				
 			String lastModDate_Format 	= this.fdtFormat; 
 			
+			//--Move the record pointer to the row that is to be updated
+			rs1.absolute(rowNum);
+			
+			//--Instantiate the record meta data object
+		  	ResultSetMetaData rsmd = rs1.getMetaData();
+			
+			//--Populate the cached record columns
+		  	String colName = rsmd.getColumnName(appProps.getFileSize_ColNum());
+		  	rs1.updateDouble(colName, fileSize * appProps.getFileSizeMultiplier());
+		  	int colNum = appProps.getFileSize_Unit_ColNum();
+		  	colName = rsmd.getColumnName(colNum);
+			rs1.updateString(colName, fileSizeUnit);
+			
+			//-- Convert the last mod date from file system form to db format
+			lastModDate = SageFTPFileCatalogerAppJDBC.prepObjectValueForSQL("datetime",lastModDate,false,appProps.getDbFormat_DateTime().toString(),lastModDate_Format);
 			if (lastModDate.indexOf(".") > -1) {
+				//-- strip out the single quotes
+				lastModDate = lastModDate.substring(1,lastModDate.length()-1);
 				//-- Truncate millisecond and timezone portion of the datetime string
 				lastModDate = lastModDate.substring(0, lastModDate.indexOf("."));
 			} 
-
-
 			
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[FileID]]", AppJDBC.prepObjectValueForSQL("string",fileID,false));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[Size]]", AppJDBC.prepObjectValueForSQL("decimal",fileSize * appProps.getFileSizeMultiplier(),false));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[Size_Unit]]", AppJDBC.prepObjectValueForSQL("string",fileSizeUnit,false));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[LastMod_Date]]", SageFTPFileCatalogerAppJDBC.prepObjectValueForSQL("datetime",lastModDate,false,appProps.getDbFormat_DateTime().toString(),lastModDate_Format));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[Permissions]]", AppJDBC.prepObjectValueForSQL("string",permissions,false));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[Owners]]", AppJDBC.prepObjectValueForSQL("string",owners,false));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[ContentHeader]]", AppJDBC.prepObjectValueForSQL("string",fileHeader,false));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[Status]]", AppJDBC.prepObjectValueForSQL("string","active",false));
-			String fileExt = fileName.substring(fileName.lastIndexOf('.')+1);
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[FileType]]", AppJDBC.prepObjectValueForSQL("string",fileExt,false));
+			//-- populate the remaining db columns with file attribute values and commit the changes
+			colName = rsmd.getColumnName(appProps.getFileLastMod_Date_ColNum());
+			rs1.updateTimestamp(colName, Timestamp.valueOf(lastModDate));
+			colName = rsmd.getColumnName(appProps.getFilePermissions_ColNum());
+			rs1.updateString(colName, permissions);
+			colName = rsmd.getColumnName(appProps.getFileOwners_ColNum());
+			rs1.updateString(colName, owners);
+			colName = rsmd.getColumnName(appProps.getFileStatus_ColNum());
+			rs1.updateString(colName, "active");
+			rs1.updateRow();
+			rs1.acceptChanges(jdbcDataSource.dbConnection);
+			rs1.commit();
 			
+			return 1;
+			
+			/*
 			try {
 				//-- Execute the UPDATE SQL in the jdbcdataSource
-				int fu = jdbcDataSource.executeStatement(updateSQL, appProps.getDbSQLTimeout());
-
 				//-- insert a corresponding DB activity record to record the record update
 				String activityType = "update";
 				String activityDesc = "LastMod_Date changed to " + lastModDate;
 				activityDesc = activityDesc + " All fields have been synced to the current file meta data.";
-				insertNewActivityRecordIntoDB(appProps,jdbcDataSource,activityType,activityDesc,fileID);				
+				insertNewActivityRecordIntoDB(appProps,jdbcDataSource,activityType,activityDesc,fileId);				
 				
-				return fu;
+				return 1;
 				
 			} catch (Exception e){
-				AppLog.logActivity(appProps,"SQL=" + updateSQL, true, true);
+				//AppLog.logActivity(appProps,"SQL=" + updateSQL, true, true);
 				throw e;
 			}
-						
+			*/	
+			
 		} catch  (Exception e){
 			//-- If an error occurs, just "bubble it up" to the calling method
 			throw e;
@@ -657,37 +712,32 @@ public class SageFTPFileCatalogerApp {
 	public int updateFileDataRecordInDB(
 			SageFTPFileCatalogerAppProperties appProps, AppJDBC jdbcDataSource, String fileID, String fileStatus) throws Exception{
 	
-		try{
-			
-			// -- ::: Update the File Meta Data record with a status change
-			
-			//-- Get the SQL from the properties and update with actual values 
-			String updateSQL = appProps.getSqlUpdateStatusFTP_File_Catalog();
-			
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[FileID]]", AppJDBC.prepObjectValueForSQL("string",fileID,false));
-			updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[Status]]", AppJDBC.prepObjectValueForSQL("string",fileStatus,false));
-			
+		
+	
 			try {
-				//-- Execute the SQL in the jdbcdataSource
-				int fu = jdbcDataSource.executeStatement(updateSQL, appProps.getDbSQLTimeout());
+				//-- instantiate a meta data object for the result set	
+			  	ResultSetMetaData rsmd = rs1.getMetaData();
+			  	
+				rs1.updateString(rsmd.getColumnName(appProps.getFileStatus_ColNum()), fileStatus);
+				rs1.updateRow();
+				rs1.acceptChanges(jdbcDataSource.dbConnection);
+				rs1.commit();
 				
+				/*
 				//-- insert a corresponding DB activity record to record the record update
 				String activityType = "update";
 				String activityDesc = "Record status was updated to " + fileStatus;
 				insertNewActivityRecordIntoDB(appProps,jdbcDataSource,activityType,activityDesc,fileID);
+				AppLog.logActivity(appProps,"Inserted Activity Record # " + fa + " of " + rs2.size() , true, true);
+				*/
 				
-				return fu;
+				return 1;
 				
 			} catch (Exception e){
-				AppLog.logActivity(appProps,"SQL=" + updateSQL, true, true);
+				AppLog.logActivity(appProps,"FileID= " + fileID, true, true);
 				throw e;
 			}
 			
-			
-		} catch  (Exception e){
-			//-- If an error occurs, just "bubble it up" to the calling method
-			throw e;
-		}	 
 	}
 	
 	/****************************************************************************************************************
@@ -697,7 +747,7 @@ public class SageFTPFileCatalogerApp {
 	 * @param jdbcDataSource
 	 * @throws Exception
 	 */
-	public int insertNewActivityRecordIntoDB(
+	public void insertNewActivityRecordIntoDB(
 			SageFTPFileCatalogerAppProperties appProps, 
 			AppJDBC jdbcDataSource, 
 			String activityType,
@@ -705,29 +755,34 @@ public class SageFTPFileCatalogerApp {
 			String newFileID) throws Exception{
 		
 		try {
-
-			//-- Get the SQL from the properties and update with actual values from for record insert into DB Activity Table
-			String insertSQL = appProps.getSqlInsertIntoDB_Activity();
 			
 			//-- Truncate the description to 500 bytes
 			if (activity_Desc.length() > 500) {
 				activity_Desc = activity_Desc.substring(0, 500);	
 			}
 			
-			//--- Substitute the tags for values
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[ActivityID]]", AppJDBC.prepObjectValueForSQL("string",AppTools.uniqueID(),false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[ActivityType]]", AppJDBC.prepObjectValueForSQL("string",activityType,false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[Description]]", AppJDBC.prepObjectValueForSQL("string",activity_Desc,false));
-			insertSQL = AppTools.updateStringTagWithValue(insertSQL,"[[FileID]]", AppJDBC.prepObjectValueForSQL("string",newFileID,false));
+			//-- Instantiate the Resultset Meta Data Object
+			ResultSetMetaData rsmd = rs2.getMetaData();
 			
-			try {
-				//-- Execute the SQL in the jdbcdataSource
-				return jdbcDataSource.executeStatement(insertSQL, appProps.getDbSQLTimeout());
-				
-			} catch (Exception e){
-				AppLog.logActivity(appProps,"SQL=" + insertSQL, true, true);
-				throw e;
-			}
+			rs2.moveToInsertRow();
+			
+			//-- Generated a new FileID for this new record
+			
+			rs2.updateString(1, AppTools.uniqueID());
+			
+			//--Populate the cached record columns
+			rs2.updateString(rsmd.getColumnName(appProps.getActivityType_ColNum()), activityType);
+			rs2.updateString(rsmd.getColumnName(appProps.getActivityDesc_ColNum()), activity_Desc);
+			rs2.updateString(rsmd.getColumnName(appProps.getActivityFileId_ColNum()), newFileID);
+			//-- Insert the row
+	        rs2.insertRow();
+	        //-- need to move away from insert row before apply changes
+	        rs2.moveToCurrentRow();
+	        //--Increment the file activity row insert counter for the current page
+	        fa++;
+	        rs2.acceptChanges(jdbcDataSource.dbConnection);
+	        rs2.commit();
+	   
 			
 		} catch (Exception e2) {
 			throw e2;
@@ -737,7 +792,7 @@ public class SageFTPFileCatalogerApp {
 	
 	/****************************************************************************************************************
 	 * Scans the file system CACHED in the Class properties as ArrayLists
-	 * For each file, the DB is queried for a corresponding meta data record.
+	 * For each file, the DB is queried for a corresponding meta data record. (After caching the recordset in memory)
 	 * If non is found a new record is inserted, otherwise the existing record is updated, if needed
 	 * An activity record is created if a record is inserted or updated to maintain an audit trail of db activities
 	 * @param appProps
@@ -745,29 +800,162 @@ public class SageFTPFileCatalogerApp {
 	 * @param dir
 	 * @throws Exception
 	 */
-	public void scanFileSystem(SageFTPFileCatalogerAppProperties appProps, AppJDBC jdbcDataSource) throws Exception {
+	public Integer scanFileSystem(SageFTPFileCatalogerAppProperties appProps, AppJDBC jdbcDataSource) throws Exception {
 
 		//-- Initialize the variable for tracking number of affected DB records
-		Integer fu = 0; // Updated records
-		Integer fi = 0; // Inserted Records
-		ArrayList<String> colVals = new ArrayList<String>();
-		ArrayList<String> colLabels = new ArrayList<String>();
-		
+		Integer fu = 0; // # of Updated records for the current batch
+		Integer fi = 0; // # of Inserted Records for the current batch
+		Integer fiTotal = 0; // # Total inserted records
+		Integer fuTotal = 0; // # Total updated records
+		Integer fTotal = 0; // # of total transactions applies to records
+		ArrayList<String> colVals = new ArrayList<String>(); // Column values array for the current row
+		ArrayList<String> colLabels = new ArrayList<String>(); // Column labels array for the current row
+      	ResultSetMetaData rsmd;
+    	String fileDateModified;
+    	String fileDateCreated;
+    	
+    	/*
+    	 * First loop through the file list and update existing record 
+    	 * Next find all the records that need to be inserted
+    	 * This double pass through the file list is required, because inserted records cause the rowNum to become out of sync with the
+    	 * cached filekey array.
+    	 * 
+    	 */
+    	
+    	//-- Update Loop
+    	
 		//Keep going while there are more files
+    	
 		for (int i=0; i < fName.size(); i++) {
-
+			
 			
 			//-- The search key for finding the file in the File Catalog DB is Server-path-filename
-			//-- Get the SQL from the properties and update with actual values 
-			rs1 = SelectFTPFileDataFromDB(appProps,jdbcDataSource,fHostName.get(i),fPath.get(i),fName.get(i));
+			String searchKey = fName.get(i)+";"+fPath.get(i)+";"+fHostName.get(i);
+			
+			int fileNum = fileKey_db.indexOf(searchKey); //-- for diagnostic purposes
+			/* DIAGNOSTICS STATEMENT
+			AppLog.logActivity(appProps,"Searching For File: "+fName.get(i)+ " Path: "+fPath.get(i)+" Hostname: "+fHostName.get(i)
+					+"\n FileKey Value: " + fName.get(i)+fPath.get(i)+fHostName.get(i)
+					+"\n FileKey_db index (fileNum)= "+ fileNum 
+					+"\n Current DB Row# is "+ rs1.getRow(), true, true);
+			*/
+			
+			if (fileNum != -1) {
 
-			if (!rs1.next()) {
+				//A match was found for the file key index
+				//Check if the "Last Modified Date" of the file meta data is older than the date on the actual file.
+				
+				//-- Copy the data modified db value to a local string variable
+				String fileDateModified_db_str = fileDateModified_db.get(fileKey_db.indexOf(fName.get(i)+";"+fPath.get(i)+";"+fHostName.get(i)));
+				
+				//-- convert the date-modified OS format to a format that the DBMS can understand
+				fileDateModified = AppTools.dateTimeStringToDBTimeStamp( fMod.get(i),fdtFormat, appProps.getDbFormat_DateTime().toString());
+
+				//-- Copy File Meta Data Record ID to a local string variable
+				String fileId_str = fileId_db.get(fileNum);
+				
+				if (!fileDateModified.equalsIgnoreCase(fileDateModified_db_str)) {
+					
+					//--File has changed so update the date-modified date and any other attributes that need to be updated
+					//-- get the cached row id based on the search (file) key consisting of the unique value fName-fPath-fHostName 
+					int rowNum = fileRowId_db.get(fileKey_db.indexOf(fName.get(i)+";"+fPath.get(i)+";"+fHostName.get(i)));					
+					
+					//--Move the record pointer to the row that that is to be updated
+					rs1.absolute(rowNum);
+					
+					AppLog.logActivity(appProps,"File Mod dates don't match for file;path;hostname \n" + 
+							 fName.get(i)+";"+fPath.get(i)+";"+fHostName.get(i) + "\n - FileModDate: " + fileDateModified 
+							+ " DBFileModDate: " + fileDateModified_db_str 
+							+ "\nRow# to update is "+rowNum
+							+"\nfileDateModified_db array index is "+fileKey_db.indexOf(fName.get(i)+";"+fPath.get(i)+";"+fHostName.get(i)) , true, true);
+					//--Store Meta Data Info for this row in the rmsd object variable
+					rsmd = rs1.getMetaData();
+					
+					
+					// -- Initialize the Column Labels and column values arrays
+					colVals.clear();
+					colLabels.clear();
+					//-- Copy the original row column values to a local ArrayList
+					int colCount = rsmd.getColumnCount();
+					int x1 = 1;
+					while (x1 <= colCount) {
+						if (!this.rs1.getString(x1).equals(null)) {
+							colVals.add(rs1.getObject(x1).toString());
+							colLabels.add(rsmd.getColumnLabel(x1));
+							AppLog.logActivity(appProps, rsmd.getColumnLabel(x1)+"="+rs1.getObject(x1).toString() , true, true);
+						}
+						x1++;
+					} // end while
+					
+					
+					fu = fu + updateFileDataRecordInDB(
+							appProps,
+							jdbcDataSource,
+							rowNum,
+							fMod.get(i),
+							fSize.get(i), 
+							fSizeUnit.get(i),
+							fPermissions.get(i),
+							fOwners.get(i),
+							fHeaders.get(i), 
+							fileId_str);
+			
+		
+					rs1.absolute(rowNum);
+					//-- This db activity type is a record update
+					String activityType = "update";
+					//-- Construct the Activity description string
+					int x = 1;
+					String ud = "Updated Values: ";
+					while (x <= colCount){
+						if (!colVals.get(x-1).equals(null)){
+							//###### KNOWN ISSUE #########
+							//###### JAVA NULL POINTER EXCEPTION WHEN DB FIELD IS EMPTY/NULL
+							//############################
+//							String colVal = "col " + x + " from rs = " + rs.getObject(x).toString();
+//							String colVal2 = "col " + x + " from rs2 = " + rs2.getObject(x).toString();
+							if (!colVals.get(x-1).equals(this.rs1.getObject(x).toString())){
+								ud = ud + colLabels.get(x-1) + " changed from '" + colVals.get(x-1) + "' to '" + this.rs1.getObject(x).toString() + "' ";
+								AppLog.logActivity(appProps,"Filename: " + fName.get(i) + " " + colLabels.get(x-1) + " old value: " + colVals.get(x-1) + ", new value:" + this.rs1.getObject(x).toString() , true, true);
+							}
+						}
+						x++;
+					} // end while
+					
+				} // end if (!fileDateModified.equalsIgnoreCase(fileDateModified_db_str))
+				else {
+					//## Diagnostic statement
+					//AppLog.logActivity(appProps,"File#"+ i +" File: "+ fName.get(i) + " File Mod dates match- FileModDate: " + fileDateModified 
+					//		+ " DBFileModDate: " + dbDateModified , true, true);
+				} // end else
+			} // end if (fileNum != -1)
+		} // end for loop	
+		
+		fTotal = fTotal + fu;
+		fuTotal = fuTotal + fu;
+		
+		//-- Insert Records Loop
+			
+		for (int i=0; i < fName.size(); i++) {
+						
+			//-- The search key for finding the file in the File Catalog DB is Server-path-filename
+			String searchKey = fName.get(i)+";"+fPath.get(i)+";"+fHostName.get(i);
+			int fileNum = fileKey_db.indexOf(searchKey); //-- for diagnostic purposes
+			
+			/*
+			AppLog.logActivity(appProps,"Searching For File: "+fName.get(i)+ " Path: "+fPath.get(i)+" Hostname: "+fHostName.get(i)
+					+"\n FileKey Value: " + fName.get(i)+fPath.get(i)+fHostName.get(i)
+					+"\n FileKey_db index (fileNum)= "+ fileNum 
+					+"\n Current DB Row# is "+ rs1.getRow(), true, true);
+			*/
+			
+			if (fileNum == -1) {
 				//-- The File Record was not found in the database
 				//-- So a new record needs to be inserted
-				
-				AppLog.logActivity(appProps,"Ready to insert file meta data for file: "+fName.get(i)+" , last modified: "+fMod.get(i), true, true);
+					
+				AppLog.logActivity(appProps,"Ready to insert file meta data into Cache for file: "+fName.get(i)+" , last modified: "+fMod.get(i), true, true);
 				//-- Insert the new record
-				
+					
 				fi = fi + insertNewFileDataRecordIntoDB(
 						appProps,
 						jdbcDataSource,
@@ -781,97 +969,25 @@ public class SageFTPFileCatalogerApp {
 						fPermissions.get(i),
 						fOwners.get(i),
 						fHeaders.get(i));
-				
-				//-- insert a corresponding DB activity record to record the record insertion
-				String fileId = appProps.getCurrentFileID();
-				String activityType = "insert";
-				String activityDesc = "Insterted new file Data Record. File Name: "+fName.get(i);
-				insertNewActivityRecordIntoDB(appProps,jdbcDataSource,activityType,activityDesc,fileId);
-			}
-			
-
-			else {
-				//The query has returned one or more File meta data records
-				//Check if the "Last Modified Date" of the file meta data is older than the date on the actual file.
-				String fileDateModified = AppTools.dateTimeStringToDBTimeStamp( fMod.get(i), 
-						fdtFormat, appProps.getDbFormat_DateTime().toString());
-				ResultSetMetaData rsmd 	= rs1.getMetaData();
-				String colName 			= rsmd.getColumnName(appProps.getLastModDate_ColNum());
-				String dbDateModified 	= rs1.getTimestamp(colName).toString();
-				int colCount = rsmd.getColumnCount();
-				if (!fileDateModified.equalsIgnoreCase(dbDateModified)) {
-					//--File has changed so update the date-modified date and any other attributes that need to be updated
-					AppLog.logActivity(appProps,"File Mod dates don't match for file " + 
-							 rs1.getString(rsmd.getColumnName(2)) +" - FileModDate: " + fileDateModified 
-							+ " DBFileModDate: " + dbDateModified , true, true);
-					//-- 
-					String fileID = rs1.getString(1);
-					fu = fu + updateFileDataRecordInDB(
-							appProps,
-							jdbcDataSource,
-							fileID,
-							fName.get(i),
-							fMod.get(i),
-							fSize.get(i), 
-							fSizeUnit.get(i),
-							fPermissions.get(i),
-							fOwners.get(i),
-							fHeaders.get(i));
-
-					//-- Copy the original row column values to a local ArrayList
-					int x1 = 1;
-					while (x1 <= colCount) {
-						if (!this.rs1.getString(x1).equals(null)) {
-							colVals.add(rs1.getObject(x1).toString());
-							colLabels.add(rsmd.getColumnLabel(x1));
-						}
-						x1++;
-					}
-					
-					//-- re-select the db record so it can be compared to values before the update
-					this.rs2 = SelectFTPFileDataFromDB(appProps,jdbcDataSource,fHostName.get(i),fPath.get(i),fName.get(i));
-
-					//-- Advance the resultset curser to the first record
-					this.rs2.next();
-
-					//-- This db activity type is a record update
-					String activityType = "update";
-					//-- Construct the Activity description string
-					int x = 1;
-					String ud = "Updated Values: ";
-					while (x <= colCount){
-						if (!colVals.get(x-1).equals(null)){
-							//###### KNOWN ISSUE #########
-							//###### JAVA NULL POINTER EXCEPTION WHEN DB FIELD IS EMPTY/NULL
-							//############################
-//							String colVal = "col " + x + " from rs = " + rs.getObject(x).toString();
-//							String colVal2 = "col " + x + " from rs2 = " + rs2.getObject(x).toString();
-//							AppLog.logActivity(appProps,"Filename: " + fName.get(i) + " " + colLabels.get(x-1) + " old value: " + colVals.get(x-1) + ", new value:" + this.rs2.getObject(x).toString() , true, true);
-							if (colVals.get(x-1).equals(this.rs2.getObject(x).toString())){
-								ud = ud + colLabels.get(x-1) + " changed from '" + colVals.get(x-1) + "' to '" + this.rs2.getObject(x).toString() + "' ";
-							}
-						}
-						x++;
-					}
-					
-					AppLog.logActivity(appProps,ud , true, true);
-					
-					//-- insert a corresponding DB activity record to record the record insertion
-					insertNewActivityRecordIntoDB(appProps,jdbcDataSource,activityType,ud,fileID);
-					
+/*
+				//-- Post records to the data source every dsBatchSize records
+				if (fi > appProps.getPageSize()) {
+					fTotal = fTotal + fi;
+					fi = 0;
+					rs1.acceptChanges(jdbcDataSource.dbConnection);  // On non-autocommit Connection
+					rs1.commit();
 				}
-				else {
-					//## Diagnostic statement
-					//AppLog.logActivity(appProps,"File#"+ i +" File: "+ fName.get(i) + " File Mod dates match- FileModDate: " + fileDateModified 
-					//		+ " DBFileModDate: " + dbDateModified , true, true);
-				} // end else
-			} // end else
-			
+*/				
+			}
 		}  // end of for loop
-
-		AppLog.logActivity(appProps,"Number of Files scanned: " + fName.size() , true, true);
-		AppLog.logActivity(appProps,"Number of DB records inserted: " + fi.toString() , true, true);
-		AppLog.logActivity(appProps,"Number of DB records updated: " + fu.toString() , true, true);
+		
+		fTotal = fTotal + fi;
+		fiTotal = fiTotal + fi;
+		
+		AppLog.logActivity(appProps,"Number of DB records inserted: " + fiTotal.toString() , true, true);
+		AppLog.logActivity(appProps,"Number of DB records updated: " + fuTotal.toString() , true, true);
+		
+		return fTotal;
 		
 	} // end of Method: scanFileSystem
 	
@@ -885,38 +1001,41 @@ public class SageFTPFileCatalogerApp {
 	 * @param dir
 	 * @throws Exception
 	 */
-	public void scanDBRecords(SageFTPFileCatalogerAppProperties appProps, AppJDBC jdbcDataSource) throws Exception {
-		try{
-			//-- Read the SQL statement template from the app properties bean into a local variable
-			String selectSQL = appProps.getSqlFetchAllRows();
-			selectSQL = AppTools.updateStringTagWithValue(selectSQL,"[[HostName]]", AppJDBC.prepObjectValueForSQL("string",appProps.getFtpServerName(),false));
+	public int scanDBRecords(SageFTPFileCatalogerAppProperties appProps, AppJDBC jdbcDataSource) throws Exception {
+		
 			
 			try {
-				//-- Get the resultset using the query and timeout from the config file
-				ResultSet rs = jdbcDataSource.getResultSet(selectSQL,appProps.getDbSQLTimeout());
 				
 				String thisFileName;
 				String fileID;
-				Integer fu = 0;
-				Integer recNo = 0;
+				int fu = 0;
+				int recNo = 0;
+				int fuTotal = 0;
 				
-				while (rs.next()) {
+				AppLog.logActivity(appProps,rs1.size() + "File Catalog records are being scanned to check for 'Deleted' status" , true, true);
+			    rs1.beforeFirst(); //--Move the row cursor ahead of the first row
+				while (rs1.next()) {
+					
+					recNo++;
 					
 					//-- read the host name, file path and file name from the db record into local variables
-					thisFileName = rs.getString(appProps.getFileName_ColNum());
+					thisFileName = rs1.getString(appProps.getFileName_ColNum());
 					
 					//-- attempt to get a handle to the file on the file system Cache from the db record definition
+					//AppLog.logActivity(appProps,"Scanning Db Record# " + recNo + " of " + rs1.size() , true, true);
 					
 					//-- test if the file exists
 					if (fName.indexOf(thisFileName) == -1 ) {
 						//-- File was not found -- mark the File DB record status 'Deleted'
 						//-- first column in resultset is assumed to be the FileID
 						//##### DEVELOPER NOTE: consider parameterizing the FileID column number of the result set #####
-						fileID = rs.getString(1);
+						fileID = rs1.getString(1);
+						
 						fu = fu + updateFileDataRecordInDB(appProps,jdbcDataSource,fileID,"Deleted");
+						fuTotal = fuTotal++;
+						AppLog.logActivity(appProps,"Rec. update # " + fuTotal + " , " + thisFileName + " was not found on the file system. Updating Status to 'Deleted'" , true, true);
+						
 					}
-					
-					recNo++;
 					
 				}
 				
@@ -925,22 +1044,14 @@ public class SageFTPFileCatalogerApp {
 					//AppLog.logActivity(appProps,appProps.getNoRecordsFoundMsg() , true, true);
 					//#### TEMP STATEMENT FOR TESTING ####
 					AppLog.logActivity(appProps,"WARNING: No records were found in the File Catalog table" , true, true);
-					
 				}
 				
-				AppLog.logActivity(appProps,"Number of DB records scanned: " + recNo , true, true);
-				AppLog.logActivity(appProps,"Number of records where status was marked 'Deleted': " + fu.toString() , true, true);
+				return fu;
+		
 				
 			} catch (Exception e){
-				AppLog.logActivity(appProps,"SQL=" + selectSQL, true, true);
 				throw e;
 			}
-			
-			
-		} catch  (Exception e){
-			//-- If an error occurs, just "bubble it up" to the calling method
-			throw e;
-		}	 
 	}
 	
 	/****************************************************************************************************************
@@ -951,10 +1062,6 @@ public class SageFTPFileCatalogerApp {
 	 */
 	public void postAlert(String alertFileName, String alertMsg) throws Exception{
 		try{
-			//File alertFile = new File(alertFileName);
-			//if (!alertFile.exists()) {
-			//	alertFile.createNewFile();
-			//} 
 			// --- Write the alert message to the file
 			//-- Startup a FileWriter based on the file name (creates a new file if one isn't there)
 			// -- the 'false' flag will cause existing content in the file to be overwritten
