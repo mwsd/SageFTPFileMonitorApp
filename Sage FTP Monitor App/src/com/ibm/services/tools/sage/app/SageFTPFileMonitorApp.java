@@ -27,7 +27,7 @@ public class SageFTPFileMonitorApp {
 	 *  1) Properties File Name (required):  The name of the properties file containing the application instructions, such as "config.properties".
 	 * 		   
 	 * @author		 @author		Yogi Golle/Tampa/Contr/IBM (yogigol@us.ibm.com) - IBM GTS Service Delivery - MWSD Tools and Technology Team
-	 * @version 	2015.06.24   
+	 * @version 	2016.08.09   
 	 */
 	//-- DB Result set Object 1
 	ResultSet rs1;
@@ -262,6 +262,7 @@ public SageFTPFileMonitorAppProperties setupAndVerifyAppProperties(SageFTPFileMo
 		appProps.setStatus_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "status_ColNum", true, true, ""));
 		appProps.setAlertInterval_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "alertInterval_ColNum", true, true, ""));
 		appProps.setLastAlertDate_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "lastAlertDate_ColNum", true, true, ""));
+		appProps.setComment_ColNum(AppTools.getAppPropertyValueInt(props, fileName, "comments_ColNum", true, true, ""));
 		
 		//-- RETURN TO CALLER
 		//-- Return the AppProperties object
@@ -429,6 +430,7 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 					int alertInterval		= rs1.getInt(appProps.getAlertInterval_ColNum()); // -- Minimum Alert interval in minutes
 					String alertSent		= rs1.getString(appProps.getAlertSent_ColNum()); // -- Was alert sent (Y/N)		
 					String sendTo			= rs1.getString(appProps.getSendTo_ColNum()); // -- recipients name(s) if alert needs to be sent
+					String comment			= rs1.getString(appProps.getComment_ColNum()); // -- Business Rule Comment
 					
 					//-- Set up the last alert calendar object based on the db value
 					if (rs1.getTimestamp(appProps.getLastAlertDate_ColNum()) != null) {
@@ -524,9 +526,11 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 							dateTimeThreshold.get(Calendar.SECOND)  , true, true);
 					//*****************************************************************/
 					
+					String freqPhrase;
 					if (fileFrequency.equalsIgnoreCase("M") ||fileFrequency.equalsIgnoreCase("W")) { // -- Monthly or Weekly File Frequency
-						
+
 						if (fileFrequency.equalsIgnoreCase("M")) {
+							freqPhrase = "this Month";
 							//-- set actual current month's planned Date based on day-of-month planned value from business rule 
 							//AppLog.logActivity(appProps,"Planned day of Month, MonthOfYear,Year before update: "+ dateTimePlanned.get(Calendar.DAY_OF_MONTH) + " , " + (dateTimePlanned.get(Calendar.MONTH)+1) + " , " + dateTimePlanned.get(Calendar.YEAR), true, true);
 							dateTimePlanned.set(Calendar.DAY_OF_MONTH, planned_Day_int);
@@ -547,6 +551,7 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 								alertSent = "N";
 							}
 						} else  {
+							freqPhrase = "this Week";
 							//-- set actual current week's planned Date based on day-of-week planned value from business rule
 							dateTimePlanned.set(Calendar.DAY_OF_WEEK, planned_Day_int);
 							//-- set actual current week's threshold Date based on day-of-week threshold value from business rule
@@ -567,6 +572,7 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 					
 					} else { //-- Daily File Frequency
 						
+						freqPhrase = "today";
 						// -- Set the day/month/year to the current planned one since this is a daily schedule
 						dateTimePlanned.set(Calendar.YEAR, dateTimeCurr.get(Calendar.YEAR));
 						dateTimePlanned.set(Calendar.DAY_OF_MONTH, dateTimeCurr.get(Calendar.DAY_OF_MONTH));
@@ -592,6 +598,32 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 						
 					} // -- end of 'if' branch for handling the M,W,D filefrequency parameter
 
+					
+					//-- Check that the AlertCount is zero
+					if (alertCount == 0) {
+						//-- reset the alertCount & alertSent
+						updateSQL = appProps.getSqlUpdateBusinessRuleIndex();
+						updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[alertCount]]",AppJDBC.prepObjectValueForSQL("integer",alertCount,false));
+						updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[alertSent]]",AppJDBC.prepObjectValueForSQL("string",alertSent,false));
+
+						//-- set the lastAlertDate to null
+						updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[lastAlertDate]]","NULL");
+						
+						//-- Set the business rule ID to be updated
+						updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[businessRule_Id]]", 	AppJDBC.prepObjectValueForSQL("string"	,brIndexID,false));
+
+						// -- Write to the log
+						AppLog.logActivity(appProps,"Last alert was sent before " + freqPhrase + 
+								"Last Alert was: "  + lastAlertDateTime_cal.getTime() +
+								"\nReset the alertcount and alertsent flag in the business rule index record..", true, true);
+						AppLog.logActivity(appProps,"Update SQL Stmt:\n"+updateSQL, true, true);
+						
+						// -- Execute the SQL Statement
+						jdbcDataSource.executeStatement(updateSQL,appProps.getDbSQLTimeout());
+					
+					}
+					
+					
 					//-- Log Business Rule Record values
 					AppLog.logActivity(appProps,"Business Rule record values: ", true, true);
 					ResultSetMetaData rsmd = rs1.getMetaData();
@@ -631,16 +663,25 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 								
 								if (alertCount != 0) {
 									//-- Reset the alertcount and alertsent flag in the business rule index record
-									AppLog.logActivity(appProps,"Current time is past the planned file creation time stamp of "+ logsdf.format(dateTimePlanned.getTime()) , true, true);
+									AppLog.logActivity(appProps,"Planned file creation time stamp of "+ logsdf.format(dateTimePlanned.getTime() + " is later than the current time") , true, true);
+
+									//-- reset the alertCount & alertSent
 									alertCount = 0;
 									alertSent = "N";
 									updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[alertCount]]",AppJDBC.prepObjectValueForSQL("integer",alertCount,false));
 									updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[alertSent]]",AppJDBC.prepObjectValueForSQL("string",alertSent,false));
+
 									//-- set the lastAlertDate to null
-									updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[LastAlertDate]]", 
-											SageFTPFileCatalogerAppJDBC.prepObjectValueForSQL("datetime",null,false,appProps.getDbFormat_DateTime(),appProps.getDbFormat_DateTime().toString()));
+									updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[lastAlertDate]]","NULL");
+									
 									//-- Set the business rule ID to be updated
 									updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[businessRule_Id]]", 	AppJDBC.prepObjectValueForSQL("string"	,brIndexID,false));
+
+									// -- Write to the log
+									AppLog.logActivity(appProps,"Reset the alertcount and alertsent flag in the business rule index record..", true, true);
+									AppLog.logActivity(appProps,"Update SQL Stmt:\n"+updateSQL, true, true);
+									
+									// -- Execute the SQL Statement
 									jdbcDataSource.executeStatement(updateSQL,appProps.getDbSQLTimeout());
 								
 								}
@@ -678,23 +719,13 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 										//--Prepare the alert message content parameter
 										ArrayList<String> lines = new ArrayList<String>();
 										lines.add(alertMsgTemplate);
-										lines.add("");
-										lines.add("This alert was generated based on business rule ID: " + brIndexID );
-										lines.add("File Name/Pattern search string: " + fileNamePattern); // -- name of the file/pattern business rule item
-										lines.add("File delivery frequency (M = Monthly, W = Weekly, D = Daily): " + fileFrequency);
-										lines.add("Alerts sent so far for this event: " + alertCount);
-										lines.add("Maximum number of alerts before alerts expire " + maxAlerts);
-										lines.add("Minimum number of alerts (in minutes) between each alert " + alertInterval);
-										/*
-										 TODO 
-										 ADD ONE LINE TO THE BODY OF HE ALERT MESSAGE FOR EACH BUSINESS RULE ITEM
-										String fileNameMode 	= rs1.getString(appProps.getFileNameMode_ColNum()); // -- P = Pattern , F = FileName
-										int maxAlerts 			= rs1.getInt(appProps.getMaxAlerts_ColNum()); // -- Maximum alerts that can be sent for given exception
-										int alertCount 			= rs1.getInt(appProps.getAlertCount_ColNum()); // -- Number of alerts sent so far
-										int alertInterval		= rs1.getInt(appProps.getAlertInterval_ColNum()); // -- Minimum Alert interval in minutes
-										String alertSent		= rs1.getString(appProps.getAlertSent_ColNum()); // -- Was alert sent (Y/N)		
-										String sendTo			= rs1.getString(appProps.getSendTo_ColNum()); // -- recipients name(s) if alert needs to be sent
-										*/
+										lines.add("\n\nThis alert was generated based on business rule ID: " + brIndexID );
+										lines.add("\nFile Name/Pattern search string: " + fileNamePattern); // -- name of the file/pattern business rule item
+										lines.add("\nFile delivery frequency (M = Monthly, W = Weekly, D = Daily): " + fileFrequency);
+										lines.add("\nNumber of alerts sent so far for this event (excluding this alert): " + alertCount);
+										lines.add("\nMaximum number of alerts before alerts expire: " + maxAlerts);
+										lines.add("\nMinimum time between alerts (in minutes): " + alertInterval);
+										lines.add("\n\nBusiness Rule Comments: " + comment);
 										
 										//-- handle the event that was triggered
 										AppLog.logActivity(appProps,"Sending email notification to " + sendTo, true, true);
@@ -734,7 +765,14 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 											logsdf.format(createDateTime_cal.getTime()) + 
 											") is after the current due date (" +
 											logsdf.format(dateTimeThreshold.getTime())+")", true, true);
-									if (isAlertDue(lastAlertDateTime_cal,alertInterval)) {
+									
+									//Set the flag indicating if alert should be sent if file was created/updated after the threshold time. 
+									boolean lateAlert = true;
+									// "NO LATE FILE ALERT" is the reserved value in the Comments field that triggers the lateAlert flag to be false
+									if (comment.indexOf("NO LATE FILE ALERT") > 0) {
+										lateAlert = false;
+									}
+									if (isAlertDue(lastAlertDateTime_cal,alertInterval) && lateAlert) {
 										//-- file was updated AFTER the threshold date
 										//-- Prepare the alert message content
 										warningMsgTemplate = AppTools.updateStringTagWithValue(warningMsgTemplate,"[[FileName]]", fileName);
@@ -746,6 +784,13 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 										//--Prepare the alert message content parameter
 										ArrayList<String> lines = new ArrayList<String>();
 										lines.add(warningMsgTemplate);
+										lines.add("\n\nThis alert was generated based on business rule ID: " + brIndexID );
+										lines.add("\nFile name/pattern search string: " + fileNamePattern); // -- name of the file/pattern business rule item
+										lines.add("\nFile delivery frequency (M = Monthly, W = Weekly, D = Daily): " + fileFrequency);
+										lines.add("\nAlerts sent so far for this event (excluding this alert): " + alertCount);
+										lines.add("\nMaximum number of alerts before alerts expire: " + maxAlerts);
+										lines.add("\nMinimum time between alerts (in minutes): " + alertInterval);
+										lines.add("\nLate file creation/update notification flag: " + lateAlert);
 								
 										//-- handle the event that was triggered
 										AppLog.logActivity(appProps,"Sending email notification to " + sendTo, true, true);
@@ -770,13 +815,19 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 									}
 									
 									else {
-										// -- Alert is not yet due be sent
+										// -- Alert is not yet due be sent or late alerts are disabled
 										// -- Next Alert Time is lastAlertDateTime + alertInterval (minutes)
 										lastAlertDateTime_cal.add(Calendar.MINUTE, alertInterval);
 										// -- get the string version of the next alert time
 										String next_Alert_Time = lastAlertDateTime_cal.getTime().toString();
 										// -- log the message
-										AppLog.logActivity(appProps,"Alert has NOT been sent because next alert is not due until "+ next_Alert_Time, true, true);
+										// -- the 'lateAlert' flag must be true for a notification to be sent if a file was created late (after the threshold time)
+										if (lateAlert) {
+											AppLog.logActivity(appProps,"Alert has NOT been sent because next alert is not due until "+ next_Alert_Time, true, true);
+										}
+										else {
+											AppLog.logActivity(appProps,"Alert has NOT been sent because alerts for late file creation/update is disabled. (\"NO LATE FILE ALERT\" flag phrase was set in business rule comment field)", true, true);
+										}
 									}
 								}
 								else if ((createDateTime_cal.after(dateTimeThreshold) ||  createDateTime_cal.before(dateTimePlanned)) && alertCount >= maxAlerts) {
@@ -788,6 +839,30 @@ public void processBusinessRules(SageFTPFileMonitorAppProperties appProps, AppJD
 									fileName + " was created as expected on " + logsdf.format(createDateTime_cal.getTime()) + 
 									" ahead of the deadline of " + logsdf.format(dateTimeThreshold.getTime()) + 
 									" and after the earliest expected time of " + logsdf.format(dateTimePlanned.getTime()), true, true);
+									
+									//-- Check that the AlertCount is zero
+									if (alertCount != 0) {
+										//-- reset the alertCount & alertSent
+										alertCount = 0;
+										alertSent = "N";
+										updateSQL = appProps.getSqlUpdateBusinessRuleIndex();
+										updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[alertCount]]",AppJDBC.prepObjectValueForSQL("integer",alertCount,false));
+										updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[alertSent]]",AppJDBC.prepObjectValueForSQL("string",alertSent,false));
+
+										//-- set the lastAlertDate to null
+										updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[lastAlertDate]]","NULL");
+										
+										//-- Set the business rule ID to be updated
+										updateSQL = AppTools.updateStringTagWithValue(updateSQL,"[[businessRule_Id]]", 	AppJDBC.prepObjectValueForSQL("string"	,brIndexID,false));
+
+										// -- Write to the log
+										AppLog.logActivity(appProps,"Reset the alertcount and alertsent flag in the business rule index record..", true, true);
+										AppLog.logActivity(appProps,"Update SQL Stmt:\n"+updateSQL, true, true);
+										
+										// -- Execute the SQL Statement
+										jdbcDataSource.executeStatement(updateSQL,appProps.getDbSQLTimeout());
+									
+									}
 								}
 								}
 								catch (Exception e){
@@ -860,7 +935,7 @@ public boolean isAlertDue(Calendar lastAlertDateTime,Integer alertFrequency) thr
 	
 		//-- Calculate the elapsed time (in minutes), from current time to time of last alert
 		long elapsedMins = (dateTime_Curr.getTimeInMillis() - lastAlertDateTime.getTimeInMillis()) / (1000 * 60);
-	
+		
 		if (elapsedMins > alertFrequency.longValue()) {
 			isDue = true;
 		}

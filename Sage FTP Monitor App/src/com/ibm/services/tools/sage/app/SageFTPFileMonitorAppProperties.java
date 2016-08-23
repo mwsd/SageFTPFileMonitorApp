@@ -42,6 +42,8 @@ public class SageFTPFileMonitorAppProperties extends AppProperties {
 		private Integer status_ColNum;
 		private Integer alertInterval_ColNum;
 		private Integer lastAlertDate_ColNum;
+		private Integer comment_ColNum;
+		
 		/**
 		 * @return the ftpFileCataloger_alertFile
 		 */
@@ -403,6 +405,20 @@ public class SageFTPFileMonitorAppProperties extends AppProperties {
 		public void setWarningMsgTemplate(String warningMsgTemplate) {
 			this.warningMsgTemplate = warningMsgTemplate;
 		}
+		/**
+		 * @return the comment_ColNum
+		 */
+		public Integer getComment_ColNum() {
+			return comment_ColNum;
+		}
+		/**
+		 * @param comment_ColNum the comment_ColNum to set
+		 */
+		public void setComment_ColNum(Integer comment_ColNum) {
+			this.comment_ColNum = comment_ColNum;
+		}
+		
+		
 	
 		
 

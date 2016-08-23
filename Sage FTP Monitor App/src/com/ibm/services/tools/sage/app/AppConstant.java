@@ -8,10 +8,10 @@ package com.ibm.services.tools.sage.app;
 /****************************************************************************************************************
  * This is used to setup constants to be used as default values throughout the application.
  * @author		Yogi Golle/Tampa/Contr/IBM (yogigol@us.ibm.com) -  IBM Global Services  -  EUS Tools and Technology Team
- * @version 	2015.04.16
+ * @version 	2016.08.09
  */
 public final class AppConstant {
-	public static final String APPLICATION_NAME = "Sage FTP Monitor App (v2015.06.18)";
+	public static final String APPLICATION_NAME = "Sage FTP Monitor App (v2016.08.09)";
 	public static final String LOG_DATETIME_FORMAT = "MM/dd/yyyy hh:mm:ss:SSS aaa z";
 	public static final int LOG_TEXT_MAX_LENGTH = 99999;
 	public static final String TEXT_AFTER_LOG_DATETIME = "     ";

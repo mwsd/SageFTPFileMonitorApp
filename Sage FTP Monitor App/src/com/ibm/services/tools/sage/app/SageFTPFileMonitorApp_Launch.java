@@ -8,7 +8,7 @@ package com.ibm.services.tools.sage.app;
  * passing over the necessary arguments. The primary class used by this app is "SageFTPFileMonitorApp". Refer to 
  * that class for details about this application.
  * @author		Yogi Golle/Tampa/Contr/IBM (yogigol@us.ibm.com) - IBM GTS Service Delivery - MWSD Tools and Technology Team
- * @version 	2015.06.15 
+ * @version 	2016.08.09 
  */
 public class SageFTPFileMonitorApp_Launch {
 
